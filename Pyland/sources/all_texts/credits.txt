@@ -1,0 +1,106 @@
+Un immense merci d’avoir jouer et fini :
+Pyland , Gardiens du Pylinarium
+ 
+Crédit :
+ 
+ 
+Devellopement et creation :
+Equipe PP42
+ 
+Développement :
+Directrice :
+Schanen Lou
+Co-directeurs :
+Pinot Cosmo
+Batt Matthew
+ 
+Interface :
+Schanen Lou
+Batt Matthew
+ 
+Jeu et Physique :
+Dupin Gaspard
+ 
+Jouabilité et intégration :
+Pinot Cosmo
+ 
+Sauvegarde :
+Dupin Gaspard
+Batt Matthew
+ 
+Diagnostic :
+Lou Shanen
+Pinot Cosmo
+ 
+ 
+ 
+Creation artisique :
+Co-directeur :
+Batt Matthew
+Dupin Gaspard
+ 
+Palletes graphique :
+Batt Matthew
+Schanen Lou
+ 
+Image et promotion :
+Schanen Lou
+Dupin Gaspard
+ 
+Images des NPC :
+Wesnoth et ses artistes
+
+Palettes de tiles :
+Pipoya on itch.io
+Cardinal Zebra on itch.io
+ 
+Dialogues :
+Batt Matthew
+Pinot Cosmo
+ 
+Scénario :
+Batt Matthew
+ 
+Son et Audio :
+Directeur :
+Dupin Gaspard
+ 
+Sons :
+Dupin Gaspard
+ 
+Musique :
+Schanen Lou
+Dupin Gaspard
+ 
+Integration musique :
+Pinot Cosmo
+ 
+Documentation :
+Directeur :
+Pinot Cosmo
+ 
+Docstrings :
+Batt Matthew
+Schanen Lou
+ 
+PDF et autres fichier :
+Pinot Cosmo
+Dupin Gaspard
+ 
+Vidéo :
+Dupin Gaspard
+ 
+Remerciement :
+ 
+Wesnoth qui offre un jeu open source d'une qualité impressionnante
+Pipoya et Cardinal Zebra sur itch.io pour leurs palettes de tiles
+Toute l’équipe PP42
+Mr Busac
+Mme Somny
+Le lycée Edouart Herriot
+StackOverflow
+W3School
+VScode, on l'oublie souvent
+Nos clées USB
+Mais surtout:
+le café

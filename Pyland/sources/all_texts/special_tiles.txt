@@ -1,0 +1,4940 @@
+"""
+toutes les cases de la carte bloquée. Ce code est exécuté dans 'addon_marked_tiles.py'
+
+programme : Matthew Batt
+dernière version : 11/03/2024 20:59
+"""
+marked_tiles[2][4] = 1
+#premier niveau
+
+marked_tiles[4][4] = 1
+#premier niveau
+
+marked_tiles[3][3] = 1
+#premier niveau
+
+marked_tiles[3][5] = 1
+#premier niveau
+
+marked_tiles[3][3] = -1
+#unacessible
+
+marked_tiles[2][8] = -1
+#unacessible
+
+marked_tiles[5][5] = -1
+#unacessible
+
+marked_tiles[1][1] = -1
+#unacessible
+
+marked_tiles[1][0] = -1
+#unacessible
+
+marked_tiles[0][2] = -1
+#unacessible
+
+marked_tiles[0][4] = -1
+#unacessible
+
+marked_tiles[0][3] = -1
+#unacessible
+
+marked_tiles[0][5] = -1
+#unacessible
+
+marked_tiles[0][6] = -1
+#unacessible
+
+marked_tiles[0][8] = -1
+#unacessible
+
+marked_tiles[1][8] = -1
+#unacessible
+
+marked_tiles[2][9] = -1
+#unacessible
+
+marked_tiles[2][10] = -1
+#unacessible
+
+marked_tiles[3][11] = -1
+#unacessible
+
+marked_tiles[4][12] = -1
+#unacessible
+
+marked_tiles[3][13] = -1
+#unacessible
+
+marked_tiles[4][14] = -1
+#unacessible
+
+marked_tiles[5][14] = -1
+#unacessible
+
+marked_tiles[6][14] = -1
+#unacessible
+
+marked_tiles[7][6] = -1
+#unacessible
+
+marked_tiles[9][7] = -1
+#unacessible
+
+marked_tiles[8][7] = -1
+#unacessible
+
+marked_tiles[10][7] = -1
+#unacessible
+
+marked_tiles[10][5] = -1
+#unacessible
+
+marked_tiles[9][6] = -1
+#unacessible
+
+marked_tiles[9][5] = -1
+#unacessible
+
+marked_tiles[8][4] = -1
+#unacessible
+
+marked_tiles[7][3] = -1
+#unacessible
+
+marked_tiles[7][2] = -1
+#unacessible
+
+marked_tiles[6][1] = -1
+#unacessible
+
+marked_tiles[6][0] = -1
+#unacessible
+
+marked_tiles[7][0] = -1
+#unacessible
+
+marked_tiles[13][0] = -1
+#unacessible
+
+marked_tiles[13][1] = -1
+#unacessible
+
+marked_tiles[13][2] = -1
+#unacessible
+
+marked_tiles[13][3] = -1
+#unacessible
+
+marked_tiles[7][5] = -1
+#unacessible
+
+marked_tiles[6][4] = -1
+#unacessible
+
+marked_tiles[6][3] = -1
+#unacessible
+
+marked_tiles[6][2] = -1
+#unacessible
+
+marked_tiles[8][9] = -1
+#unacessible
+
+marked_tiles[9][9] = -1
+#unacessible
+
+marked_tiles[10][9] = -1
+#unacessible
+
+marked_tiles[6][15] = -2
+#empty house
+
+marked_tiles[6][16] = -2
+#empty house
+
+marked_tiles[9][13] = -1
+#unacessible
+
+marked_tiles[6][17] = -1
+#unacessible
+
+marked_tiles[5][18] = -1
+#unacessible
+
+marked_tiles[4][19] = -1
+#unacessible
+
+marked_tiles[9][12] = -1
+#unacessible
+
+marked_tiles[8][11] = -1
+#unacessible
+
+marked_tiles[8][10] = -1
+#unacessible
+
+marked_tiles[10][10] = -1
+#unacessible
+
+marked_tiles[10][11] = -1
+#unacessible
+
+marked_tiles[10][12] = -1
+#unacessible
+
+marked_tiles[10][13] = -1
+#unacessible
+
+marked_tiles[10][14] = -1
+#unacessible
+
+marked_tiles[12][14] = -1
+#unacessible
+
+marked_tiles[13][14] = -1
+#unacessible
+
+marked_tiles[13][15] = -1
+#unacessible
+
+marked_tiles[13][16] = -1
+#unacessible
+
+marked_tiles[13][17] = -1
+#unacessible
+
+marked_tiles[14][17] = -1
+#unacessible
+
+marked_tiles[14][18] = -1
+#unacessible
+
+marked_tiles[15][18] = -1
+#unacessible
+
+marked_tiles[15][19] = -1
+#unacessible
+
+marked_tiles[16][19] = -1
+#unacessible
+
+marked_tiles[17][18] = -1
+#unacessible
+
+marked_tiles[16][17] = -1
+#unacessible
+
+marked_tiles[16][16] = -1
+#unacessible
+
+marked_tiles[16][15] = -1
+#unacessible
+
+marked_tiles[16][14] = -1
+#unacessible
+
+marked_tiles[16][13] = -1
+#unacessible
+
+marked_tiles[13][8] = -1
+#unacessible
+
+marked_tiles[14][9] = -1
+#unacessible
+
+marked_tiles[15][9] = -1
+#unacessible
+
+marked_tiles[15][8] = -1
+#unacessible
+
+marked_tiles[16][7] = -1
+#unacessible
+
+marked_tiles[17][7] = -1
+#unacessible
+
+marked_tiles[14][4] = -1
+#unacessible
+
+marked_tiles[14][5] = -1
+#unacessible
+
+marked_tiles[14][6] = -1
+#unacessible
+
+marked_tiles[14][7] = -1
+#unacessible
+
+marked_tiles[14][8] = -1
+#unacessible
+
+marked_tiles[17][13] = -1
+#unacessible
+
+marked_tiles[17][14] = -1
+#unacessible
+
+marked_tiles[17][15] = -1
+#unacessible
+
+marked_tiles[17][16] = -1
+#unacessible
+
+marked_tiles[17][17] = -1
+#unacessible
+
+marked_tiles[18][19] = -1
+#unacessible
+
+marked_tiles[18][18] = -1
+#unacessible
+
+marked_tiles[18][17] = -1
+#unacessible
+
+marked_tiles[18][16] = -1
+#unacessible
+
+marked_tiles[18][15] = -1
+#unacessible
+
+marked_tiles[18][14] = -1
+#unacessible
+
+marked_tiles[19][14] = -1
+#unacessible
+
+marked_tiles[19][11] = -1
+#unacessible
+
+marked_tiles[18][10] = -1
+#unacessible
+
+marked_tiles[18][9] = -1
+#unacessible
+
+marked_tiles[19][8] = -1
+#unacessible
+
+marked_tiles[19][7] = -1
+#unacessible
+
+marked_tiles[18][7] = -1
+#unacessible
+
+marked_tiles[12][15] = -1
+#unacessible
+
+marked_tiles[13][18] = -1
+#unacessible
+
+marked_tiles[3][20] = -1
+#unacessible
+
+marked_tiles[2][21] = -1
+#unacessible
+
+marked_tiles[1][21] = -1
+#unacessible
+
+marked_tiles[0][22] = -1
+#unacessible
+
+marked_tiles[0][23] = -1
+#unacessible
+
+marked_tiles[9][25] = -1
+#unacessible
+
+marked_tiles[9][21] = -1
+#unacessible
+
+marked_tiles[8][26] = -1
+#unacessible
+
+marked_tiles[7][26] = -1
+#unacessible
+
+marked_tiles[6][26] = -1
+#unacessible
+
+marked_tiles[6][27] = -1
+#unacessible
+
+marked_tiles[6][28] = -1
+#unacessible
+
+marked_tiles[5][28] = -1
+#unacessible
+
+marked_tiles[4][28] = -1
+#unacessible
+
+marked_tiles[3][29] = -1
+#unacessible
+
+marked_tiles[3][30] = -1
+#unacessible
+
+marked_tiles[3][31] = -1
+#unacessible
+
+marked_tiles[3][32] = -1
+#unacessible
+
+marked_tiles[3][33] = -1
+#unacessible
+
+marked_tiles[3][34] = -1
+#unacessible
+
+marked_tiles[4][35] = -1
+#unacessible
+
+marked_tiles[5][36] = -1
+#unacessible
+
+marked_tiles[6][36] = -1
+#unacessible
+
+marked_tiles[11][21] = -1
+#unacessible
+
+marked_tiles[11][22] = -1
+#unacessible
+
+marked_tiles[10][22] = -1
+#unacessible
+
+marked_tiles[10][23] = -1
+#unacessible
+
+marked_tiles[10][24] = -1
+#unacessible
+
+marked_tiles[12][21] = -1
+#unacessible
+
+marked_tiles[13][22] = -1
+#unacessible
+
+marked_tiles[14][23] = -1
+#unacessible
+
+marked_tiles[16][23] = -1
+#unacessible
+
+marked_tiles[15][20] = -1
+#unacessible
+
+marked_tiles[15][21] = -1
+#unacessible
+
+marked_tiles[16][21] = -1
+#unacessible
+
+marked_tiles[16][20] = -1
+#unacessible
+
+marked_tiles[17][20] = -1
+#unacessible
+
+marked_tiles[18][20] = -1
+#unacessible
+
+marked_tiles[18][21] = -1
+#unacessible
+
+marked_tiles[18][22] = -1
+#unacessible
+
+marked_tiles[18][23] = -1
+#unacessible
+
+marked_tiles[18][24] = -1
+#unacessible
+
+marked_tiles[18][25] = -1
+#unacessible
+
+marked_tiles[18][26] = -1
+#unacessible
+
+marked_tiles[17][26] = -1
+#unacessible
+
+marked_tiles[16][26] = -1
+#unacessible
+
+marked_tiles[16][25] = -1
+#unacessible
+
+marked_tiles[16][24] = -1
+#unacessible
+
+marked_tiles[17][24] = -1
+#unacessible
+
+marked_tiles[17][23] = -1
+#unacessible
+
+marked_tiles[17][22] = -1
+#unacessible
+
+marked_tiles[16][22] = -1
+#unacessible
+
+marked_tiles[14][24] = -1
+#unacessible
+
+marked_tiles[14][25] = -1
+#unacessible
+
+marked_tiles[14][26] = -1
+#unacessible
+
+marked_tiles[13][26] = -1
+#unacessible
+
+marked_tiles[13][27] = -1
+#unacessible
+
+marked_tiles[13][28] = -1
+#unacessible
+
+marked_tiles[13][29] = -1
+#unacessible
+
+marked_tiles[13][30] = -1
+#unacessible
+
+marked_tiles[14][30] = -1
+#unacessible
+
+marked_tiles[15][29] = -1
+#unacessible
+
+marked_tiles[16][28] = -1
+#unacessible
+
+marked_tiles[16][27] = -1
+#unacessible
+
+marked_tiles[15][27] = -1
+#unacessible
+
+marked_tiles[20][14] = -1
+#unacessible
+
+marked_tiles[21][14] = -1
+#unacessible
+
+marked_tiles[22][14] = -1
+#unacessible
+
+marked_tiles[22][13] = -1
+#unacessible
+
+marked_tiles[22][12] = -1
+#unacessible
+
+marked_tiles[23][12] = -1
+#unacessible
+
+marked_tiles[24][13] = -1
+#unacessible
+
+marked_tiles[25][13] = -1
+#unacessible
+
+marked_tiles[26][12] = -1
+#unacessible
+
+marked_tiles[27][12] = -1
+#unacessible
+
+marked_tiles[28][12] = -1
+#unacessible
+
+marked_tiles[29][12] = -1
+#unacessible
+
+marked_tiles[29][10] = -1
+#unacessible
+
+marked_tiles[28][10] = -1
+#unacessible
+
+marked_tiles[27][10] = -1
+#unacessible
+
+marked_tiles[26][10] = -1
+#unacessible
+
+marked_tiles[25][10] = -1
+#unacessible
+
+marked_tiles[24][10] = -1
+#unacessible
+
+marked_tiles[23][10] = -1
+#unacessible
+
+marked_tiles[22][10] = -1
+#unacessible
+
+marked_tiles[21][10] = -1
+#unacessible
+
+marked_tiles[20][11] = -1
+#unacessible
+
+marked_tiles[30][12] = -1
+#unacessible
+
+marked_tiles[31][12] = -1
+#unacessible
+
+marked_tiles[30][10] = -1
+#unacessible
+
+marked_tiles[31][9] = -1
+#unacessible
+
+marked_tiles[31][13] = -1
+#unacessible
+
+marked_tiles[30][14] = -1
+#unacessible
+
+marked_tiles[30][8] = -1
+#unacessible
+
+marked_tiles[30][7] = -1
+#unacessible
+
+marked_tiles[30][6] = -1
+#unacessible
+
+marked_tiles[30][5] = -1
+#unacessible
+
+marked_tiles[30][4] = -1
+#unacessible
+
+marked_tiles[31][1] = -1
+#unacessible
+
+marked_tiles[30][1] = -1
+#unacessible
+
+marked_tiles[29][1] = -1
+#unacessible
+
+marked_tiles[28][1] = -1
+#unacessible
+
+marked_tiles[28][2] = -1
+#unacessible
+
+marked_tiles[28][3] = -1
+#unacessible
+
+marked_tiles[28][4] = -1
+#unacessible
+
+marked_tiles[29][4] = -1
+#unacessible
+
+marked_tiles[32][0] = -1
+#unacessible
+
+marked_tiles[33][0] = -1
+#unacessible
+
+marked_tiles[34][1] = -1
+#unacessible
+
+marked_tiles[34][2] = -1
+#unacessible
+
+marked_tiles[34][3] = -1
+#unacessible
+
+marked_tiles[36][4] = -1
+#unacessible
+
+marked_tiles[36][5] = -1
+#unacessible
+
+marked_tiles[35][3] = -1
+#unacessible
+
+marked_tiles[37][5] = -1
+#unacessible
+
+marked_tiles[37][4] = -1
+#unacessible
+
+marked_tiles[37][3] = -1
+#unacessible
+
+marked_tiles[38][3] = -1
+#unacessible
+
+marked_tiles[39][3] = -1
+#unacessible
+
+marked_tiles[40][1] = -1
+#unacessible
+
+marked_tiles[41][1] = -1
+#unacessible
+
+marked_tiles[39][2] = -1
+#unacessible
+
+marked_tiles[40][4] = -1
+#unacessible
+
+marked_tiles[40][5] = -2
+#empty house
+
+marked_tiles[40][6] = -1
+#unacessible
+
+marked_tiles[33][12] = -2
+#empty house
+
+marked_tiles[33][13] = -2
+#empty house
+
+marked_tiles[33][14] = -2
+#empty house
+
+marked_tiles[33][15] = -2
+#empty house
+
+marked_tiles[35][19] = -1
+#unacessible
+
+marked_tiles[36][19] = -1
+#unacessible
+
+marked_tiles[34][19] = -1
+#unacessible
+
+marked_tiles[33][19] = -1
+#unacessible
+
+marked_tiles[32][19] = -1
+#unacessible
+
+marked_tiles[31][19] = -1
+#unacessible
+
+marked_tiles[29][14] = -1
+#unacessible
+
+marked_tiles[28][14] = -1
+#unacessible
+
+marked_tiles[28][15] = -1
+#unacessible
+
+marked_tiles[28][16] = -1
+#unacessible
+
+marked_tiles[27][17] = -1
+#unacessible
+
+marked_tiles[26][18] = -1
+#unacessible
+
+marked_tiles[26][19] = -1
+#unacessible
+
+marked_tiles[26][20] = -1
+#unacessible
+
+marked_tiles[26][21] = -1
+#unacessible
+
+marked_tiles[26][22] = -1
+#unacessible
+
+marked_tiles[27][23] = -1
+#unacessible
+
+marked_tiles[28][23] = -1
+#unacessible
+
+marked_tiles[29][23] = -1
+#unacessible
+
+marked_tiles[30][21] = -1
+#unacessible
+
+marked_tiles[31][22] = -1
+#unacessible
+
+marked_tiles[31][23] = -1
+#unacessible
+
+marked_tiles[31][24] = -1
+#unacessible
+
+marked_tiles[31][25] = -1
+#unacessible
+
+marked_tiles[30][25] = -1
+#unacessible
+
+marked_tiles[31][26] = -1
+#unacessible
+
+marked_tiles[30][27] = -1
+#unacessible
+
+marked_tiles[29][27] = -1
+#unacessible
+
+marked_tiles[29][25] = -1
+#unacessible
+
+marked_tiles[28][26] = -1
+#unacessible
+
+marked_tiles[29][24] = -1
+#unacessible
+
+marked_tiles[31][20] = -1
+#unacessible
+
+marked_tiles[36][20] = -1
+#unacessible
+
+marked_tiles[37][21] = -1
+#unacessible
+
+marked_tiles[38][20] = -1
+#unacessible
+
+marked_tiles[38][22] = -1
+#unacessible
+
+marked_tiles[38][23] = -1
+#unacessible
+
+marked_tiles[38][24] = -1
+#unacessible
+
+marked_tiles[38][25] = -1
+#unacessible
+
+marked_tiles[37][27] = -1
+#unacessible
+
+marked_tiles[37][25] = -1
+#unacessible
+
+marked_tiles[36][25] = -1
+#unacessible
+
+marked_tiles[35][25] = -1
+#unacessible
+
+marked_tiles[34][26] = -1
+#unacessible
+
+marked_tiles[35][27] = -1
+#unacessible
+
+marked_tiles[36][27] = -1
+#unacessible
+
+marked_tiles[38][28] = -1
+#unacessible
+
+marked_tiles[38][29] = -1
+#unacessible
+
+marked_tiles[38][30] = -1
+#unacessible
+
+marked_tiles[38][31] = -1
+#unacessible
+
+marked_tiles[38][32] = -1
+#unacessible
+
+marked_tiles[39][34] = -1
+#unacessible
+
+marked_tiles[39][35] = -1
+#unacessible
+
+marked_tiles[39][36] = -1
+#unacessible
+
+marked_tiles[39][37] = -1
+#unacessible
+
+marked_tiles[37][37] = -1
+#unacessible
+
+marked_tiles[37][36] = -1
+#unacessible
+
+marked_tiles[37][35] = -1
+#unacessible
+
+marked_tiles[37][34] = -1
+#unacessible
+
+marked_tiles[37][32] = -1
+#unacessible
+
+marked_tiles[36][32] = -1
+#unacessible
+
+marked_tiles[35][32] = -1
+#unacessible
+
+marked_tiles[34][32] = -1
+#unacessible
+
+marked_tiles[33][32] = -1
+#unacessible
+
+marked_tiles[32][32] = -1
+#unacessible
+
+marked_tiles[31][32] = -1
+#unacessible
+
+marked_tiles[36][34] = -1
+#unacessible
+
+marked_tiles[35][34] = -1
+#unacessible
+
+marked_tiles[34][34] = -1
+#unacessible
+
+marked_tiles[33][34] = -1
+#unacessible
+
+marked_tiles[33][35] = -1
+#unacessible
+
+marked_tiles[31][35] = -1
+#unacessible
+
+marked_tiles[31][34] = -1
+#unacessible
+
+marked_tiles[30][30] = -1
+#unacessible
+
+marked_tiles[31][31] = -1
+#unacessible
+
+marked_tiles[30][34] = -1
+#unacessible
+
+marked_tiles[31][36] = -1
+#unacessible
+
+marked_tiles[33][36] = -1
+#unacessible
+
+marked_tiles[33][37] = -1
+#unacessible
+
+marked_tiles[31][37] = -1
+#unacessible
+
+marked_tiles[31][38] = -1
+#unacessible
+
+marked_tiles[33][38] = -1
+#unacessible
+
+marked_tiles[31][39] = -1
+#unacessible
+
+marked_tiles[32][41] = -1
+#unacessible
+
+marked_tiles[31][41] = -1
+#unacessible
+
+marked_tiles[33][41] = -1
+#unacessible
+
+marked_tiles[34][40] = -1
+#unacessible
+
+marked_tiles[34][38] = -1
+#unacessible
+
+marked_tiles[35][38] = -1
+#unacessible
+
+marked_tiles[36][37] = -1
+#unacessible
+
+marked_tiles[38][39] = -1
+#unacessible
+
+marked_tiles[30][39] = -1
+#unacessible
+
+marked_tiles[30][43] = -1
+#unacessible
+
+marked_tiles[31][44] = -1
+#unacessible
+
+marked_tiles[30][45] = -1
+#unacessible
+
+marked_tiles[30][46] = -1
+#unacessible
+
+marked_tiles[31][46] = -1
+#unacessible
+
+marked_tiles[32][46] = -1
+#unacessible
+
+marked_tiles[33][46] = -1
+#unacessible
+
+marked_tiles[34][46] = -1
+#unacessible
+
+marked_tiles[36][46] = -1
+#unacessible
+
+marked_tiles[34][47] = -1
+#unacessible
+
+marked_tiles[34][48] = -1
+#unacessible
+
+marked_tiles[34][49] = -1
+#unacessible
+
+marked_tiles[32][42] = -1
+#unacessible
+
+marked_tiles[32][43] = -1
+#unacessible
+
+marked_tiles[32][44] = -1
+#unacessible
+
+marked_tiles[33][44] = -1
+#unacessible
+
+marked_tiles[34][44] = -1
+#unacessible
+
+marked_tiles[35][44] = -1
+#unacessible
+
+marked_tiles[36][44] = -1
+#unacessible
+
+marked_tiles[37][44] = -1
+#unacessible
+
+marked_tiles[37][46] = -1
+#unacessible
+
+marked_tiles[38][46] = -1
+#unacessible
+
+marked_tiles[39][46] = -1
+#unacessible
+
+marked_tiles[39][44] = -1
+#unacessible
+
+marked_tiles[39][43] = -1
+#unacessible
+
+marked_tiles[39][42] = -1
+#unacessible
+
+marked_tiles[39][41] = -1
+#unacessible
+
+marked_tiles[39][40] = -1
+#unacessible
+
+marked_tiles[37][42] = -1
+#unacessible
+
+marked_tiles[37][43] = -1
+#unacessible
+
+marked_tiles[36][41] = -1
+#unacessible
+
+marked_tiles[35][40] = -1
+#unacessible
+
+marked_tiles[29][44] = -1
+#unacessible
+
+marked_tiles[29][41] = -1
+#unacessible
+
+marked_tiles[28][42] = -1
+#unacessible
+
+marked_tiles[28][43] = -1
+#unacessible
+
+marked_tiles[28][40] = -1
+#unacessible
+
+marked_tiles[28][39] = -1
+#unacessible
+
+marked_tiles[28][38] = -1
+#unacessible
+
+marked_tiles[29][36] = -1
+#unacessible
+
+marked_tiles[28][36] = -1
+#unacessible
+
+marked_tiles[27][38] = -1
+#unacessible
+
+marked_tiles[26][37] = -1
+#unacessible
+
+marked_tiles[25][37] = -1
+#unacessible
+
+marked_tiles[24][36] = -1
+#unacessible
+
+marked_tiles[25][35] = -1
+#unacessible
+
+marked_tiles[26][35] = -1
+#unacessible
+
+marked_tiles[28][35] = -1
+#unacessible
+
+marked_tiles[29][34] = -1
+#unacessible
+
+marked_tiles[26][34] = -1
+#unacessible
+
+marked_tiles[26][33] = -1
+#unacessible
+
+marked_tiles[26][32] = -1
+#unacessible
+
+marked_tiles[26][31] = -1
+#unacessible
+
+marked_tiles[26][30] = -1
+#unacessible
+
+marked_tiles[29][32] = -1
+#unacessible
+
+marked_tiles[29][30] = -1
+#unacessible
+
+marked_tiles[29][29] = -1
+#unacessible
+
+marked_tiles[29][28] = -1
+#unacessible
+
+marked_tiles[29][28] = -1
+#unacessible
+
+marked_tiles[28][27] = -1
+#unacessible
+
+marked_tiles[27][27] = -1
+#unacessible
+
+marked_tiles[26][28] = -1
+#unacessible
+
+marked_tiles[25][28] = -1
+#unacessible
+
+marked_tiles[24][29] = -1
+#unacessible
+
+marked_tiles[25][30] = -1
+#unacessible
+
+marked_tiles[41][21] = -1
+#unacessible
+
+marked_tiles[40][22] = -1
+#unacessible
+
+marked_tiles[40][23] = -1
+#unacessible
+
+marked_tiles[40][24] = -1
+#unacessible
+
+marked_tiles[40][25] = -1
+#unacessible
+
+marked_tiles[40][26] = -1
+#unacessible
+
+marked_tiles[40][28] = -1
+#unacessible
+
+marked_tiles[40][29] = -1
+#unacessible
+
+marked_tiles[40][30] = -1
+#unacessible
+
+marked_tiles[40][31] = -1
+#unacessible
+
+marked_tiles[40][32] = -1
+#unacessible
+
+marked_tiles[40][34] = -1
+#unacessible
+
+marked_tiles[40][35] = -1
+#unacessible
+
+marked_tiles[40][37] = -1
+#unacessible
+
+marked_tiles[40][39] = -1
+#unacessible
+
+marked_tiles[41][39] = -1
+#unacessible
+
+marked_tiles[41][37] = -1
+#unacessible
+
+marked_tiles[42][37] = -1
+#unacessible
+
+marked_tiles[42][39] = -1
+#unacessible
+
+marked_tiles[44][39] = -1
+#unacessible
+
+marked_tiles[44][38] = -1
+#unacessible
+
+marked_tiles[44][37] = -1
+#unacessible
+
+marked_tiles[44][35] = -1
+#unacessible
+
+marked_tiles[44][34] = -1
+#unacessible
+
+marked_tiles[43][34] = -1
+#unacessible
+
+marked_tiles[43][33] = -1
+#unacessible
+
+marked_tiles[43][32] = -1
+#unacessible
+
+marked_tiles[43][31] = -1
+#unacessible
+
+marked_tiles[43][30] = -1
+#unacessible
+
+marked_tiles[43][29] = -1
+#unacessible
+
+marked_tiles[43][28] = -1
+#unacessible
+
+marked_tiles[44][28] = -1
+#unacessible
+
+marked_tiles[45][27] = -1
+#unacessible
+
+marked_tiles[46][26] = -1
+#unacessible
+
+marked_tiles[47][25] = -1
+#unacessible
+
+marked_tiles[47][24] = -1
+#unacessible
+
+marked_tiles[44][24] = -1
+#unacessible
+
+marked_tiles[44][25] = -1
+#unacessible
+
+marked_tiles[45][22] = -1
+#unacessible
+
+marked_tiles[46][22] = -1
+#unacessible
+
+marked_tiles[48][22] = -1
+#unacessible
+
+marked_tiles[48][21] = -1
+#unacessible
+
+marked_tiles[46][21] = -1
+#unacessible
+
+marked_tiles[45][21] = -1
+#unacessible
+
+marked_tiles[44][21] = -1
+#unacessible
+
+marked_tiles[43][20] = -1
+#unacessible
+
+marked_tiles[42][20] = -1
+#unacessible
+
+marked_tiles[41][29] = -1
+#unacessible
+
+marked_tiles[41][30] = -1
+#unacessible
+
+marked_tiles[41][31] = -1
+#unacessible
+
+marked_tiles[41][32] = -1
+#unacessible
+
+marked_tiles[42][36] = -1
+#unacessible
+
+marked_tiles[41][36] = -1
+#unacessible
+
+marked_tiles[45][37] = -1
+#unacessible
+
+marked_tiles[46][37] = -1
+#unacessible
+
+marked_tiles[47][37] = -1
+#unacessible
+
+marked_tiles[48][37] = -1
+#unacessible
+
+marked_tiles[49][37] = -1
+#unacessible
+
+marked_tiles[50][37] = -1
+#unacessible
+
+marked_tiles[51][37] = -1
+#unacessible
+
+marked_tiles[51][38] = -1
+#unacessible
+
+marked_tiles[51][39] = -1
+#unacessible
+
+marked_tiles[52][35] = -1
+#unacessible
+
+marked_tiles[51][35] = -1
+#unacessible
+
+marked_tiles[50][35] = -1
+#unacessible
+
+marked_tiles[49][35] = -1
+#unacessible
+
+marked_tiles[48][35] = -1
+#unacessible
+
+marked_tiles[47][35] = -1
+#unacessible
+
+marked_tiles[46][35] = -1
+#unacessible
+
+marked_tiles[45][35] = -1
+#unacessible
+
+marked_tiles[52][34] = -1
+#unacessible
+
+marked_tiles[52][33] = -1
+#unacessible
+
+marked_tiles[52][32] = -1
+#unacessible
+
+marked_tiles[52][31] = -1
+#unacessible
+
+marked_tiles[51][30] = -1
+#unacessible
+
+marked_tiles[52][29] = -1
+#unacessible
+
+marked_tiles[53][28] = -1
+#unacessible
+
+marked_tiles[54][29] = -1
+#unacessible
+
+marked_tiles[54][30] = -1
+#unacessible
+
+marked_tiles[54][31] = -1
+#unacessible
+
+marked_tiles[55][31] = -1
+#unacessible
+
+marked_tiles[55][33] = -1
+#unacessible
+
+marked_tiles[54][33] = -1
+#unacessible
+
+marked_tiles[54][34] = -1
+#unacessible
+
+marked_tiles[54][35] = -1
+#unacessible
+
+marked_tiles[55][35] = -1
+#unacessible
+
+marked_tiles[55][34] = -1
+#unacessible
+
+marked_tiles[54][37] = -1
+#unacessible
+
+marked_tiles[53][37] = -1
+#unacessible
+
+marked_tiles[53][38] = -1
+#unacessible
+
+marked_tiles[53][39] = -1
+#unacessible
+
+marked_tiles[55][39] = -1
+#unacessible
+
+marked_tiles[54][38] = -1
+#unacessible
+
+marked_tiles[55][28] = -1
+#unacessible
+
+marked_tiles[55][29] = -1
+#unacessible
+
+marked_tiles[55][30] = -1
+#unacessible
+
+marked_tiles[54][27] = -1
+#unacessible
+
+marked_tiles[54][26] = -1
+#unacessible
+
+marked_tiles[54][24] = -1
+#unacessible
+
+marked_tiles[55][24] = -1
+#unacessible
+
+marked_tiles[53][26] = -1
+#unacessible
+
+marked_tiles[52][25] = -1
+#unacessible
+
+marked_tiles[52][24] = -1
+#unacessible
+
+marked_tiles[54][23] = -1
+#unacessible
+
+marked_tiles[53][22] = -1
+#unacessible
+
+marked_tiles[52][22] = -1
+#unacessible
+
+marked_tiles[51][22] = -1
+#unacessible
+
+marked_tiles[51][24] = -1
+#unacessible
+
+marked_tiles[50][24] = -1
+#unacessible
+
+marked_tiles[50][22] = -1
+#unacessible
+
+marked_tiles[55][23] = -1
+#unacessible
+
+marked_tiles[55][22] = -1
+#unacessible
+
+marked_tiles[55][21] = -1
+#unacessible
+
+marked_tiles[54][21] = -1
+#unacessible
+
+marked_tiles[53][21] = -1
+#unacessible
+
+marked_tiles[52][21] = -1
+#unacessible
+
+marked_tiles[51][21] = -1
+#unacessible
+
+marked_tiles[50][21] = -1
+#unacessible
+
+marked_tiles[49][21] = -1
+#unacessible
+
+marked_tiles[49][20] = -1
+#unacessible
+
+marked_tiles[49][15] = -1
+#unacessible
+
+marked_tiles[49][14] = -1
+#unacessible
+
+marked_tiles[48][14] = -1
+#unacessible
+
+marked_tiles[48][15] = -1
+#unacessible
+
+marked_tiles[48][24] = -1
+#unacessible
+
+marked_tiles[49][24] = -1
+#unacessible
+
+marked_tiles[51][40] = -1
+#unacessible
+
+marked_tiles[51][41] = -1
+#unacessible
+
+marked_tiles[51][42] = -1
+#unacessible
+
+marked_tiles[51][42] = -1
+#unacessible
+
+marked_tiles[52][43] = -1
+#unacessible
+
+marked_tiles[53][43] = -1
+#unacessible
+
+marked_tiles[54][43] = -1
+#unacessible
+
+marked_tiles[55][43] = -1
+#unacessible
+
+marked_tiles[55][44] = -1
+#unacessible
+
+marked_tiles[54][44] = -1
+#unacessible
+
+marked_tiles[53][44] = -1
+#unacessible
+
+marked_tiles[52][44] = -1
+#unacessible
+
+marked_tiles[51][45] = -1
+#unacessible
+
+marked_tiles[51][46] = -1
+#unacessible
+
+marked_tiles[50][46] = -1
+#unacessible
+
+marked_tiles[50][50] = -1
+#unacessible
+
+marked_tiles[56][41] = -1
+#unacessible
+
+marked_tiles[56][40] = -1
+#unacessible
+
+marked_tiles[55][41] = -1
+#unacessible
+
+marked_tiles[54][41] = -1
+#unacessible
+
+marked_tiles[53][41] = -1
+#unacessible
+
+marked_tiles[53][40] = -1
+#unacessible
+
+marked_tiles[59][51] = -1
+#unacessible
+
+marked_tiles[58][52] = -1
+#unacessible
+
+marked_tiles[58][53] = -1
+#unacessible
+
+marked_tiles[58][54] = -1
+#unacessible
+
+marked_tiles[57][54] = -1
+#unacessible
+
+marked_tiles[56][54] = -1
+#unacessible
+
+marked_tiles[56][55] = -1
+#unacessible
+
+marked_tiles[57][56] = -1
+#unacessible
+
+marked_tiles[57][57] = -1
+#unacessible
+
+marked_tiles[57][58] = -1
+#unacessible
+
+marked_tiles[58][59] = -1
+#unacessible
+
+marked_tiles[55][59] = -1
+#unacessible
+
+marked_tiles[49][46] = -1
+#unacessible
+
+marked_tiles[48][46] = -1
+#unacessible
+
+marked_tiles[47][45] = -1
+#unacessible
+
+marked_tiles[46][45] = -1
+#unacessible
+
+marked_tiles[45][51] = -1
+#unacessible
+
+marked_tiles[44][50] = -1
+#unacessible
+
+marked_tiles[48][55] = -1
+#unacessible
+
+marked_tiles[41][56] = -1
+#unacessible
+
+marked_tiles[42][46] = -1
+#unacessible
+
+marked_tiles[41][46] = -1
+#unacessible
+
+marked_tiles[41][47] = -1
+#unacessible
+
+marked_tiles[41][48] = -1
+#unacessible
+
+marked_tiles[40][49] = -1
+#unacessible
+
+marked_tiles[44][46] = -1
+#unacessible
+
+marked_tiles[46][44] = -1
+#unacessible
+
+marked_tiles[45][43] = -1
+#unacessible
+
+marked_tiles[44][42] = -1
+#unacessible
+
+marked_tiles[42][44] = -1
+#unacessible
+
+marked_tiles[42][43] = -1
+#unacessible
+
+marked_tiles[42][42] = -1
+#unacessible
+
+marked_tiles[42][41] = -1
+#unacessible
+
+marked_tiles[42][40] = -1
+#unacessible
+
+marked_tiles[44][40] = -1
+#unacessible
+
+marked_tiles[44][41] = -1
+#unacessible
+
+marked_tiles[41][44] = -1
+#unacessible
+
+marked_tiles[40][44] = -1
+#unacessible
+
+marked_tiles[40][46] = -1
+#unacessible
+
+marked_tiles[36][47] = -1
+#unacessible
+
+marked_tiles[36][48] = -1
+#unacessible
+
+marked_tiles[36][49] = -1
+#unacessible
+
+marked_tiles[37][50] = -1
+#unacessible
+
+marked_tiles[37][51] = -1
+#unacessible
+
+marked_tiles[38][51] = -1
+#unacessible
+
+marked_tiles[38][50] = -1
+#unacessible
+
+marked_tiles[39][49] = -1
+#unacessible
+
+marked_tiles[37][55] = -1
+#unacessible
+
+marked_tiles[36][55] = -1
+#unacessible
+
+marked_tiles[35][55] = -1
+#unacessible
+
+marked_tiles[35][56] = -1
+#unacessible
+
+marked_tiles[34][56] = -1
+#unacessible
+
+marked_tiles[33][56] = -1
+#unacessible
+
+marked_tiles[32][54] = -1
+#unacessible
+
+marked_tiles[31][54] = -1
+#unacessible
+
+marked_tiles[31][56] = -1
+#unacessible
+
+marked_tiles[32][56] = -1
+#unacessible
+
+marked_tiles[32][53] = -1
+#unacessible
+
+marked_tiles[32][52] = -1
+#unacessible
+
+marked_tiles[32][51] = -1
+#unacessible
+
+marked_tiles[31][51] = -1
+#unacessible
+
+marked_tiles[30][50] = -1
+#unacessible
+
+marked_tiles[31][49] = -1
+#unacessible
+
+marked_tiles[32][49] = -1
+#unacessible
+
+marked_tiles[33][49] = -1
+#unacessible
+
+marked_tiles[31][57] = -1
+#unacessible
+
+marked_tiles[31][58] = -1
+#unacessible
+
+marked_tiles[31][59] = -1
+#unacessible
+
+marked_tiles[32][59] = -1
+#unacessible
+
+marked_tiles[32][58] = -1
+#unacessible
+
+marked_tiles[32][57] = -1
+#unacessible
+
+marked_tiles[28][48] = -1
+#unacessible
+
+marked_tiles[29][49] = -1
+#unacessible
+
+marked_tiles[29][50] = -1
+#unacessible
+
+marked_tiles[29][51] = -1
+#unacessible
+
+marked_tiles[29][52] = -1
+#unacessible
+
+marked_tiles[44][18] = -2
+#empty house
+
+marked_tiles[44][17] = -2
+#empty house
+
+marked_tiles[45][14] = -2
+#empty house
+
+marked_tiles[45][15] = -1
+#unacessible
+
+marked_tiles[47][13] = -2
+#empty house
+
+marked_tiles[47][14] = -2
+#empty house
+
+marked_tiles[48][12] = -1
+#unacessible
+
+marked_tiles[48][11] = -2
+#empty house
+
+marked_tiles[48][10] = -2
+#empty house
+
+marked_tiles[48][9] = -1
+#unacessible
+
+marked_tiles[41][9] = -2
+#empty house
+
+marked_tiles[41][8] = -2
+#empty house
+
+marked_tiles[42][11] = -1
+#unacessible
+
+marked_tiles[43][11] = -1
+#unacessible
+
+marked_tiles[43][12] = -1
+#unacessible
+
+marked_tiles[42][12] = -1
+#unacessible
+
+marked_tiles[41][13] = -2
+#empty house
+
+marked_tiles[41][14] = -2
+#empty house
+
+marked_tiles[41][15] = -1
+#unacessible
+
+marked_tiles[40][15] = -1
+#unacessible
+
+marked_tiles[43][15] = -1
+#unacessible
+
+marked_tiles[43][14] = -2
+#empty house
+
+marked_tiles[45][11] = -2
+#empty house
+
+marked_tiles[45][12] = -2
+#empty house
+
+marked_tiles[47][12] = -1
+#unacessible
+
+marked_tiles[46][12] = -1
+#unacessible
+
+marked_tiles[46][11] = -2
+#empty house
+
+marked_tiles[47][10] = -2
+#empty house
+
+marked_tiles[47][11] = -1
+#unacessible
+
+marked_tiles[47][9] = -1
+#unacessible
+
+marked_tiles[47][6] = -1
+#unacessible
+
+marked_tiles[46][6] = -1
+#unacessible
+
+marked_tiles[48][5] = -1
+#unacessible
+
+marked_tiles[49][5] = -1
+#unacessible
+
+marked_tiles[49][4] = -1
+#unacessible
+
+marked_tiles[49][3] = -1
+#unacessible
+
+marked_tiles[49][2] = -1
+#unacessible
+
+marked_tiles[49][0] = -1
+#unacessible
+
+marked_tiles[48][0] = -1
+#unacessible
+
+marked_tiles[47][0] = -1
+#unacessible
+
+marked_tiles[46][0] = -1
+#unacessible
+
+marked_tiles[45][0] = -1
+#unacessible
+
+marked_tiles[44][0] = -1
+#unacessible
+
+marked_tiles[43][0] = -1
+#unacessible
+
+marked_tiles[42][0] = -1
+#unacessible
+
+marked_tiles[41][5] = -2
+#empty house
+
+marked_tiles[40][5] = -2
+#empty house
+
+marked_tiles[41][6] = -1
+#unacessible
+
+marked_tiles[41][12] = -1
+#unacessible
+
+marked_tiles[40][12] = -1
+#unacessible
+
+marked_tiles[40][13] = -1
+#unacessible
+
+marked_tiles[40][14] = -1
+#unacessible
+
+marked_tiles[44][9] = -1
+#unacessible
+
+marked_tiles[43][9] = -2
+#empty house
+
+marked_tiles[43][8] = -2
+#empty house
+
+marked_tiles[43][7] = -1
+#unacessible
+
+marked_tiles[43][6] = -1
+#unacessible
+
+marked_tiles[43][5] = -2
+#empty house
+
+marked_tiles[43][4] = -1
+#unacessible
+
+marked_tiles[42][3] = -2
+#empty house
+
+marked_tiles[43][3] = -1
+#unacessible
+
+marked_tiles[43][2] = -1
+#unacessible
+
+marked_tiles[42][2] = -1
+#unacessible
+
+marked_tiles[44][2] = -1
+#unacessible
+
+marked_tiles[46][2] = -1
+#unacessible
+
+marked_tiles[47][2] = -1
+#unacessible
+
+marked_tiles[48][2] = -1
+#unacessible
+
+marked_tiles[44][3] = -1
+#unacessible
+
+marked_tiles[44][4] = -1
+#unacessible
+
+marked_tiles[44][5] = -2
+#empty house
+
+marked_tiles[44][6] = -2
+#empty house
+
+marked_tiles[44][7] = -1
+#unacessible
+
+marked_tiles[44][8] = -2
+#empty house
+
+marked_tiles[47][5] = -1
+#unacessible
+
+marked_tiles[46][5] = -1
+#unacessible
+
+marked_tiles[41][4] = -1
+#unacessible
+
+marked_tiles[41][3] = -2
+#empty house
+
+marked_tiles[58][9] = -1
+#unacessible
+
+marked_tiles[58][7] = -1
+#unacessible
+
+marked_tiles[58][8] = -1
+#unacessible
+
+marked_tiles[59][8] = -1
+#unacessible
+
+marked_tiles[59][7] = -1
+#unacessible
+
+marked_tiles[58][6] = -1
+#unacessible
+
+marked_tiles[53][0] = -1
+#unacessible
+
+marked_tiles[52][0] = -1
+#unacessible
+
+marked_tiles[51][0] = -1
+#unacessible
+
+marked_tiles[50][0] = -1
+#unacessible
+
+marked_tiles[69][41] = -1
+#unacessible
+
+marked_tiles[68][41] = -1
+#unacessible
+
+marked_tiles[67][41] = -1
+#unacessible
+
+marked_tiles[67][42] = -1
+#unacessible
+
+marked_tiles[67][43] = -1
+#unacessible
+
+marked_tiles[66][44] = -1
+#unacessible
+
+marked_tiles[65][44] = -1
+#unacessible
+
+marked_tiles[64][44] = -1
+#unacessible
+
+marked_tiles[64][45] = -1
+#unacessible
+
+marked_tiles[64][46] = -1
+#unacessible
+
+marked_tiles[64][47] = -1
+#unacessible
+
+marked_tiles[64][48] = -1
+#unacessible
+
+marked_tiles[63][48] = -1
+#unacessible
+
+marked_tiles[62][47] = -1
+#unacessible
+
+marked_tiles[61][47] = -1
+#unacessible
+
+marked_tiles[61][48] = -1
+#unacessible
+
+marked_tiles[61][49] = -1
+#unacessible
+
+marked_tiles[60][50] = -1
+#unacessible
+
+marked_tiles[59][59] = -1
+#unacessible
+
+marked_tiles[60][59] = -1
+#unacessible
+
+marked_tiles[60][60] = -1
+#unacessible
+
+marked_tiles[60][61] = -1
+#unacessible
+
+marked_tiles[3][37] = -1
+#unacessible
+
+marked_tiles[3][36] = -1
+#unacessible
+
+marked_tiles[4][37] = -2
+#empty house
+
+marked_tiles[4][36] = -2
+#empty house
+
+marked_tiles[8][37] = -2
+#empty house
+
+marked_tiles[8][38] = -2
+#empty house
+
+marked_tiles[7][38] = -1
+#unacessible
+
+marked_tiles[7][37] = -1
+#unacessible
+
+marked_tiles[7][36] = -1
+#unacessible
+
+marked_tiles[8][36] = -1
+#unacessible
+
+marked_tiles[9][36] = -1
+#unacessible
+
+marked_tiles[9][39] = -2
+#empty house
+
+marked_tiles[8][39] = -1
+#unacessible
+
+marked_tiles[0][40] = -1
+#unacessible
+
+marked_tiles[1][41] = -1
+#unacessible
+
+marked_tiles[1][42] = -1
+#unacessible
+
+marked_tiles[1][43] = -2
+#empty house
+
+marked_tiles[1][44] = -2
+#empty house
+
+marked_tiles[0][45] = -1
+#unacessible
+
+marked_tiles[0][50] = -1
+#unacessible
+
+marked_tiles[1][51] = -2
+#empty house
+
+marked_tiles[1][52] = -2
+#empty house
+
+marked_tiles[0][53] = -1
+#unacessible
+
+marked_tiles[0][54] = -1
+#unacessible
+
+marked_tiles[0][55] = -1
+#unacessible
+
+marked_tiles[0][56] = -1
+#unacessible
+
+marked_tiles[0][57] = -1
+#unacessible
+
+marked_tiles[0][58] = -1
+#unacessible
+
+marked_tiles[0][59] = -1
+#unacessible
+
+marked_tiles[2][59] = -1
+#unacessible
+
+marked_tiles[2][57] = -1
+#unacessible
+
+marked_tiles[2][56] = -1
+#unacessible
+
+marked_tiles[2][54] = -1
+#unacessible
+
+marked_tiles[4][51] = -1
+#unacessible
+
+marked_tiles[4][50] = -1
+#unacessible
+
+marked_tiles[5][50] = -1
+#unacessible
+
+marked_tiles[5][51] = -1
+#unacessible
+
+marked_tiles[5][48] = -2
+#empty house
+
+marked_tiles[5][47] = -2
+#empty house
+
+marked_tiles[4][47] = -1
+#unacessible
+
+marked_tiles[3][48] = -1
+#unacessible
+
+marked_tiles[3][49] = -1
+#unacessible
+
+marked_tiles[4][49] = -1
+#unacessible
+
+marked_tiles[7][48] = -1
+#unacessible
+
+marked_tiles[7][42] = -2
+#empty house
+
+marked_tiles[7][43] = -2
+#empty house
+
+marked_tiles[6][43] = -1
+#unacessible
+
+marked_tiles[6][42] = -1
+#unacessible
+
+marked_tiles[8][40] = -1
+#unacessible
+
+marked_tiles[9][40] = -2
+#empty house
+
+marked_tiles[9][43] = -2
+#empty house
+
+marked_tiles[9][44] = -2
+#empty house
+
+marked_tiles[8][44] = -1
+#unacessible
+
+marked_tiles[8][43] = -1
+#unacessible
+
+marked_tiles[8][54] = -1
+#unacessible
+
+marked_tiles[5][54] = -1
+#unacessible
+
+marked_tiles[7][57] = -1
+#unacessible
+
+marked_tiles[7][58] = -1
+#unacessible
+
+marked_tiles[7][59] = -1
+#unacessible
+
+marked_tiles[6][57] = -1
+#unacessible
+
+marked_tiles[5][55] = -1
+#unacessible
+
+marked_tiles[5][57] = -1
+#unacessible
+
+marked_tiles[4][57] = -1
+#unacessible
+
+marked_tiles[3][56] = -1
+#unacessible
+
+marked_tiles[4][55] = -1
+#unacessible
+
+marked_tiles[4][54] = -1
+#unacessible
+
+marked_tiles[3][54] = -1
+#unacessible
+
+marked_tiles[3][55] = -1
+#unacessible
+
+marked_tiles[0][60] = -1
+#unacessible
+
+marked_tiles[0][61] = -1
+#unacessible
+
+marked_tiles[1][62] = -1
+#unacessible
+
+marked_tiles[0][63] = -1
+#unacessible
+
+marked_tiles[1][64] = -1
+#unacessible
+
+marked_tiles[2][64] = -1
+#unacessible
+
+marked_tiles[3][64] = -1
+#unacessible
+
+marked_tiles[4][64] = -1
+#unacessible
+
+marked_tiles[6][64] = -1
+#unacessible
+
+marked_tiles[6][62] = -1
+#unacessible
+
+marked_tiles[5][62] = -1
+#unacessible
+
+marked_tiles[4][62] = -1
+#unacessible
+
+marked_tiles[3][62] = -1
+#unacessible
+
+marked_tiles[3][61] = -1
+#unacessible
+
+marked_tiles[2][60] = -1
+#unacessible
+
+marked_tiles[6][61] = -1
+#unacessible
+
+marked_tiles[6][60] = -1
+#unacessible
+
+marked_tiles[8][61] = -1
+#unacessible
+
+marked_tiles[8][62] = -1
+#unacessible
+
+marked_tiles[8][63] = -1
+#unacessible
+
+marked_tiles[8][64] = -1
+#unacessible
+
+marked_tiles[8][65] = -1
+#unacessible
+
+marked_tiles[8][66] = -1
+#unacessible
+
+marked_tiles[7][67] = -1
+#unacessible
+
+marked_tiles[7][68] = -1
+#unacessible
+
+marked_tiles[7][69] = -1
+#unacessible
+
+marked_tiles[7][70] = -1
+#unacessible
+
+marked_tiles[8][70] = -1
+#unacessible
+
+marked_tiles[9][70] = -1
+#unacessible
+
+marked_tiles[9][72] = -1
+#unacessible
+
+marked_tiles[8][72] = -1
+#unacessible
+
+marked_tiles[9][61] = -1
+#unacessible
+
+marked_tiles[9][62] = -1
+#unacessible
+
+marked_tiles[9][63] = -1
+#unacessible
+
+marked_tiles[9][64] = -1
+#unacessible
+
+marked_tiles[9][65] = -1
+#unacessible
+
+marked_tiles[9][66] = -1
+#unacessible
+
+marked_tiles[9][67] = -1
+#unacessible
+
+marked_tiles[9][68] = -1
+#unacessible
+
+marked_tiles[9][69] = -1
+#unacessible
+
+marked_tiles[10][68] = -1
+#unacessible
+
+marked_tiles[10][66] = -1
+#unacessible
+
+marked_tiles[10][65] = -1
+#unacessible
+
+marked_tiles[10][64] = -1
+#unacessible
+
+marked_tiles[5][67] = -1
+#unacessible
+
+marked_tiles[4][67] = -1
+#unacessible
+
+marked_tiles[5][68] = -1
+#unacessible
+
+marked_tiles[5][69] = -1
+#unacessible
+
+marked_tiles[5][70] = -1
+#unacessible
+
+marked_tiles[5][71] = -1
+#unacessible
+
+marked_tiles[6][72] = -1
+#unacessible
+
+marked_tiles[6][73] = -1
+#unacessible
+
+marked_tiles[5][73] = -1
+#unacessible
+
+marked_tiles[3][73] = -1
+#unacessible
+
+marked_tiles[4][72] = -1
+#unacessible
+
+marked_tiles[3][74] = -1
+#unacessible
+
+marked_tiles[2][74] = -1
+#unacessible
+
+marked_tiles[1][74] = -1
+#unacessible
+
+marked_tiles[0][74] = -1
+#unacessible
+
+marked_tiles[0][77] = -1
+#unacessible
+
+marked_tiles[1][76] = -1
+#unacessible
+
+marked_tiles[2][76] = -1
+#unacessible
+
+marked_tiles[3][76] = -1
+#unacessible
+
+marked_tiles[4][76] = -1
+#unacessible
+
+marked_tiles[5][76] = -1
+#unacessible
+
+marked_tiles[6][75] = -1
+#unacessible
+
+marked_tiles[6][76] = -1
+#unacessible
+
+marked_tiles[7][77] = -1
+#unacessible
+
+marked_tiles[7][79] = -1
+#unacessible
+
+marked_tiles[6][78] = -1
+#unacessible
+
+marked_tiles[8][79] = -1
+#unacessible
+
+marked_tiles[9][78] = -1
+#unacessible
+
+marked_tiles[8][77] = -1
+#unacessible
+
+marked_tiles[4][66] = 46
+#crypte
+
+marked_tiles[5][65] = -1
+#unacessible
+
+marked_tiles[6][65] = -1
+#unacessible
+
+marked_tiles[8][74] = -1
+#unacessible
+
+marked_tiles[10][75] = -1
+#unacessible
+
+marked_tiles[10][76] = -1
+#unacessible
+
+marked_tiles[10][77] = -1
+#unacessible
+
+marked_tiles[10][78] = -1
+#unacessible
+
+marked_tiles[10][79] = -1
+#unacessible
+
+marked_tiles[11][78] = -1
+#unacessible
+
+marked_tiles[11][77] = -2
+#empty house
+
+marked_tiles[11][76] = -2
+#empty house
+
+marked_tiles[11][75] = -1
+#unacessible
+
+marked_tiles[10][73] = -1
+#unacessible
+
+marked_tiles[11][73] = -1
+#unacessible
+
+marked_tiles[11][72] = -2
+#empty house
+
+marked_tiles[11][71] = -2
+#empty house
+
+marked_tiles[11][70] = -1
+#unacessible
+
+marked_tiles[10][70] = -1
+#unacessible
+
+marked_tiles[12][69] = -1
+#unacessible
+
+marked_tiles[12][70] = -1
+#unacessible
+
+marked_tiles[13][70] = -2
+#empty house
+
+marked_tiles[13][69] = -2
+#empty house
+
+marked_tiles[12][66] = -2
+#empty house
+
+marked_tiles[12][65] = -2
+#empty house
+
+marked_tiles[12][64] = -1
+#unacessible
+
+marked_tiles[11][64] = -1
+#unacessible
+
+marked_tiles[12][67] = -1
+#unacessible
+
+marked_tiles[11][67] = -1
+#unacessible
+
+marked_tiles[10][71] = -1
+#unacessible
+
+marked_tiles[13][74] = -1
+#unacessible
+
+marked_tiles[13][73] = -1
+#unacessible
+
+marked_tiles[13][72] = -1
+#unacessible
+
+marked_tiles[14][72] = -1
+#unacessible
+
+marked_tiles[15][72] = -1
+#unacessible
+
+marked_tiles[16][72] = -1
+#unacessible
+
+marked_tiles[17][72] = -1
+#unacessible
+
+marked_tiles[17][73] = -1
+#unacessible
+
+marked_tiles[17][76] = -1
+#unacessible
+
+marked_tiles[17][77] = -1
+#unacessible
+
+marked_tiles[16][77] = -1
+#unacessible
+
+marked_tiles[15][77] = -1
+#unacessible
+
+marked_tiles[14][77] = -1
+#unacessible
+
+marked_tiles[13][77] = -1
+#unacessible
+
+marked_tiles[13][76] = -1
+#unacessible
+
+marked_tiles[13][75] = -1
+#unacessible
+
+marked_tiles[18][73] = -1
+#unacessible
+
+marked_tiles[18][72] = -2
+#empty house
+
+marked_tiles[15][71] = -1
+#unacessible
+
+marked_tiles[13][79] = -1
+#unacessible
+
+marked_tiles[13][78] = -2
+#empty house
+
+marked_tiles[14][78] = -2
+#empty house
+
+marked_tiles[15][78] = -1
+#unacessible
+
+marked_tiles[16][78] = -1
+#unacessible
+
+marked_tiles[16][79] = -2
+#empty house
+
+marked_tiles[19][78] = -2
+#empty house
+
+marked_tiles[19][79] = -1
+#unacessible
+
+marked_tiles[20][77] = -1
+#unacessible
+
+marked_tiles[19][76] = -2
+#empty house
+
+marked_tiles[19][75] = -2
+#empty house
+
+marked_tiles[20][74] = -1
+#unacessible
+
+marked_tiles[19][70] = -1
+#unacessible
+
+marked_tiles[19][69] = -1
+#unacessible
+
+marked_tiles[16][66] = -1
+#unacessible
+
+marked_tiles[17][66] = -2
+#empty house
+
+marked_tiles[17][67] = -2
+#empty house
+
+marked_tiles[16][67] = -1
+#unacessible
+
+marked_tiles[16][68] = -2
+#empty house
+
+marked_tiles[16][69] = -1
+#unacessible
+
+marked_tiles[15][68] = -2
+#empty house
+
+marked_tiles[15][69] = -1
+#unacessible
+
+marked_tiles[19][65] = -1
+#unacessible
+
+marked_tiles[19][64] = -1
+#unacessible
+
+marked_tiles[19][63] = -1
+#unacessible
+
+marked_tiles[19][62] = -1
+#unacessible
+
+marked_tiles[17][64] = -1
+#unacessible
+
+marked_tiles[17][63] = -2
+#empty house
+
+marked_tiles[17][62] = -2
+#empty house
+
+marked_tiles[17][61] = -2
+#empty house
+
+marked_tiles[17][60] = -1
+#unacessible
+
+marked_tiles[16][60] = -1
+#unacessible
+
+marked_tiles[17][59] = -2
+#empty house
+
+marked_tiles[16][59] = -2
+#empty house
+
+marked_tiles[15][55] = -2
+#empty house
+
+marked_tiles[15][54] = -2
+#empty house
+
+marked_tiles[17][54] = -1
+#unacessible
+
+marked_tiles[14][60] = -2
+#empty house
+
+marked_tiles[14][59] = -2
+#empty house
+
+marked_tiles[14][61] = -1
+#unacessible
+
+marked_tiles[13][61] = -1
+#unacessible
+
+marked_tiles[13][60] = -1
+#unacessible
+
+marked_tiles[13][59] = -1
+#unacessible
+
+marked_tiles[13][58] = -1
+#unacessible
+
+marked_tiles[11][59] = -1
+#unacessible
+
+marked_tiles[11][60] = -2
+#empty house
+
+marked_tiles[11][61] = -2
+#empty house
+
+marked_tiles[11][62] = -1
+#unacessible
+
+marked_tiles[10][62] = -1
+#unacessible
+
+marked_tiles[10][61] = -1
+#unacessible
+
+marked_tiles[10][60] = -1
+#unacessible
+
+marked_tiles[10][59] = -1
+#unacessible
+
+marked_tiles[14][58] = -1
+#unacessible
+
+marked_tiles[14][63] = -1
+#unacessible
+
+marked_tiles[15][64] = -1
+#unacessible
+
+marked_tiles[15][65] = -2
+#empty house
+
+marked_tiles[15][66] = -1
+#unacessible
+
+marked_tiles[15][67] = -1
+#unacessible
+
+marked_tiles[14][67] = -1
+#unacessible
+
+marked_tiles[14][66] = -1
+#unacessible
+
+marked_tiles[14][65] = -1
+#unacessible
+
+marked_tiles[14][64] = -1
+#unacessible
+
+marked_tiles[20][60] = -1
+#unacessible
+
+marked_tiles[20][62] = -1
+#unacessible
+
+marked_tiles[20][63] = -2
+#empty house
+
+marked_tiles[20][64] = -2
+#empty house
+
+marked_tiles[20][65] = -1
+#unacessible
+
+marked_tiles[21][66] = -1
+#unacessible
+
+marked_tiles[20][66] = -1
+#unacessible
+
+marked_tiles[20][67] = -1
+#unacessible
+
+marked_tiles[21][67] = -1
+#unacessible
+
+marked_tiles[18][51] = -1
+#unacessible
+
+marked_tiles[17][51] = -1
+#unacessible
+
+marked_tiles[16][50] = -1
+#unacessible
+
+marked_tiles[16][49] = -1
+#unacessible
+
+marked_tiles[17][48] = -1
+#unacessible
+
+marked_tiles[17][47] = -1
+#unacessible
+
+marked_tiles[17][46] = -1
+#unacessible
+
+marked_tiles[15][45] = -1
+#unacessible
+
+marked_tiles[18][42] = -1
+#unacessible
+
+marked_tiles[13][48] = -1
+#unacessible
+
+marked_tiles[18][45] = -1
+#unacessible
+
+marked_tiles[18][44] = -1
+#unacessible
+
+marked_tiles[19][44] = -1
+#unacessible
+
+marked_tiles[20][46] = -1
+#unacessible
+
+marked_tiles[19][45] = -1
+#unacessible
+
+marked_tiles[20][44] = -1
+#unacessible
+
+marked_tiles[22][45] = -1
+#unacessible
+
+marked_tiles[21][44] = -1
+#unacessible
+
+marked_tiles[21][46] = -1
+#unacessible
+
+marked_tiles[20][43] = -1
+#unacessible
+
+marked_tiles[21][41] = -1
+#unacessible
+
+marked_tiles[21][40] = -1
+#unacessible
+
+marked_tiles[22][41] = -1
+#unacessible
+
+marked_tiles[22][43] = -1
+#unacessible
+
+marked_tiles[21][43] = -1
+#unacessible
+
+marked_tiles[23][43] = -1
+#unacessible
+
+marked_tiles[24][43] = -1
+#unacessible
+
+marked_tiles[25][43] = -1
+#unacessible
+
+marked_tiles[26][43] = -1
+#unacessible
+
+marked_tiles[27][42] = -1
+#unacessible
+
+marked_tiles[26][41] = -1
+#unacessible
+
+marked_tiles[25][41] = -1
+#unacessible
+
+marked_tiles[24][41] = -1
+#unacessible
+
+marked_tiles[23][41] = -1
+#unacessible
+
+marked_tiles[20][38] = -1
+#unacessible
+
+marked_tiles[21][38] = -1
+#unacessible
+
+marked_tiles[22][38] = -1
+#unacessible
+
+marked_tiles[22][39] = -1
+#unacessible
+
+marked_tiles[19][39] = -1
+#unacessible
+
+marked_tiles[18][39] = -1
+#unacessible
+
+marked_tiles[17][38] = -1
+#unacessible
+
+marked_tiles[16][38] = -1
+#unacessible
+
+marked_tiles[15][39] = -1
+#unacessible
+
+marked_tiles[14][39] = -1
+#unacessible
+
+marked_tiles[13][39] = -1
+#unacessible
+
+marked_tiles[12][40] = -1
+#unacessible
+
+marked_tiles[11][40] = -1
+#unacessible
+
+marked_tiles[11][39] = -1
+#unacessible
+
+marked_tiles[11][38] = -1
+#unacessible
+
+marked_tiles[11][37] = -1
+#unacessible
+
+marked_tiles[11][36] = -1
+#unacessible
+
+marked_tiles[10][36] = -1
+#unacessible
+
+marked_tiles[19][50] = -1
+#unacessible
+
+marked_tiles[20][50] = -1
+#unacessible
+
+marked_tiles[21][50] = -1
+#unacessible
+
+marked_tiles[22][51] = -1
+#unacessible
+
+marked_tiles[22][52] = -1
+#unacessible
+
+marked_tiles[23][50] = -1
+#unacessible
+
+marked_tiles[23][49] = -1
+#unacessible
+
+marked_tiles[22][48] = -1
+#unacessible
+
+marked_tiles[22][47] = -1
+#unacessible
+
+marked_tiles[23][46] = -1
+#unacessible
+
+marked_tiles[24][46] = -1
+#unacessible
+
+marked_tiles[25][46] = -1
+#unacessible
+
+marked_tiles[26][46] = -1
+#unacessible
+
+marked_tiles[27][47] = -1
+#unacessible
+
+marked_tiles[26][48] = -1
+#unacessible
+
+marked_tiles[27][48] = -1
+#unacessible
+
+marked_tiles[22][59] = -1
+#unacessible
+
+marked_tiles[20][59] = -1
+#unacessible
+
+marked_tiles[20][58] = -2
+#empty house
+
+marked_tiles[22][58] = -2
+#empty house
+
+marked_tiles[23][56] = -2
+#empty house
+
+marked_tiles[23][55] = -2
+#empty house
+
+marked_tiles[30][54] = -1
+#unacessible
+
+marked_tiles[30][53] = -1
+#unacessible
+
+marked_tiles[56][60] = -1
+#unacessible
+
+marked_tiles[57][61] = -1
+#unacessible
+
+marked_tiles[58][62] = -1
+#unacessible
+
+marked_tiles[59][63] = -1
+#unacessible
+
+marked_tiles[32][60] = -1
+#unacessible
+
+marked_tiles[33][61] = -1
+#unacessible
+
+marked_tiles[34][61] = -1
+#unacessible
+
+marked_tiles[37][60] = -1
+#unacessible
+
+marked_tiles[36][61] = -1
+#unacessible
+
+marked_tiles[37][61] = -1
+#unacessible
+
+marked_tiles[38][61] = -1
+#unacessible
+
+marked_tiles[39][60] = -1
+#unacessible
+
+marked_tiles[38][65] = -1
+#unacessible
+
+marked_tiles[37][65] = -1
+#unacessible
+
+marked_tiles[36][65] = -1
+#unacessible
+
+marked_tiles[35][64] = -1
+#unacessible
+
+marked_tiles[34][63] = -1
+#unacessible
+
+marked_tiles[34][62] = -1
+#unacessible
+
+marked_tiles[38][66] = -1
+#unacessible
+
+marked_tiles[38][67] = -1
+#unacessible
+
+marked_tiles[38][68] = -1
+#unacessible
+
+marked_tiles[37][69] = -1
+#unacessible
+
+marked_tiles[37][70] = -1
+#unacessible
+
+marked_tiles[38][71] = -1
+#unacessible
+
+marked_tiles[38][72] = -1
+#unacessible
+
+marked_tiles[38][73] = -1
+#unacessible
+
+marked_tiles[39][73] = -1
+#unacessible
+
+marked_tiles[40][73] = -1
+#unacessible
+
+marked_tiles[41][73] = -1
+#unacessible
+
+marked_tiles[42][73] = -1
+#unacessible
+
+marked_tiles[42][72] = -1
+#unacessible
+
+marked_tiles[44][72] = -1
+#unacessible
+
+marked_tiles[45][73] = -1
+#unacessible
+
+marked_tiles[45][74] = -1
+#unacessible
+
+marked_tiles[45][75] = -1
+#unacessible
+
+marked_tiles[45][72] = -1
+#unacessible
+
+marked_tiles[46][71] = -1
+#unacessible
+
+marked_tiles[46][70] = -1
+#unacessible
+
+marked_tiles[48][69] = -1
+#unacessible
+
+marked_tiles[47][70] = -1
+#unacessible
+
+marked_tiles[48][68] = -1
+#unacessible
+
+marked_tiles[48][67] = -1
+#unacessible
+
+marked_tiles[48][66] = -1
+#unacessible
+
+marked_tiles[48][65] = -1
+#unacessible
+
+marked_tiles[49][65] = -1
+#unacessible
+
+marked_tiles[50][65] = -1
+#unacessible
+
+marked_tiles[51][64] = -1
+#unacessible
+
+marked_tiles[51][63] = -1
+#unacessible
+
+marked_tiles[52][62] = -1
+#unacessible
+
+marked_tiles[53][61] = -1
+#unacessible
+
+marked_tiles[54][60] = -1
+#unacessible
+
+marked_tiles[44][66] = -1
+#unacessible
+
+marked_tiles[42][66] = -1
+#unacessible
+
+marked_tiles[42][67] = -1
+#unacessible
+
+marked_tiles[42][68] = -1
+#unacessible
+
+marked_tiles[41][75] = -2
+#empty house
+
+marked_tiles[41][76] = -2
+#empty house
+
+marked_tiles[44][76] = -1
+#unacessible
+
+marked_tiles[44][77] = -1
+#unacessible
+
+marked_tiles[43][78] = -1
+#unacessible
+
+marked_tiles[42][78] = -1
+#unacessible
+
+marked_tiles[42][79] = -1
+#unacessible
+
+marked_tiles[41][79] = -1
+#unacessible
+
+marked_tiles[40][78] = -1
+#unacessible
+
+marked_tiles[39][75] = -1
+#unacessible
+
+marked_tiles[38][75] = -1
+#unacessible
+
+marked_tiles[37][75] = -1
+#unacessible
+
+marked_tiles[37][73] = -1
+#unacessible
+
+marked_tiles[39][77] = -1
+#unacessible
+
+marked_tiles[39][76] = -1
+#unacessible
+
+marked_tiles[37][76] = -1
+#unacessible
+
+marked_tiles[37][77] = -1
+#unacessible
+
+marked_tiles[36][78] = -1
+#unacessible
+
+marked_tiles[35][78] = -1
+#unacessible
+
+marked_tiles[34][78] = -1
+#unacessible
+
+marked_tiles[33][78] = -1
+#unacessible
+
+marked_tiles[33][76] = -1
+#unacessible
+
+marked_tiles[32][77] = -1
+#unacessible
+
+marked_tiles[34][76] = -1
+#unacessible
+
+marked_tiles[34][75] = -1
+#unacessible
+
+marked_tiles[34][73] = -1
+#unacessible
+
+marked_tiles[33][75] = -1
+#unacessible
+
+marked_tiles[33][73] = -1
+#unacessible
+
+marked_tiles[35][72] = -1
+#unacessible
+
+marked_tiles[36][71] = -1
+#unacessible
+
+marked_tiles[37][72] = -1
+#unacessible
+
+marked_tiles[33][72] = -1
+#unacessible
+
+marked_tiles[34][72] = -1
+#unacessible
+
+marked_tiles[35][70] = -1
+#unacessible
+
+marked_tiles[35][69] = -1
+#unacessible
+
+marked_tiles[36][68] = -1
+#unacessible
+
+marked_tiles[31][62] = -1
+#unacessible
+
+marked_tiles[31][61] = -1
+#unacessible
+
+marked_tiles[31][60] = -1
+#unacessible
+
+marked_tiles[31][63] = -1
+#unacessible
+
+marked_tiles[31][64] = -1
+#unacessible
+
+marked_tiles[32][64] = -1
+#unacessible
+
+marked_tiles[33][65] = -1
+#unacessible
+
+marked_tiles[32][66] = -1
+#unacessible
+
+marked_tiles[31][66] = -1
+#unacessible
+
+marked_tiles[31][67] = -1
+#unacessible
+
+marked_tiles[32][67] = -1
+#unacessible
+
+marked_tiles[34][66] = -1
+#unacessible
+
+marked_tiles[35][66] = -1
+#unacessible
+
+marked_tiles[36][66] = -1
+#unacessible
+
+marked_tiles[37][67] = -1
+#unacessible
+
+marked_tiles[33][70] = -1
+#unacessible
+
+marked_tiles[33][69] = -1
+#unacessible
+
+marked_tiles[32][69] = -1
+#unacessible
+
+marked_tiles[32][70] = -1
+#unacessible
+
+marked_tiles[31][71] = -1
+#unacessible
+
+marked_tiles[30][72] = -1
+#unacessible
+
+marked_tiles[30][73] = -1
+#unacessible
+
+marked_tiles[32][76] = -1
+#unacessible
+
+marked_tiles[31][76] = -1
+#unacessible
+
+marked_tiles[31][77] = -1
+#unacessible
+
+marked_tiles[29][79] = -1
+#unacessible
+
+marked_tiles[28][78] = -1
+#unacessible
+
+marked_tiles[28][77] = -1
+#unacessible
+
+marked_tiles[26][76] = -1
+#unacessible
+
+marked_tiles[27][77] = -1
+#unacessible
+
+marked_tiles[31][70] = -1
+#unacessible
+
+marked_tiles[30][70] = -1
+#unacessible
+
+marked_tiles[29][62] = -1
+#unacessible
+
+marked_tiles[29][61] = -1
+#unacessible
+
+marked_tiles[28][61] = -1
+#unacessible
+
+marked_tiles[28][62] = -1
+#unacessible
+
+marked_tiles[28][65] = -1
+#unacessible
+
+marked_tiles[28][66] = -1
+#unacessible
+
+marked_tiles[28][67] = -1
+#unacessible
+
+marked_tiles[28][68] = -1
+#unacessible
+
+marked_tiles[27][68] = -1
+#unacessible
+
+marked_tiles[27][69] = -1
+#unacessible
+
+marked_tiles[28][69] = -1
+#unacessible
+
+marked_tiles[27][70] = -2
+#empty house
+
+marked_tiles[25][70] = -1
+#unacessible
+
+marked_tiles[25][71] = -1
+#unacessible
+
+marked_tiles[24][71] = -1
+#unacessible
+
+marked_tiles[24][70] = -1
+#unacessible
+
+marked_tiles[23][70] = -1
+#unacessible
+
+marked_tiles[22][70] = -1
+#unacessible
+
+marked_tiles[22][69] = -1
+#unacessible
+
+marked_tiles[23][69] = -1
+#unacessible
+
+marked_tiles[23][68] = -1
+#unacessible
+
+marked_tiles[23][67] = -1
+#unacessible
+
+marked_tiles[24][67] = -1
+#unacessible
+
+marked_tiles[24][68] = -1
+#unacessible
+
+marked_tiles[26][65] = -1
+#unacessible
+
+marked_tiles[25][65] = -1
+#unacessible
+
+marked_tiles[25][64] = -1
+#unacessible
+
+marked_tiles[26][64] = -1
+#unacessible
+
+marked_tiles[24][63] = -1
+#unacessible
+
+marked_tiles[23][63] = -1
+#unacessible
+
+marked_tiles[23][64] = -1
+#unacessible
+
+marked_tiles[24][64] = -1
+#unacessible
+
+marked_tiles[20][69] = -1
+#unacessible
+
+marked_tiles[20][70] = -1
+#unacessible
+
+marked_tiles[21][74] = -1
+#unacessible
+
+marked_tiles[21][75] = -1
+#unacessible
+
+marked_tiles[21][77] = -1
+#unacessible
+
+marked_tiles[21][78] = -1
+#unacessible
+
+marked_tiles[22][79] = -1
+#unacessible
+
+marked_tiles[23][78] = -1
+#unacessible
+
+marked_tiles[24][78] = -1
+#unacessible
+
+marked_tiles[25][77] = -1
+#unacessible
+
+marked_tiles[25][76] = -1
+#unacessible
+
+marked_tiles[25][74] = -1
+#unacessible
+
+marked_tiles[26][74] = -1
+#unacessible
+
+marked_tiles[29][73] = -1
+#unacessible
+
+marked_tiles[28][73] = -1
+#unacessible
+
+marked_tiles[27][73] = -1
+#unacessible
+
+marked_tiles[26][73] = -1
+#unacessible
+
+marked_tiles[27][72] = -1
+#unacessible
+
+marked_tiles[28][72] = -1
+#unacessible
+
+marked_tiles[29][72] = -1
+#unacessible
+
+marked_tiles[25][73] = -1
+#unacessible
+
+marked_tiles[20][76] = -2
+#empty house
+
+marked_tiles[29][67] = -1
+#unacessible
+
+marked_tiles[29][66] = -1
+#unacessible
+
+marked_tiles[30][79] = -1
+#unacessible
+
+marked_tiles[31][79] = -1
+#unacessible
+
+marked_tiles[32][78] = -1
+#unacessible
+
+marked_tiles[20][75] = -1
+#unacessible
+
+marked_tiles[38][60] = -1
+#unacessible
+
+marked_tiles[63][65] = -1
+#unacessible
+
+marked_tiles[62][62] = -1
+#unacessible
+
+marked_tiles[67][70] = -1
+#unacessible
+
+marked_tiles[66][64] = -1
+#unacessible
+
+marked_tiles[62][72] = -1
+#unacessible
+
+marked_tiles[65][76] = -1
+#unacessible
+
+marked_tiles[64][76] = -1
+#unacessible
+
+marked_tiles[63][77] = -1
+#unacessible
+
+marked_tiles[62][77] = -1
+#unacessible
+
+marked_tiles[61][77] = -1
+#unacessible
+
+marked_tiles[60][77] = -1
+#unacessible
+
+marked_tiles[59][77] = -1
+#unacessible
+
+marked_tiles[58][77] = -1
+#unacessible
+
+marked_tiles[57][76] = -1
+#unacessible
+
+marked_tiles[56][76] = -1
+#unacessible
+
+marked_tiles[55][77] = -1
+#unacessible
+
+marked_tiles[54][77] = -1
+#unacessible
+
+marked_tiles[53][77] = -1
+#unacessible
+
+marked_tiles[52][77] = -1
+#unacessible
+
+marked_tiles[52][76] = -1
+#unacessible
+
+marked_tiles[52][75] = -1
+#unacessible
+
+marked_tiles[52][74] = -1
+#unacessible
+
+marked_tiles[53][73] = -1
+#unacessible
+
+marked_tiles[53][72] = -1
+#unacessible
+
+marked_tiles[52][71] = -1
+#unacessible
+
+marked_tiles[52][70] = -1
+#unacessible
+
+marked_tiles[53][70] = -1
+#unacessible
+
+marked_tiles[54][70] = -1
+#unacessible
+
+marked_tiles[55][69] = -1
+#unacessible
+
+marked_tiles[56][68] = -1
+#unacessible
+
+marked_tiles[56][67] = -1
+#unacessible
+
+marked_tiles[56][66] = -1
+#unacessible
+
+marked_tiles[57][66] = -1
+#unacessible
+
+marked_tiles[58][66] = -1
+#unacessible
+
+marked_tiles[59][66] = -1
+#unacessible
+
+marked_tiles[60][66] = -1
+#unacessible
+
+marked_tiles[60][65] = -1
+#unacessible
+
+marked_tiles[60][64] = -1
+#unacessible
+
+marked_tiles[66][66] = -1
+#unacessible
+
+marked_tiles[66][67] = -1
+#unacessible
+
+marked_tiles[66][68] = -1
+#unacessible
+
+marked_tiles[66][61] = -1
+#unacessible
+
+marked_tiles[66][60] = -1
+#unacessible
+
+marked_tiles[69][59] = -1
+#unacessible
+
+marked_tiles[68][59] = -1
+#unacessible
+
+marked_tiles[68][58] = -1
+#unacessible
+
+marked_tiles[69][58] = -1
+#unacessible
+
+marked_tiles[67][57] = -1
+#unacessible
+
+marked_tiles[67][58] = -1
+#unacessible
+
+marked_tiles[65][59] = -1
+#unacessible
+
+marked_tiles[65][58] = -1
+#unacessible
+
+marked_tiles[65][57] = -1
+#unacessible
+
+marked_tiles[66][56] = -1
+#unacessible
+
+marked_tiles[67][55] = -1
+#unacessible
+
+marked_tiles[67][54] = -1
+#unacessible
+
+marked_tiles[67][53] = -1
+#unacessible
+
+marked_tiles[68][52] = -1
+#unacessible
+
+marked_tiles[69][52] = -1
+#unacessible
+
+marked_tiles[70][52] = -1
+#unacessible
+
+marked_tiles[71][51] = -1
+#unacessible
+
+marked_tiles[72][51] = -1
+#unacessible
+
+marked_tiles[73][51] = -1
+#unacessible
+
+marked_tiles[74][50] = -1
+#unacessible
+
+marked_tiles[75][50] = -1
+#unacessible
+
+marked_tiles[76][51] = -1
+#unacessible
+
+marked_tiles[76][52] = -1
+#unacessible
+
+marked_tiles[75][53] = -1
+#unacessible
+
+marked_tiles[74][53] = -1
+#unacessible
+
+marked_tiles[73][53] = -1
+#unacessible
+
+marked_tiles[72][54] = -1
+#unacessible
+
+marked_tiles[71][55] = -1
+#unacessible
+
+marked_tiles[70][56] = -1
+#unacessible
+
+marked_tiles[69][54] = -1
+#unacessible
+
+marked_tiles[69][55] = -1
+#unacessible
+
+marked_tiles[69][56] = -1
+#unacessible
+
+marked_tiles[70][57] = -1
+#unacessible
+
+marked_tiles[70][58] = -1
+#unacessible
+
+marked_tiles[70][59] = -1
+#unacessible
+
+marked_tiles[70][60] = -1
+#unacessible
+
+marked_tiles[70][61] = -1
+#unacessible
+
+marked_tiles[70][62] = -1
+#unacessible
+
+marked_tiles[71][62] = -1
+#unacessible
+
+marked_tiles[72][63] = -1
+#unacessible
+
+marked_tiles[72][64] = -1
+#unacessible
+
+marked_tiles[72][65] = -1
+#unacessible
+
+marked_tiles[72][66] = -1
+#unacessible
+
+marked_tiles[70][66] = -1
+#unacessible
+
+marked_tiles[70][65] = -1
+#unacessible
+
+marked_tiles[72][67] = -1
+#unacessible
+
+marked_tiles[72][68] = -1
+#unacessible
+
+marked_tiles[70][67] = -1
+#unacessible
+
+marked_tiles[70][68] = -1
+#unacessible
+
+marked_tiles[70][69] = -1
+#unacessible
+
+marked_tiles[71][69] = -1
+#unacessible
+
+marked_tiles[69][70] = -1
+#unacessible
+
+marked_tiles[69][71] = -1
+#unacessible
+
+marked_tiles[70][72] = -1
+#unacessible
+
+marked_tiles[71][71] = -1
+#unacessible
+
+marked_tiles[71][70] = -1
+#unacessible
+
+marked_tiles[64][59] = -1
+#unacessible
+
+marked_tiles[63][59] = -1
+#unacessible
+
+marked_tiles[62][60] = -1
+#unacessible
+
+marked_tiles[61][61] = -1
+#unacessible
+
+marked_tiles[61][66] = -1
+#unacessible
+
+marked_tiles[61][67] = -1
+#unacessible
+
+marked_tiles[57][71] = -1
+#unacessible
+
+marked_tiles[57][70] = -1
+#unacessible
+
+marked_tiles[57][74] = -1
+#unacessible
+
+marked_tiles[57][73] = -1
+#unacessible
+
+marked_tiles[57][72] = -1
+#unacessible
+
+marked_tiles[59][73] = -1
+#unacessible
+
+marked_tiles[59][69] = -1
+#unacessible
+
+marked_tiles[59][70] = -1
+#unacessible
+
+marked_tiles[59][71] = -1
+#unacessible
+
+marked_tiles[61][74] = -1
+#unacessible
+
+marked_tiles[61][73] = -1
+#unacessible
+
+marked_tiles[62][69] = -1
+#unacessible
+
+marked_tiles[62][70] = -1
+#unacessible
+
+marked_tiles[65][71] = -1
+#unacessible
+
+marked_tiles[65][72] = -1
+#unacessible
+
+marked_tiles[63][75] = -1
+#unacessible
+
+marked_tiles[63][74] = -1
+#unacessible
+
+marked_tiles[66][76] = -1
+#unacessible
+
+marked_tiles[67][75] = -1
+#unacessible
+
+marked_tiles[68][74] = -1
+#unacessible
+
+marked_tiles[69][73] = -1
+#unacessible
+
+marked_tiles[44][22] = -1
+#unacessible
+
+marked_tiles[43][22] = -1
+#unacessible
+
+marked_tiles[42][22] = -1
+#unacessible
+
+marked_tiles[41][23] = -1
+#unacessible
+
+marked_tiles[41][24] = -1
+#unacessible
+
+marked_tiles[41][25] = -1
+#unacessible
+
+marked_tiles[43][24] = -1
+#unacessible
+
+marked_tiles[43][25] = -1
+#unacessible
+
+marked_tiles[63][4] = -1
+#unacessible
+
+marked_tiles[63][3] = -1
+#unacessible
+
+marked_tiles[64][3] = -2
+#empty house
+
+marked_tiles[64][4] = -2
+#empty house
+
+marked_tiles[62][5] = -1
+#unacessible
+
+marked_tiles[67][7] = -1
+#unacessible
+
+marked_tiles[69][2] = -1
+#unacessible
+
+marked_tiles[70][0] = -1
+#unacessible
+
+marked_tiles[70][1] = -1
+#unacessible
+
+marked_tiles[70][2] = -1
+#unacessible
+
+marked_tiles[70][3] = -1
+#unacessible
+
+marked_tiles[70][4] = -1
+#unacessible
+
+marked_tiles[70][5] = -1
+#unacessible
+
+marked_tiles[70][6] = -1
+#unacessible
+
+marked_tiles[70][7] = -1
+#unacessible
+
+marked_tiles[70][8] = -1
+#unacessible
+
+marked_tiles[70][9] = -1
+#unacessible
+
+marked_tiles[70][10] = -1
+#unacessible
+
+marked_tiles[70][11] = -1
+#unacessible
+
+marked_tiles[70][12] = -1
+#unacessible
+
+marked_tiles[70][13] = -1
+#unacessible
+
+marked_tiles[70][14] = -1
+#unacessible
+
+marked_tiles[70][15] = -1
+#unacessible
+
+marked_tiles[70][16] = -1
+#unacessible
+
+marked_tiles[70][17] = -1
+#unacessible
+
+marked_tiles[70][18] = -1
+#unacessible
+
+marked_tiles[70][19] = -1
+#unacessible
+
+marked_tiles[71][19] = -1
+#unacessible
+
+marked_tiles[72][19] = -1
+#unacessible
+
+marked_tiles[73][19] = -1
+#unacessible
+
+marked_tiles[74][19] = -1
+#unacessible
+
+marked_tiles[75][19] = -1
+#unacessible
+
+marked_tiles[76][19] = -1
+#unacessible
+
+marked_tiles[77][19] = -1
+#unacessible
+
+marked_tiles[78][19] = -1
+#unacessible
+
+marked_tiles[79][19] = -1
+#unacessible
+
+marked_tiles[78][15] = -1
+#unacessible
+
+marked_tiles[78][14] = -1
+#unacessible
+
+marked_tiles[78][13] = -1
+#unacessible
+
+marked_tiles[78][12] = -1
+#unacessible
+
+marked_tiles[78][11] = -1
+#unacessible
+
+marked_tiles[78][10] = -1
+#unacessible
+
+marked_tiles[78][9] = -1
+#unacessible
+
+marked_tiles[78][8] = -1
+#unacessible
+
+marked_tiles[78][7] = -1
+#unacessible
+
+marked_tiles[78][6] = -1
+#unacessible
+
+marked_tiles[78][5] = -1
+#unacessible
+
+marked_tiles[78][4] = -1
+#unacessible
+
+marked_tiles[77][3] = -1
+#unacessible
+
+marked_tiles[76][3] = -1
+#unacessible
+
+marked_tiles[75][3] = -1
+#unacessible
+
+marked_tiles[74][3] = -1
+#unacessible
+
+marked_tiles[73][3] = -1
+#unacessible
+
+marked_tiles[72][3] = -1
+#unacessible
+
+marked_tiles[72][4] = -1
+#unacessible
+
+marked_tiles[73][5] = -1
+#unacessible
+
+marked_tiles[73][6] = -1
+#unacessible
+
+marked_tiles[73][13] = -1
+#unacessible
+
+marked_tiles[73][14] = -1
+#unacessible
+
+marked_tiles[72][15] = -1
+#unacessible
+
+marked_tiles[77][14] = -1
+#unacessible
+
+marked_tiles[77][11] = -1
+#unacessible
+
+marked_tiles[77][8] = -1
+#unacessible
+
+marked_tiles[77][5] = -1
+#unacessible
+
+marked_tiles[73][16] = -1
+#unacessible
+
+marked_tiles[74][16] = -1
+#unacessible
+
+marked_tiles[75][16] = -1
+#unacessible
+
+marked_tiles[76][16] = -1
+#unacessible
+
+marked_tiles[77][16] = -1
+#unacessible
+
+marked_tiles[5][15] = -1
+#unacessible
+
+marked_tiles[5][16] = -1
+#unacessible
+
+marked_tiles[16][38] = -2
+#empty house
+
+marked_tiles[15][38] = -1
+#unacessible
+
+marked_tiles[15][37] = -1
+#unacessible
+
+marked_tiles[16][37] = -1
+#unacessible
+
+marked_tiles[16][74] = -1
+#unacessible
+
+marked_tiles[16][75] = -1
+#unacessible
+
+marked_tiles[3][66] = -1
+#unacessible
+
+marked_tiles[3][67] = -1
+#unacessible
+
+marked_tiles[76][24] = -1
+#unacessible
+
+marked_tiles[76][23] = -1
+#unacessible
+
+marked_tiles[69][26] = -1
+#unacessible
+
+marked_tiles[69][27] = -1
+#unacessible
+
+marked_tiles[69][28] = -1
+#unacessible
+
+marked_tiles[69][29] = -1
+#unacessible
+
+marked_tiles[71][31] = -1
+#unacessible
+
+marked_tiles[71][32] = -1
+#unacessible
+
+marked_tiles[71][33] = -1
+#unacessible
+
+marked_tiles[71][34] = -1
+#unacessible
+
+marked_tiles[72][34] = -1
+#unacessible
+
+marked_tiles[72][31] = -1
+#unacessible
+
+marked_tiles[72][32] = -2
+#empty house
+
+marked_tiles[72][33] = -2
+#empty house
+
+marked_tiles[75][32] = -2
+#empty house
+
+marked_tiles[75][31] = -2
+#empty house
+
+marked_tiles[77][31] = -2
+#empty house
+
+marked_tiles[77][32] = -2
+#empty house
+
+marked_tiles[78][34] = -2
+#empty house
+
+marked_tiles[78][35] = -2
+#empty house
+
+marked_tiles[76][35] = -2
+#empty house
+
+marked_tiles[76][36] = -2
+#empty house
+
+marked_tiles[77][29] = -2
+#empty house
+
+marked_tiles[77][28] = -2
+#empty house
+
+marked_tiles[77][23] = -2
+#empty house
+
+marked_tiles[77][24] = -2
+#empty house
+
+marked_tiles[77][25] = -1
+#unacessible
+
+marked_tiles[77][26] = -1
+#unacessible
+
+marked_tiles[76][26] = -1
+#unacessible
+
+marked_tiles[75][26] = -1
+#unacessible
+
+marked_tiles[74][26] = -1
+#unacessible
+
+marked_tiles[73][26] = -1
+#unacessible
+
+marked_tiles[73][25] = -1
+#unacessible
+
+marked_tiles[73][24] = -1
+#unacessible
+
+marked_tiles[73][23] = -1
+#unacessible
+
+marked_tiles[73][22] = -1
+#unacessible
+
+marked_tiles[73][21] = -1
+#unacessible
+
+marked_tiles[74][21] = -1
+#unacessible
+
+marked_tiles[75][21] = -1
+#unacessible
+
+marked_tiles[76][21] = -1
+#unacessible
+
+marked_tiles[77][21] = -1
+#unacessible
+
+marked_tiles[77][22] = -1
+#unacessible
+
+marked_tiles[79][21] = -2
+#empty house
+
+marked_tiles[79][20] = -2
+#empty house
+
+marked_tiles[71][20] = -1
+#unacessible
+
+marked_tiles[70][20] = -1
+#unacessible
+
+marked_tiles[70][21] = -1
+#unacessible
+
+marked_tiles[70][22] = -1
+#unacessible
+
+marked_tiles[70][23] = -1
+#unacessible
+
+marked_tiles[71][23] = -1
+#unacessible
+
+marked_tiles[71][21] = -2
+#empty house
+
+marked_tiles[71][22] = -2
+#empty house
+
+marked_tiles[70][28] = -2
+#empty house
+
+marked_tiles[70][27] = -2
+#empty house
+
+marked_tiles[70][26] = -1
+#unacessible
+
+marked_tiles[73][28] = -2
+#empty house
+
+marked_tiles[73][29] = -2
+#empty house
+
+marked_tiles[75][28] = -2
+#empty house
+
+marked_tiles[75][29] = -2
+#empty house
+
+marked_tiles[79][42] = -1
+#unacessible
+
+marked_tiles[78][41] = -1
+#unacessible
+
+marked_tiles[77][40] = -1
+#unacessible
+
+marked_tiles[76][40] = -1
+#unacessible
+
+marked_tiles[75][40] = -1
+#unacessible
+
+marked_tiles[74][40] = -1
+#unacessible
+
+marked_tiles[73][40] = -1
+#unacessible
+
+marked_tiles[72][40] = -1
+#unacessible
+
+marked_tiles[71][41] = -1
+#unacessible
+
+marked_tiles[70][41] = -1
+#unacessible
+
+marked_tiles[76][4] = -1
+#unacessible
+
+marked_tiles[75][5] = -1
+#unacessible
+
+marked_tiles[74][5] = -1
+#unacessible
+
+marked_tiles[72][8] = -1
+#unacessible
+
+marked_tiles[72][7] = -1
+#unacessible
+
+marked_tiles[75][6] = -1
+#unacessible
+
+marked_tiles[77][12] = -1
+#unacessible
+
+marked_tiles[76][14] = -1
+#unacessible
+
+marked_tiles[75][14] = -1
+#unacessible
+
+marked_tiles[74][14] = -1
+#unacessible
+
+marked_tiles[72][11] = -1
+#unacessible
+
+marked_tiles[72][12] = -1
+#unacessible
+
+marked_tiles[71][8] = -1
+#unacessible
+
+marked_tiles[76][5] = -1
+#unacessible
+
+marked_tiles[71][11] = -1
+#unacessible
+
+marked_tiles[71][9] = -1
+#unacessible
+
+marked_tiles[71][10] = -1
+#unacessible
+
+marked_tiles[6][9] = -3
+#un panneau
+
+marked_tiles[19][12] = -4
+#un panneau
+
+marked_tiles[31][10] = -4
+#un panneau
+
+marked_tiles[35][12] = -5
+#un panneau
+
+marked_tiles[40][11] = -6
+#un panneau
+
+marked_tiles[46][18] = -6
+#un panneau
+
+marked_tiles[51][18] = -7
+#un panneau
+
+marked_tiles[46][24] = -9
+#un panneau
+
+marked_tiles[44][47] = -9
+#un panneau
+
+marked_tiles[44][57] = -10
+#un panneau
+
+marked_tiles[55][58] = -11
+#un panneau
+
+marked_tiles[68][23] = -8
+#un panneau
+
+marked_tiles[42][71] = -12
+#un panneau
+
+marked_tiles[36][73] = -13
+#un panneau
+
+marked_tiles[21][72] = -14
+#un panneau
+
+marked_tiles[12][54] = -14
+#un panneau
+
+marked_tiles[24][58] = -14
+#un panneau
+
+marked_tiles[9][48] = -15
+#un panneau
+
+marked_tiles[1][36] = -15
+#un panneau
+
+marked_tiles[12][12] = -16
+#un panneau
+
+marked_tiles[25][11] = 2
+#ambuscade gobelin
+
+marked_tiles[25][12] = 2
+#ambuscade gobelin
+
+marked_tiles[2][29] = 2
+#ambuscade gobelin
+
+marked_tiles[1][29] = 2
+#ambuscade gobelin
+
+marked_tiles[0][29] = 2
+#ambuscade gobelin
+
+marked_tiles[33][15] = 3
+#farore
+
+marked_tiles[33][14] = 3
+#farore
+
+marked_tiles[33][13] = 3
+#farore
+
+marked_tiles[33][12] = 3
+#farore
+
+marked_tiles[45][26] = 4
+#ambuscade squelette (Kheïa)
+
+marked_tiles[42][25] = 4
+#ambuscade squelette (Kheïa)
+
+marked_tiles[41][27] = 4
+#ambuscade squelette (Kheïa)
+
+marked_tiles[41][33] = 4
+#ambuscade squelette (Kheïa)
+
+marked_tiles[48][36] = 4
+#ambuscade squelette (Kheïa)
+
+marked_tiles[43][38] = 4
+#ambuscade squelette (Kheïa)
+
+marked_tiles[64][4] = 5
+#décryptage élémentaires de feu
+
+marked_tiles[64][3] = 5
+#décryptage élémentaires de feu
+
+marked_tiles[7][43] = 6
+#combat araigné géante
+
+marked_tiles[7][42] = 6
+#combat araigné géante
+
+marked_tiles[27][70] = 9
+#decryptage haldarielle
+
+marked_tiles[30][71] = -1
+#unacessible
+
+marked_tiles[60][62] = 10
+#chemin campement orc
+
+marked_tiles[67][68] = 11
+#combat Parz-Karl
+
+marked_tiles[68][68] = 11
+#combat Parz-Karl
+
+marked_tiles[68][67] = 11
+#combat Parz-Karl
+
+marked_tiles[67][69] = 11
+#combat Parz-Karl
+
+marked_tiles[68][66] = 11
+#combat Parz-Karl
+
+marked_tiles[67][66] = 11
+#combat Parz-Karl
+
+marked_tiles[73][10] = 12
+#combat final
+
+marked_tiles[73][9] = 12
+#combat final
+
+marked_tiles[72][9] = 12
+#combat final
+
+marked_tiles[77][24] = 8
+#combat entrainement
+
+marked_tiles[77][23] = 8
+#combat entrainement
+
+marked_tiles[47][13] = 42
+#dialogue Balmac
+
+marked_tiles[47][14] = 42
+#dialogue Balmac
+
+marked_tiles[45][13] = 42
+#dialogue Balmac
+
+marked_tiles[46][15] = 42
+#dialogue Balmac
+
+marked_tiles[42][13] = 41
+#dialogue Gurun
+
+marked_tiles[42][14] = 41
+#dialogue Gurun
+
+marked_tiles[42][15] = 41
+#dialogue Gurun
+
+marked_tiles[15][26] = 43
+#dialogue Olkin
+
+marked_tiles[3][41] = 40
+#dialogue spectre
+
+marked_tiles[2][41] = 40
+#dialogue spectre
+
+marked_tiles[4][41] = 40
+#dialogue spectre
+
+marked_tiles[5][41] = 40
+#dialogue spectre
+
+marked_tiles[5][44] = 40
+#dialogue spectre
+
+marked_tiles[4][44] = 40
+#dialogue spectre
+
+marked_tiles[3][44] = 40
+#dialogue spectre
+
+marked_tiles[2][44] = 40
+#dialogue spectre
+
+marked_tiles[36][40] = 44
+#dialogue Felria
+
+marked_tiles[37][40] = 44
+#dialogue Felria
+
+marked_tiles[38][40] = 44
+#dialogue Felria
+
+marked_tiles[38][41] = 44
+#dialogue Felria
+
+marked_tiles[38][42] = 44
+#dialogue Felria
+
+marked_tiles[17][74] = 45
+#dialogue Endal
+
+marked_tiles[17][75] = 45
+#dialogue Endal
+
+marked_tiles[43][62] = 7
+#scorpion
+
+marked_tiles[42][62] = 7
+#scorpion
+
+marked_tiles[41][62] = 7
+#scorpion
+
+marked_tiles[41][63] = 7
+#scorpion
+
+marked_tiles[41][64] = 7
+#scorpion
+
+marked_tiles[41][65] = 7
+#scorpion
+
+marked_tiles[40][66] = 7
+#scorpion
+
+marked_tiles[40][67] = 7
+#scorpion
+
+marked_tiles[40][68] = 7
+#scorpion
+
+marked_tiles[41][69] = 7
+#scorpion
+
+marked_tiles[42][69] = 7
+#scorpion
+
+marked_tiles[43][69] = 7
+#scorpion
+
+marked_tiles[44][69] = 7
+#scorpion
+
+marked_tiles[45][68] = 7
+#scorpion
+
+marked_tiles[45][67] = 7
+#scorpion
+
+marked_tiles[45][66] = 7
+#scorpion
+
+marked_tiles[46][65] = 7
+#scorpion
+
+marked_tiles[46][64] = 7
+#scorpion
+
+marked_tiles[46][63] = 7
+#scorpion
+
+marked_tiles[46][62] = 7
+#scorpion
+
+marked_tiles[45][62] = 7
+#scorpion

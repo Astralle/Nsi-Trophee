@@ -1,0 +1,37 @@
+--t--Vocabulaire
+--st--Le terminal
+Le terminal est la zone où le résultat d'un programme apparaît. La fonction print() permet d'y afficher du contenu. Dans un terminal habituel, il est également possible d'y écrire directement de plusieurs façons :
+· lorsqu'un programme tourne et exécute la fonction input( ) (non vue au travers de jeu). Elle permet à l'utilisateur d'écrire dans le terminal et d'utiliser ce qu'il y écrit pour adapter le comportement du programme.
+· lorsqu'aucun programme n'est en cours. Dans ce cas, il est possible de faire exécuter divers instructions à l'interpréteur python comme des opérations mathématiques.
+--st--L'IDE
+IDE est l'abrévation de 'Integrated Development Environment' ou en français, Environnement de Développement Intégré. C'est une application permettant aux programmeurs d'écrire du code dans tel ou tel langage de programmation et de le tester. Il facilite le travail des programmeurs en offrant divers fonctionnalitées comme une coloration syntaxique, la possibilité de travailler sur plusieurs fichiers simultanément ou encore de l'autocomplétion.
+--st--Python
+Python est un langage de programmation dit 'typé dynamiquement'. Cela signifie qu'il n'est pas nécessaire de préciser le type d'une donnée et qu'une variable peut changer de type après sa création. (les types sont expliqués plus loin dans le codex)
+--st--Variable
+Une variable est une sorte de conteneur permettant de mettre en mémoire des données pour pouvoir y accéder plus tard. Elle possède un nom auquel est associé une valeur. Ce nom peut-être n'importe quelle chaîne de caractère composée exclusivement de lettres, minuscules ou majuscules, de chiffres et du tiret du bas (underscore). Il n'est cependant pas possible de commencer le nom de la variable par un chiffre. Même si cela ne change rien du point de vue de l'exécution du programme, il existe des conventions de nomages permettant à un code d'être facilement compréhensible par une autre personne que le programmeur. Pour cela, le nom de la variable doit être composée d'un ou plusieurs mots en minuscule et séparés par des underscores. Une variable peut contenir toutes sortes de valeurs, comme un nombre entier, un nombre à virgule ou une chaîne de caractère. 
+--st--Boucles
+Les boucles executent toutes les lignes de code se trouvant sous la boucle et à un niveau d'indentation de plus (1 tab ou 4 espaces, c'est pareil) et les répètent un certain nombre de fois.
+En python, il existe les boucles for qui executent un code un nombre défini de fois, et les boucles while qui effectuent un code tant qu'une valeur est vraie.
+--st--Fonction
+Une fonction python est un bout de code effectuant une action précise que vous définissez. Elle se créée avec def nom_fonction(parametre):. Comme pour les variables, le nom de la fonction doit être en minuscule, tout attaché et doit expliquer clairement ce que votre fonction fait. Entre parenthèse, le ou les paramètres sont des variables que vous pouvez utiliser dans le code de la fonction. Comme pour les boucles, la fonction effectue tout le code écrit avec un niveau d'indentation de plus que la ligne de def.
+--st--Type
+Les types sont
+
+
+--t--Boucles
+Il y a deux types de boucles dans python : les for et les whiles.
+. Les boucles for s'écrivent for variable in liste:. La variable va prendre la valeur de chaque élément de la liste les uns après les autres et effectuer le code, jusqu'à la fin de la liste. Vous pouvez créer une liste de nombres de x à y-1 avec range(x, y). x n'est pas nécessaire, si vous ne le mettez pas, la liste ira de 0 à y-1. Ainsi, range(2) créé la liste [0, 1]. for i in range(2): va donc effectuer deux fois un code, et i va valloir sucessivement 0 puis 1.
+. Les boucles while s'ecrivent while condition:. La condition est un booléen, par exemple x < y. Tant que cette condition est vraie, la boucle s'execute. Il est important de bien modifier la condition à l'intérieur de la boucle pour s'assurer qu'elle ne tourne pas à l'infini. Nous avons eu un problème de boucle infinie pendant la réalisation du jeu, qui nous a coûté plus de 3h de debug.
+--t--Fonction
+
+
+3) Fonction
+4) Type
+5) Objet
+6) methods
+Types
+En Python, comme dans la plupart des langages de programmation, il existe plusieurs 'types' différents. Le type représente la nature d'une donnée et change la façon dont elle est comprise par le programme. Un type définit les opérations pouvant être effectuées sur cette donnée et la manière par laquelle elle est stockée dans la mémoire de l'ordinateur. Pour enregistrer une donnée et pouvoir la réutiliser plus tard, il est nécessaire de l'affecter à une variable. Il existe deux grandes catégories de type :
+a) Les types immuables
+b) Les types mutable 
+
+Fonctions

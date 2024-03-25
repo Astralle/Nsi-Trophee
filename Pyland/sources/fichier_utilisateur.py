@@ -1,0 +1,1 @@
+print("Oui, je parle.")
