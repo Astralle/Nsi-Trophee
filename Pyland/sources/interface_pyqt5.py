@@ -395,7 +395,6 @@ def creer_fenetre(pile : QStackedWidget) -> QWidget :
     pile.addWidget(fenetre)
     return fenetre
 
-
 def creer_layout(interface : dict) -> QHBoxLayout :
     """
     Renvoie le layout global de la fenêtre principale
@@ -608,7 +607,6 @@ def creer_codex(pile_principale : QStackedWidget) -> QWidget :
     codex.paintEvent = lambda event : fond_codex(codex, pile_principale)
     pile_principale.addWidget(codex)
 
-
     # boite portant tout le contenu
     layout = QVBoxLayout()
     layout.setContentsMargins(5, 10, 5, 10)
@@ -695,7 +693,7 @@ def creer_accueil(interface) -> tuple[QLabel, QPushButton] :
     disposition = QVBoxLayout()
     disposition.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
 
-    bouton_commencer = QPushButton('\nCommencer\n') #texte_verify_0()
+    bouton_commencer = QPushButton(texte_verify_0())
     style_sheet_1 = 'background-color : rgb(0, 255, 0); border-radius : 15%;'
     bouton_commencer.setStyleSheet(style_sheet_1)
     bouton_commencer.pressed.connect(lambda: bouton_commencer.setStyleSheet(STYLE_BOUTON_PRESSE + style_sheet_1))

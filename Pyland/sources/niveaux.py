@@ -98,14 +98,14 @@ def trouver_squelette(lst):
 """
 
 squelette_suite = {
-    'message_id': 24,
+    'message_id': 17, # dernier niveau == 16
     'tests': (""),
     'réponses': ("",),
     'condition': dico_dialogue[24]['condition'],
     'progression': 'undead_vivant',
 }
 """
-
+def 
 """
 
 decryptage_feu = {
@@ -125,7 +125,7 @@ def inverse_dialogue(string):
 """ # c'est pas la solution
 
 
-grosses_araignées = {
+grosses_araignees = {
     'message_id': 6,
     'tests': ("print(piece_parfaite(8))", 
               "print(piece_parfaite(5))",
@@ -142,18 +142,27 @@ def piece_parfaite(rayon):
     return 200 <= aire <= 300
 """
 
-araignée_suite = {
-    'message_id': 26,
-    'tests': ("",),
-    'réponses': ('',),
+araignee_suite = {
+    'message_id': 18, # dernier niveau == 16, +1 avec squelette_suite
+    'tests': ("print(cris_e(25.03))",
+                "print(cris_e(2.0))",
+                "print(cris_e(1.9))",
+                "print(cris_e(2.718))",),
+    'réponses': ('""',
+                '"e"',
+                '""',
+                '"e"',),
     'condition': dico_dialogue[26]['condition'],
     'progression': 'araigne_vivante',
 }
 """
-
+def cris_e(nb):
+    if nb >= 2 and nb <= 2:
+        return "e"
+    return ""
 """
 
-Scorpion = {
+scorpion = {
     'message_id': 7,
     'tests': ("print(est_pangramme('Portez ce vieux whisky au juge blond qui fume.'))",
               "print(est_pangramme('Un zebre jaune et quatre wapitis gracieux marcherent vers Xavier.'))",
@@ -360,4 +369,4 @@ aldirien_5 = {
 }
 
 
-liste_niveaux = ({}, debut, embuscade_gobelins, farore, embuscade_squelettes, decryptage_feu, grosses_araignées, Scorpion, l_illusion_du_choix, haldarielle, camp_orc, parz_karl, aldirien_1, aldirien_2, aldirien_3, aldirien_4, aldirien_5)
+liste_niveaux = ({}, debut, embuscade_gobelins, farore, embuscade_squelettes, decryptage_feu, grosses_araignees, scorpion, l_illusion_du_choix, haldarielle, camp_orc, parz_karl, aldirien_1, aldirien_2, aldirien_3, aldirien_4, aldirien_5, araignee_suite, squelette_suite)

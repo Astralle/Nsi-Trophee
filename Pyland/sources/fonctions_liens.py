@@ -10,8 +10,9 @@ from PyQt5.QtMultimedia import QMediaPlayer
 from PyQt5.QtCore import Qt
 
 # constants
-from constantes import HIGHLIGHTING_RULES, VIE_MAX, dico_saved_var
+from constantes import VIE_MAX, dico_saved_var
 from constante_son import SON_INACCESSIBLE
+from coloration import *
 
 # globals
 from fonctions_globales import *

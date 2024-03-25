@@ -67,7 +67,7 @@ def executer_par_defaut(interface : dict) -> None :
     terminal (QTextEdit): Le terminal dans lequel on affiche les résultats
     """
     terminal = interface['terminal']
-    print_terminal(terminal, "reçu signal du bouton 'lancer'...", couleur = QColor(255, 0, 0))
+    print_terminal(terminal, "Aldirien vous avait déjà dit qu'il était inutile de lancer des sorts quand on a pas de problème a résoudre.", couleur = QColor(255, 0, 0))
     texte = interface['zone_texte'].toPlainText()
     if is_legal(texte) :
         try:
@@ -81,7 +81,7 @@ def executer_par_defaut(interface : dict) -> None :
             pass
         else:
             print_terminal(terminal, output.strip(), couleur = QColor(255, 255, 255))
-    print_terminal(terminal, "Fin programme.", couleur = QColor(255, 0, 0))
+    print_terminal(terminal, "Fin du sort.", couleur = QColor(255, 0, 0))
     print_terminal(terminal, "\n")
 
 
@@ -242,8 +242,33 @@ def sortir_niveau(event, interface) :
             save_all()
             if dico_dialogue.get(level['current']['message_id'] + 20, False):
                 commencer_dialogue(interface['dialogue'], level['current']['message_id'] + 20)
+            print(level['current']['message_id'] in (4, 6, 12, 13, 14, 15))
+            if level['current']['message_id'] in (4, 6, 12, 13, 14, 15):
+                trigger_suite_niveau(interface, level['current']['message_id'])
 
-def update_condition_niveau(level : int):
+def trigger_suite_niveau(interface, niveau):
+    """
+    semblable a trigger_niveau, mais concue pour lancer uniquement les niveaux en suivant d'autre. Elle n'est donc appelée
+    qu'à la fin d'un précédent niveau et non durant les déplacements du joueur, et prends comme paramètre supplémentaire
+    niveau (int) : le niveau qui demande le lancement d'une suite.
+    De plus, le paramètre event est retiré.
+    """
+    # assignement du niveau suivant correspondant
+    if niveau in (12, 13, 14, 15):
+        niveau += 1
+    elif niveau == 4:
+        niveau = 17
+    elif niveau == 6:
+        niveau = 18
+    # lancement du niveau demandé
+    if not level["player in"] and liste_niveaux[niveau]['condition'] :
+        changer_son(interface['son_principal'], interface['son_battle'])
+        level['player in'] = True
+        level['current'] = liste_niveaux[niveau]
+        changement_niveau(level['current']['message_id'], interface)
+    # problème sur le changment de condition de pnj a l'issue de ces niveaux
+
+def update_condition_niveau(niveau : int):
     """
     change les conditions suivantes
     - affichage dialogues
@@ -252,15 +277,24 @@ def update_condition_niveau(level : int):
 
     params
     ------
-    level (int) : le niveau qui cause l'update
+    niveau (int) : le niveau qui cause l'update
     """
-    liste_niveaux[level]['condition'] = False
-    dico_dialogue[level]['condition'] = False
-    progression_change = liste_niveaux[level]['progression']
+    # update condition niveau
+    liste_niveaux[niveau]['condition'] = False
+    progression_change = liste_niveaux[niveau]['progression']
     if progression_change != 'aucune':
         progression_base.dico_progression[progression_change] = not(progression_base.dico_progression[progression_change])
+    # transformation des niveaux suivis en dialogues suivis
+    if niveau == 17: # suite niveau 4
+        niveau = 24
+    elif niveau == 18: # suite niveau 6
+        niveau = 24
+    elif niveau == 16: # suite niveau 12 (dernière de ses 4 suites)
+        niveau == 32
+    # update condition dialogue
+    dico_dialogue[niveau]['condition'] = False
 
-def update_condition_pnj(level : int):
+def update_condition_pnj(niveau : int):
     """
     change les conditions suivantes
     - affichage pnj
@@ -268,10 +302,10 @@ def update_condition_pnj(level : int):
 
     params
     ------
-    level (int) : le niveau qui cause l'update
+    niveau (int) : le niveau qui cause l'update
     """
     for pnj_coord in dico_pnj.keys():
-        if level in dico_pnj[pnj_coord]['niveau']:
+        if niveau in dico_pnj[pnj_coord]['niveau']:
             dico_pnj[pnj_coord]['condition'] = not(dico_pnj[pnj_coord]['condition'])
 
 def search_level_on_current(player_pos, interface):

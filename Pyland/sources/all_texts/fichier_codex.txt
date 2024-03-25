@@ -7,31 +7,89 @@ Le terminal est la zone où le résultat d'un programme apparaît. La fonction p
 IDE est l'abrévation de 'Integrated Development Environment' ou en français, Environnement de Développement Intégré. C'est une application permettant aux programmeurs d'écrire du code dans tel ou tel langage de programmation et de le tester. Il facilite le travail des programmeurs en offrant divers fonctionnalitées comme une coloration syntaxique, la possibilité de travailler sur plusieurs fichiers simultanément ou encore de l'autocomplétion.
 --st--Python
 Python est un langage de programmation dit 'typé dynamiquement'. Cela signifie qu'il n'est pas nécessaire de préciser le type d'une donnée et qu'une variable peut changer de type après sa création. (les types sont expliqués plus loin dans le codex)
+Attention ! Python est un langage spacial, il prend en compte les retours à la ligne ou les espaces. Les identations en sont un exemple.
 --st--Variable
 Une variable est une sorte de conteneur permettant de mettre en mémoire des données pour pouvoir y accéder plus tard. Elle possède un nom auquel est associé une valeur. Ce nom peut-être n'importe quelle chaîne de caractère composée exclusivement de lettres, minuscules ou majuscules, de chiffres et du tiret du bas (underscore). Il n'est cependant pas possible de commencer le nom de la variable par un chiffre. Même si cela ne change rien du point de vue de l'exécution du programme, il existe des conventions de nomages permettant à un code d'être facilement compréhensible par une autre personne que le programmeur. Pour cela, le nom de la variable doit être composée d'un ou plusieurs mots en minuscule et séparés par des underscores. Une variable peut contenir toutes sortes de valeurs, comme un nombre entier, un nombre à virgule ou une chaîne de caractère. 
+--st--Maths
+Python peut exécuter la majorité des opérations les plus importantes avec des petits symboles, addition (+), soustraction (-), mutiplication (*), division (/), quotient de division euclidienne (//), reste de division euclidienne (%), puissance (**), etc.
+--st--Types
+Les types sont des "classes" dans les langages de programmation. Ils définissent si une variable est un entier, un nombre à virgule, une liste, une chaîne de caractères etc.
+Elles ont chacune une classe en Python:
+* Entiers et Nombres à virgule: 'int' et 'float'. Pour transformer une variable en 'int' ou 'float' tu écris 'int(variable)' et 'float(variable)'
+* Chaînes de caractères: 'str'. La même transformation s'applique pour chaque type: 'str(variable)'
+* Booléens: 'bool' et 'bool(variable)'
+* Listes: 'list' et 'list(variable)'
+Pour savoir le type d'une variable tu peux utilser 'type(variable)' qui te renvoie le nom du type dans une chaîne de caractères.
 --st--Boucles
 Les boucles executent toutes les lignes de code se trouvant sous la boucle et à un niveau d'indentation de plus (1 tab ou 4 espaces, c'est pareil) et les répètent un certain nombre de fois.
 En python, il existe les boucles for qui executent un code un nombre défini de fois, et les boucles while qui effectuent un code tant qu'une valeur est vraie.
 --st--Fonction
 Une fonction python est un bout de code effectuant une action précise que vous définissez. Elle se créée avec def nom_fonction(parametre):. Comme pour les variables, le nom de la fonction doit être en minuscule, tout attaché et doit expliquer clairement ce que votre fonction fait. Entre parenthèse, le ou les paramètres sont des variables que vous pouvez utiliser dans le code de la fonction. Comme pour les boucles, la fonction effectue tout le code écrit avec un niveau d'indentation de plus que la ligne de def.
---st--Type
-Les types sont
 
+--t--Variables
+Les variables sont des conteneurs, comme des boîtes avec chacun une valeur. Ces variables sont retenu en mémoire pour être utilisé plus tard dans le code. Tu peux modifier la variable autant que tu le veux.
+--st--Exemple
+a = 10 # Ici a est un entier 10
+a = 15 # On change a pour qu'il soit égal à 15
+b = 5 # On déclare une autre variable
+c = a + b # Ici c = 20.
+print(c) # Enfin, on affiche c
+ 
+--t--Maths
+Les maths sont une partie importante de la programmation. Et Python contient tout ce qu'il faut pour cela.
+Les exemples ont déjà été dit dans le Vocabulaire mais voici des petits plus.
+Au lieu de tout le temps mettre 'variable = variable * 3' ou n'importe quelle opération à la place de mutiplication, tu peux simplement faire 'variable *= 3'.
+On applique la même avec 'variable += 15' ou 'variable %= 3'.
+
+--t--Types
+En Python, comme dans la plupart des langages de programmation, il existe plusieurs 'types' différents. 
+Le type représente la nature d'une donnée et change la façon dont elle est comprise par le programme. Un type définit les opérations pouvant être effectuées sur cette donnée et la manière par laquelle elle est stockée dans la mémoire de l'ordinateur. Pour enregistrer une donnée et pouvoir la réutiliser plus tard, il est nécessaire de l'affecter à une variable. 
+Il existe deux grandes catégories de type :
+--st--Types de données immuables :
+Les types de données immuables sont des objets dont l'état (c'est-à-dire les données qu'ils contiennent) ne peut pas être modifié après leur création. 
+Si vous essayez de modifier un objet immuable, cela entraînera en fait la création d'un nouvel objet avec la nouvelle valeur plutôt que de modifier l'objet d'origine. Les types de données immuables sont souvent utilisés dans les situations où vous souhaitez garantir que les données restent constantes et ne sont pas modifiées accidentellement.
+On a donc les entiers ('int'), les nombres à virgule ('float'), les booléen ('bool') ou les chaînes de caractères ('str').
+--st--Types de données mutables :
+Les types de données mutables, en revanche, peuvent être modifiés après leur création. Cela signifie que vous pouvez ajouter, supprimer ou modifier des éléments à l'intérieur de l'objet sans créer de nouvel objet. 
+Les types de données mutables sont souvent utilisés dans les situations où vous devez modifier les données au fil du temps, comme dans les listes ('list'), les ensembles ('set') et les dictionnaires ('dict').
+
+--t--Conditions
+Les conditions portent bien leur nom, en Python elle serve à savoir si quelque chose est vrai (True) ou fausse (False).
+Par exemple si on veut savoir si une variable a est plus petite que 10 on écrit 'a < 10'. Si on veut savoir si elle est égale à 10 on écrit 'a == 10':
+* Egalité: '==', exemple 'a == 10'
+* Plus grand que: '>', exemple 'a > 10'
+* Plus grand ou égal: '>=' exemple 'a >= 10'
+* Plus petit que: '<', exemple 'a < 10'
+* Plus petit ou égal: '<=' exemple 'a <= 10'
+* Pas égal à: '!=', exemple 'a != 10'
+* Est dans liste: 'in', exemple 'a in liste'
+* N'est pas: 'not', exemple 'not condition'
+* Et: 'and', exemple 'condition1 and condition2'
+* Ou: 'or', exemple 'condition1 or condition2'
 
 --t--Boucles
 Il y a deux types de boucles dans python : les for et les whiles.
-. Les boucles for s'écrivent for variable in liste:. La variable va prendre la valeur de chaque élément de la liste les uns après les autres et effectuer le code, jusqu'à la fin de la liste. Vous pouvez créer une liste de nombres de x à y-1 avec range(x, y). x n'est pas nécessaire, si vous ne le mettez pas, la liste ira de 0 à y-1. Ainsi, range(2) créé la liste [0, 1]. for i in range(2): va donc effectuer deux fois un code, et i va valloir sucessivement 0 puis 1.
-. Les boucles while s'ecrivent while condition:. La condition est un booléen, par exemple x < y. Tant que cette condition est vraie, la boucle s'execute. Il est important de bien modifier la condition à l'intérieur de la boucle pour s'assurer qu'elle ne tourne pas à l'infini. Nous avons eu un problème de boucle infinie pendant la réalisation du jeu, qui nous a coûté plus de 3h de debug.
---t--Fonction
+* Les boucles for s'écrivent 'for variable in liste:'. La variable va prendre la valeur de chaque élément de la liste les uns après les autres et effectuer le code, jusqu'à la fin de la liste. Vous pouvez créer une liste de nombres de x à y-1 avec range(x, y). x n'est pas nécessaire, si vous ne le mettez pas, la liste ira de 0 à y-1. Ainsi, range(2) créé la liste [0, 1]. 'for i in range(2):' va donc effectuer deux fois un code, et 'i' va valloir sucessivement 0 puis 1.
+* Les boucles while s'écrivent 'while condition:'. La condition est un booléen, par exemple x < y. Tant que cette condition est vraie, la boucle s'execute. Il est important de bien modifier la condition à l'intérieur de la boucle pour s'assurer qu'elle ne tourne pas à l'infini. Nous avons eu un problème de boucle infinie pendant la réalisation du jeu, qui nous a coûté plus de 3h de debug.
+--st--Exemples:
+for i in range(3):
+    print(i)
+Le code au dessus affiche les nombres 0, 1 et 2.
+Les mots 'break' et 'continue' permettent de simplifier les boucles. 'break' fait terminer la boucle, ne continuant plus le reste de la boucle. 'continue' arrête l'étape qui est exécuté et procède à la prochaine étape.
+i = 1
+while i < 100:
+    i = i*2
+Ici elle itère la boucle 'while' tant que i est plus petit que 100, dès que i sera plus grand que 100, elle s'arrêtera. (Ici i sera égal à 128).
 
-
-3) Fonction
-4) Type
-5) Objet
-6) methods
-Types
-En Python, comme dans la plupart des langages de programmation, il existe plusieurs 'types' différents. Le type représente la nature d'une donnée et change la façon dont elle est comprise par le programme. Un type définit les opérations pouvant être effectuées sur cette donnée et la manière par laquelle elle est stockée dans la mémoire de l'ordinateur. Pour enregistrer une donnée et pouvoir la réutiliser plus tard, il est nécessaire de l'affecter à une variable. Il existe deux grandes catégories de type :
-a) Les types immuables
-b) Les types mutable 
-
-Fonctions
+--t--Fonctions
+Avez vous marre de toujours répéter le même bout de code à chaque fois ?
+Vous pouvez utiliser les fonctions ! Les fonctions permettent de ne pas à réécrire un bout de code encore et encore mais de le definir pour le réutiliser plus tard.
+Par exemple si on veut afficher "Salut ! Je suis Gaspard":
+def afficher_message():
+    print("Salut ! Je suis Gaspard")
+Maintenant, on voudrait aussi afficher le même message mais avec Lou au lieu de Gaspard. Pas de souccis, tu peux utiliser un paramètre, c'est une option dans la defintion d'une fonction qui permet d'intégrer une diversité.
+def afficher_message(nom):
+    print("Salut ! Je suis " + nom) # Ici on affiche le paramètre nom au lieu de Gaspard
+On peut mettre plusieurs paramètres dans les fonctions, autant qu'on veut en fait.
+Pour appeler la fonction, on l'écrit juste ainsi:
+afficher_message("Lou") # Affiche: Salut ! Je suis Lou

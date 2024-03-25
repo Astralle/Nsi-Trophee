@@ -2,7 +2,7 @@ Zone libre.
  
 Vous êtes libre de faire ce que bon vous semble.
 
-Le premier niveau
+Le dernier entraînement
 Situation :
 Master Aldirien vous rappelle vos bases.
  
@@ -46,10 +46,10 @@ print(pierre_cassable([10, 30, 25, 18, 25])) -> 2
 print(pierre_cassable([1, 1])) -> 2
 print(pierre_cassable([20, 21, 19])) -> 1
 
-Surprise squelettique
+Une odeur de mort
 Situation :
 Des squelettes se cachent dans la forêt et sont prêts à vous attaquer.
-Vous les avez vaguement aperçus autour de vous mais n'êtes pas sûr de leur position exacte car ils sont très discrêts.
+Vous les avez vaguement aperçus autour de vous mais n'êtes pas sûr de leur position exacte car ils sont très discrets.
  
 Énoncé :
 Votre sort d'observation vous permet de connaître les noms de tous les objets se trouvant sur la ligne que vous observez.
@@ -77,7 +77,7 @@ print(inverse_dialogue('! redia suov xuev eJ')) -> 'Je veux vous aider !'
 print(inverse_dialogue('...dnerpmoc em ennosreP')) -> 'Personne me comprend...'
 print(inverse_dialogue('.elpmis tse'c tnatruoP')) -> 'Pourtant c'est simple.'
 
-Spider Dance
+Mauvais présage dans l'air(e)...
 Situation :
 Vous entendez un monstre proche de vous, mais ne le voyez pas et ne savez donc pas à quoi vous préparer.
 Ayant bien étudié la science des monstres, vous savez que lorsqu'une pièce fait entre 200 et 300 m², elle ne peut être habitée que par un montre très spécial : l'araignée d'Euler.
@@ -298,3 +298,18 @@ Exemples :
 print(retourne_sort(1)) -> 11
 print(retourne_sort(11)) -> 21
 print(retourne_sort(133)) -> 1123
+
+Spider Dance
+Situation :
+Bien vu ! Il s'agissait d'une araignée d'Euler. Maintenant qu'elle est au dessus de vous et prête a vous mordre, il va falloir vous en débarrasser.
+Heureusement, le moyen de détruire ces créatures et bien connu : si une araignée d'Euler entend la lettre "e" lorsqu'elle attaque avec entre 2 et 3 pattes, elle perds ses moyens et devient très vulnérable. 
+Cette réaction est complètement irrationnelle, mais que voulez-vous, il faut de tout pour faire un ensemble.
+ 
+Énoncé :
+Écrivez une fonction crie_e(nombre_pattes) qui prend en paramètre le nombre de pattes que l’araignée utilise pour vous frapper et qui renvoie "e" si ce nombre est entre 2 et 3, et une chaîne vide "" sinon.
+Oui, cette araignée est plus facile a combattre qu’a repérer.
+ 
+Exemples :
+print(cris_e(25.03)) -> ""
+print(cris_e(2.0)) -> "e"
+print(cris_e(3.0)) -> "e"

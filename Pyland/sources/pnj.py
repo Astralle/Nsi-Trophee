@@ -8,6 +8,7 @@ from PyQt5.QtGui import QPixmap
 
 # 1 à 12 et 21 à 32 déclenchement à la fin d'un dialogue
 # on rajoute 100 lorsqu'on veut déclencher à la fin d'un niveau.
+# attention : les suites des niveaux 4 et 6 sont 17 et 18 (pas le même système qu'avec les dialogues).
 
 dico_pnj = { # aldirien - camp du début
     (5, 2) : {
@@ -73,22 +74,22 @@ dico_pnj = { # aldirien - camp du début
     (36, 40) : {
         'image' : QPixmap('encounters/creatures/undead.png'),
         'condition' : dico_saved_var['undead_revele'] and dico_saved_var['undead_vivant'],
-        'niveau': (24, 124) # fin du dialogue suite 4 et fin niveau suite 4
+        'niveau': (24, 117) # fin du dialogue suite 4 et fin niveau suite 4
     },
     (31, 44) : {
         'image' : QPixmap('encounters/creatures/undead2.png'),
         'condition' : dico_saved_var['undead_revele'] and dico_saved_var['undead_vivant'],
-        'niveau': (24, 124) # fin du dialogue suite 4 et fin niveau suite 4
+        'niveau': (24, 117) # fin du dialogue suite 4 et fin niveau suite 4
     },
     (24, 43) : {
         'image' : QPixmap('encounters/creatures/undead2.png'),
         'condition' : dico_saved_var['undead_revele'] and dico_saved_var['undead_vivant'],
-        'niveau': (24, 124) # fin du dialogue suite 4 et fin niveau suite 4
+        'niveau': (24, 117) # fin du dialogue suite 4 et fin niveau suite 4
     },
     (28, 46) : {
         'image' : QPixmap('encounters/creatures/undead.png'),
         'condition' : dico_saved_var['undead_revele'] and dico_saved_var['undead_vivant'],
-        'niveau': (24, 124) # fin du dialogue suite 4 et fin niveau suite 4
+        'niveau': (24, 117) # fin du dialogue suite 4 et fin niveau suite 4
     }, # elementaire de feu
     (2, 64) : {
         'image' : QPixmap('encounters/creatures/fire_elemental.png'),
@@ -198,7 +199,7 @@ dico_pnj = { # aldirien - camp du début
     (42, 7) : {
         'image' : QPixmap('encounters/creatures/spider.png'),
         'condition' : dico_saved_var['araigne_revele'] and dico_saved_var['araigne_vivante'],
-        'niveau': (26, 126) # fin dialogue suite 6 et fin niveau suite 6
+        'niveau': (26, 118) # fin dialogue suite 6 et fin niveau suite 6
     }, # Saal-lio forme draconique
     (11, 74) : {
         'image' : QPixmap('encounters/npc/saal_lio_dragon.png'),
