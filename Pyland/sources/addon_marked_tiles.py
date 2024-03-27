@@ -24,7 +24,6 @@ def special(grid_width, grid_height):
     ------
     a 2D plane with special action applied
     """
-    #create the 2D plan
     marked_tiles = [[0] * grid_width for _ in range(grid_height)]
 
     # définit les tuiles bloquées, menant à un batiment ou permettant d'interagir avec un panneau

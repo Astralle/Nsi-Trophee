@@ -10,8 +10,7 @@ from PyQt5.QtMultimedia import QMediaPlayer
 from PyQt5.QtCore import Qt
 
 # constants
-from constantes import VIE_MAX, dico_saved_var
-from constante_son import SON_INACCESSIBLE
+from constantes import dico_saved_var
 from coloration import *
 
 # globals
@@ -42,8 +41,17 @@ def indenter(zone_texte : QTextEdit, texte : str) -> None:
     curseur.insertText('\t' * lignes[curseur.blockNumber() - 1].count('\t'))
 
 def mort(interface : dict) :
-    changer_son(interface["son_principal"], interface["son_death"])
-    changer_son(interface["son_boss_final"], interface["son_death"])
+    """
+    affiche la mort du joueur dans l'interface et lui remet de la vie .
+    Parameters
+    ----------
+    interface : donnes les sons a joué en fonction de l'interface
+
+    Returns
+    -------
+
+    """
+    changer_son(interface["son_death"], interface["son_principal"], interface["son_boss_final"])
     message = QMessageBox()
     message.setText('\nNarrateur - Vous sentez une insoutenable douleur vous submerger, et soudain tout devient noir.\n\n'
                    'Mais de toute évidence, les divinités de Pyland ont encore besoin de vous, car dans le noir, un chuchotement se fait entendre...\n\n'
@@ -54,15 +62,23 @@ def mort(interface : dict) :
                    'Agath - Bonne chance à toi, joueur.\n')
     message.setStandardButtons(QMessageBox.Ok)
     message.exec_()
-    changer_son(interface['son_death'], interface['son_principal'])
+    changer_son(interface['son_principal'], interface['son_death'])
     interface['timer_vie'].start()
 
 
 def perdre_vie(points_perdus : int, interface : dict) :
     """
-    diminue la vie du jueur
+    fait perdre de la vie au joueur lors des actions qui le demande .
+    Parameters
+    ----------
+    points_perdus
+    interface
+
+    Returns
+    -------
+
     """
-    SON_INACCESSIBLE.play()
+    interface["son_inaccessible"].play()
     barre_vie = interface["barre_vie"]
     terminal = interface["terminal"]
     vie_actuelle = barre_vie.value()
@@ -154,6 +170,17 @@ def autocompletion(zone_texte : QTextEdit, event : QKeyEvent) :
         zone_texte.setTextCursor(curseur)
 
 def ajout_double(element : str, curseur : QTextCursor) :
+    """
+    Ajouter la fin des character double en python , par exemple '(' et ')'
+    Parameters
+    ----------
+    element : l'élement a ajouter
+    curseur : la position du curseur
+
+    Returns
+    -------
+
+    """
     position_debut = curseur.selectionStart()
     position_fin = curseur.selectionEnd() + 1
     texte = curseur.selectedText()
@@ -165,6 +192,17 @@ def ajout_double(element : str, curseur : QTextCursor) :
     curseur.movePosition(curseur.Right, curseur.KeepAnchor, len(texte))
 
 def entourer(zone_texte : QTextEdit, event : QKeyEvent) :
+    """
+    permet de selectioner du texte et d'ajouter a chaque extrémitées le symbole choisi
+    Parameters
+    ----------
+    zone_texte : le texte sélectionné
+    event : le character a ajouter
+
+    Returns
+    -------
+
+    """
     cle = event.key()
     curseur = zone_texte.textCursor()
     ajout = False
@@ -208,13 +246,13 @@ def text_modifier(zone_texte : QTextEdit, event : QKeyEvent, interface : dict) -
         zone_texte.super_keyPressEvent(event) # La méthode de base des zones de texte
         if not curseur.hasSelection() :
             autocompletion(zone_texte, event)
+    texte = zone_texte.toPlainText()
     if not (event.key() == 16777219): # Ne s'applique pas lorsque l'on efface
-        texte = zone_texte.toPlainText()
         if event.text() in ('\n', '\r', ' ') :
-            colorer(zone_texte, texte, interface)
+            pass
         if event.text() in ('\n', '\r') :
             indenter(zone_texte, texte)
-        
+    colorer(zone_texte, texte, interface)
 
 
 def niveau_act(interface : dict) -> int :
@@ -393,7 +431,7 @@ def cacher_spin_box(disposition : QVBoxLayout) -> None:
     spin_box = acceder_element(disposition, 'spin_box')
     spin_box.setVisible(False)
 
-def changer_son(ancien : QMediaPlayer, nouveau : QMediaPlayer) -> None:
+def changer_son(nouveau : QMediaPlayer, *anciens : QMediaPlayer) -> None:
     """Arrête le son en train de jouer et lance le deuxième.
 
     Params
@@ -401,7 +439,8 @@ def changer_son(ancien : QMediaPlayer, nouveau : QMediaPlayer) -> None:
     ancien (QMediaPlayer) : Le son en train d'être joué
     nouveau (QMediaPlayer) : Le son qui est lancé
     """
-    ancien.stop()
+    for ancien in anciens :
+        ancien.stop()
     nouveau.play()
 
 def bouton_panneau(disposition : QVBoxLayout) -> None :

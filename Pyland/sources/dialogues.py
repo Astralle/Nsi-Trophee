@@ -29,9 +29,10 @@ else :
 # ===================
 
 # de 1 à 12 : niveaux
-# de 21 à 32 : suite niveaux (niveau +20)
+# de 21 à 31 : suite niveaux (niveau +20)
+# 32 : suite du niveau final (coupé en 5 parties 12, 13, 14, 15 et 16)
 # de 40 à 46 : dialogues hors niveau
-# 54, 56 : suite de la suite niveau (suite niveau +30)
+# 37, 38 : suite de la suite niveau (17 et 18 étant des "slots" de niveau libres)
 # -2 : maisons vides
 # de -3 à -15 : pancartes
 
@@ -40,19 +41,20 @@ dico_dialogue = {
     1 : { # niveau 1 | dialogue d'introduction avec Master Aldirien (exercice simple pour expliquer le jeu),
         'dialogue' : (
             (
-                "Narrateur\n\nVous attendez devant ce feu de camp depuis quelques instants, lorsqu'un vieil homme approche. Il s'agit de votre mentor, celui que vous appelez Master Aldirien.",
+                "Narrateur\n\nVous attendez devant ce feu de camp depuis quelques instants, lorsqu'un vieil homme approche. Il s'agit de votre mentor, celui que vous appelez Master Aldirien.\n\n(cliquez sur le bouton vert 'suite' sous le dialogue)",
                 "Master Aldirien\n\nSalut à toi, jeune apprenti{0}. Voyons si tu as en mémoire ce que nous avons appris dans la bibliothèque.".format(e_feminin),
-                "Master Aldirien\n\nPour lancer des sorts, tu dois écrire du code python dans l'encadré blanc à ta droite.",
+                "Master Aldirien\n\nPour lancer des sorts, tu dois écrire du code python dans l'encadré blanc à ta droite. Le bouton 'lancer' en dessous de cet encadré te permet d’exécuter ce que tu as écris.",
                 "Master Aldirien\n\nTu en auras besoin a chaque fois qu'un niveau va démarrer. Lorsque ce sera le cas, l'énoncé expliquant ce que tu dois faire s'affichera au dessus de l'encadré blanc.",
-                "Master Aldirien\n\nLe résultat de tes sorts a un impact sur notre monde, mais aussi dans le plan arcanique du terminal. C'est l'encadré noir sous la carte. Tu y verras les retours concrets de tes sorts, dont les explications si ça ne marche pas.",
-                "Master Aldirien\n\nJe vais te communiquer un exercice a résoudre dans le plan de l'énoncé. Tu le vois ? Alors résous le."
+                "Master Aldirien\n\nLe résultat de tes sorts a un impact sur notre monde, mais aussi -et surtout- dans le plan arcanique du terminal. C'est l'encadré noir sous la carte. Tu y verras les retours concrets de tes sorts, dont quelques explications si ça ne marche pas.",
+                "Master Aldirien\n\nSi tu as des doutes, n'oublie pas d'aller lire ton codex, le livre qui contient bien des informations sur la magie pythonique.",
+                "Master Aldirien\n\nJe vais te communiquer un exercice a résoudre dans le plan de l'énoncé. Tu le vois ? Alors résous le.",
             ),
         ),
         'condition' : not(dico_saved_var['start_game']),
         'nb_options' : 0,
         'type_choix' : 'aucun'
     },
-    2 : { # niveau 2 | ambuscade des gobelins dans la passe du sud ou sur la route de l'Est (exercice combat simple),
+    2 : { # niveau 2 | ambuscade des gobelins dans la passe du Sud ou sur la route de l'Est (exercice combat simple),
         'dialogue' : (
             (
             "Narrateur\n\nVous vous avancez dans le chemin tracé entre deux montagnes par une ancienne rivière assechée. La route déserte n'est animée que par le bruit du vent qui s'engouffre entre les rochers",
@@ -73,7 +75,7 @@ dico_dialogue = {
                 "Farore\n\n...Malone ?... Mal... one ?...",
                 "Farore\n\nQuelqu'... un ?... A l'aide...",
                 "Narrateur\n\nVous vous approchez, et découvrez un corps au sol. Un soldat, non, une soldate vous regarde.",
-                "Narrator\n\nElle a beau être fortement bâtie et couverte de muscles, ses blessures l'empêche d'enlever les briques de pierres éboulées qui la bloquent au sol.",
+                "Narrateur\n\nElle a beau être fortement bâtie et couverte de muscles, ses blessures l'empêche d'enlever les briques de pierres éboulées qui la bloquent au sol.",
                 "Narrateur\n\nUne seule de ces briques serait d'ailleur trop lourde pour vous, mais un sort pourrait toutes les enlever. Pour cela, L'énoncé commence a former une réponse dans votre esprit.",
             ),
         ),
@@ -164,7 +166,7 @@ dico_dialogue = {
                 "Narrateur\n\nAutour du feu s'assemble une cuisine d'alchimiste. Une elfe se tient devant, dos à vous. Elle ne semble pas vous avoir remarqué{0}.".format(e_feminin),
                 "Haldarielle\n\nJe savais que vous alliez venir.",
                 "Narrateur\n\nSa voix vous fait sursauter. Vous ne pensiez pas qu'elle vous avait vue entrer.",
-                "Haladrielle\n\nOui, je savais. Je sais beaucoup de choses.",
+                "Haldarielle\n\nOui, je savais. Je sais beaucoup de choses.",
                 "Haldarielle\n\nJ'ai d'ailleurs quelque chose à vous apprendre. Approchez.",
                 "Haldarielle\n\nRegardez dans cet orbe. Il s'agit d'une sphère du savoir. Elle vous apprend ce qui se passe en ce moment dans le monde.",
                 "Haldarielle\n\nCertaines choses devraient vous intéresser.",
@@ -182,10 +184,10 @@ dico_dialogue = {
             (
                 "Narrateur\n\nAlors que vous avancez prudement sur le chemin, vous repérez un homme qui épie le campement orc au loin.",
                 "Narrateur\n\nSoudain, vous sentez une branche craquer sous vos pieds.",
-                "Un mage\n\nQui va là ! Ah, c'est un{0} mage. Mais... Vous n'êtes pas l'apprenti{0} d'Aldirien ?".format(e_feminin),
+                "Un mage\n\nQui va là ! Ah, c'est un{0} mage. Mais... n'êtes-vous pas l'apprenti{0} d'Aldirien ?".format(e_feminin),
                 "Un mage\n\nPeut importe, ce n'est pas un combat pour les jeunes. Je suis chargé de combattre ces orcs, et je ne veux pas risquer votre vie.",
                 "Narrateur\n\nIroniquement, ce mage est celui qui vous avait apprit un jour à bien argumenter pour obtenir ce que vous vouliez. Il ne fallut pas longtemps pour le convaincre de vous laisser combattre.",
-                "Un mage\n\nBon, Bon. C'est d'accord. Par contre, il va falloir se faufiler là-dedans sans se faire voir.",
+                "Un mage\n\nBon, bon. C'est d'accord. Par contre, il va falloir se faufiler là-dedans sans se faire voir.",
                 "Un mage\n\nC'est l'occasion de vous tester un peu tiens. Essayez de trouver un chemin hors de vue de ces monstres.",
                 "Un mage\n\nPour cela, vous avez ce sort que je vais vous partager mentalement... voyons... là.",
                 "Un mage\n\nTout est dans votre énoncé. Une fois que vous avez réussit, on y va.",
@@ -198,7 +200,7 @@ dico_dialogue = {
     11 : { # niveau 11 | combat contre Parz-Karl (exercice combat difficile),
         'dialogue' : (
             (
-                "Narrateur\n\nVous arrivez avec le mage à côté d'une tente apparement vide. A quelques pas, Parz-Karl contemple sa tribue en action."
+                "Narrateur\n\nVous arrivez avec le mage à côté d'une tente apparement vide. A quelques pas, Parz-Karl contemple sa tribue en action.",
                 "Narrateur\n\nVous repérez une femme en armure, enchaînée près d'une tente imposante. Une épée à deux mains gise au sol proche d'elle.",
                 "Un mage\n\nRegardez, une femme est emprisonnée ! On dirait l'héroïne de Pyland...",
                 "Parz-Karl\n\nDes intrus ! Qui les a laissés entrer ?",
@@ -236,7 +238,7 @@ dico_dialogue = {
                 "Master Aldirien\n\nAh, tu réponds. Bon. Il est temps de tester tes connaissances hors de la bibliothèque sécurisée !",
                 "Master Aldirien\n\nPour commencer, tu vas lancer une attaque sur la montagne là-b-",
                 "Master Aldirien\n\nMais que ??...",
-                "Narrateur\n\nSoudain, trois gobelins montés à dos de sanglier débarquent au galop depuis la passe du sud, criant à l'assaut.",
+                "Narrateur\n\nSoudain, trois gobelins montés à dos de sanglier débarquent au galop depuis la passe du Sud, criant à l'assaut.",
                 "Un gobelin\n\nAhah, nous te tenons, vieux croû-",
                 "Master Aldirien\n\nfor _ in range(3):\n    remove('gobelin') #!\n#ZBAMM !!!",
                 "Narrateur\n\nLes gobelins disparaissent instantanément, ne laissant que leurs montures qui vous regardent avec inquiétude.",
@@ -254,7 +256,7 @@ dico_dialogue = {
         'dialogue' : (
             (
                 "Farore\n\nAh, je me sens bien mieux ! Merci, sorci{0}. Sans vous, j'aurai succombé à mes blessures.".format(ere_feminin),
-                "Farore\n\nQue vois-je... Malone ne fait pas partie des corps... Ils ont dû l'enlever. Écoutez-moi ! Il faut la libérer. Les orcs l'ont emmenée, ils venaient du sud. Elle est très importante, je devais l'escorter, hélas...",
+                "Farore\n\nQue vois-je... Malone ne fait pas partie des corps... Ils ont dû l'enlever. Écoutez-moi ! Il faut la libérer. Les orcs l'ont emmenée, ils venaient du Sud. Elle est très importante, je devais l'escorter, hélas...",
                 "Farore\n\nBref. Il faut la sortir d'ici. Autant pour son propre bien que celui du royaume entier !\nJe compte sur vous, je dois encore me remettre de mes coups. Encore merci à vous.",
             ),
         ),
@@ -273,7 +275,7 @@ dico_dialogue = {
         'nb_options' : 0,
         'type_choix' : 'aucun'
     },
-    54 : { # suite 24 | dialogue avec Kheïa après le combat contre les squelettes
+    37 : { # suite 24 | dialogue avec Kheïa après le combat contre les squelettes
         'dialogue' : (
             (
                 "Kheïa\n\nUh ! On s'en sort bien, heureusement qu'ils sont faciles à démonter. Merci. Il faut que je retrouve Gurun maintenant, il doit se faire un sang de lave refroidie.",
@@ -306,7 +308,7 @@ dico_dialogue = {
         'nb_options' : 0,
         'type_choix' : 'aucun'
     },
-    56 : { # suite 26 | après la mort de l'araignée géante dans la ziggourat
+    38 : { # suite 26 | après la mort de l'araignée géante dans la ziggourat
         'dialogue' : (
             (
                 "Narrateur\n\nAlors que vous regardez le corps carbonisé de l'araignée géante, vous sentez une sorte de fierté en vous. Les esprits du village manifestent leurs remerciements sans se montrer.",
@@ -318,13 +320,20 @@ dico_dialogue = {
         'type_choix' : 'aucun'
     },
     27 : {
-        "Narrateur\n\nAmusé{0}, vous regardez le scorpion se trémousser à chaque pangramme que vous dites. La terrifiante créature s'arrête, vous regarde avec ses petits yeux et claque légèrement des pinces comme pour vous remercier.".format(e_feminin),
-        "Narrateur\n\nElle s'en retourne finallement à ses occupations. Heureusement que vous ne l'avez pas tué, tout le monde sait que les scorpions géants des plaines sont en voie d'extinction.",
+        'dialogue' : (
+            (
+                "Narrateur\n\nAmusé{0}, vous regardez le scorpion se trémousser à chaque pangramme que vous dites. La terrifiante créature s'arrête, vous regarde avec ses petits yeux et claque légèrement des pinces comme pour vous remercier.".format(e_feminin),
+                "Narrateur\n\nElle s'en retourne finallement à ses occupations. Heureusement que vous ne l'avez pas tué, tout le monde sait que les scorpions géants des plaines sont en voie d'extinction.",
+            ),
+        ),
+        'condition' : True,
+        'nb_options' : 0,
+        'type_choix' : 'aucun'
     },
     28 : { # suite 8 | dialogue après le combat contre l'entraineur
         'dialogue' : (
             (
-                "Narrateur\n\nSous le regard ébahis des miliciens, vous parez l'ultime attaque de l'entraîneur. Personne ne s'attendait à ce que vous gagniez.",
+                "Narrateur\n\nSous les regards ébahis des miliciens, vous parez l'ultime attaque de l'entraîneur. Personne ne s'attendait à ce que vous gagniez.",
                 "L'entraineur\n\nRmbbl... bravo. Bravo. Allez, vous avez gagné pour ce coup-ci. À la revoyure.",
             ),
         ),
@@ -338,7 +347,7 @@ dico_dialogue = {
                 "Narrateur\n\nVous parvenez finalement à lire la prédicition, qui se résume en ces mots...",
                 "Sphère de divination\n\nAldirien trahi. Parz-Karl sait. Sa mort révelera.",
                 "Narrateur\n\nVous saviez que les messages de divination ne sont jamais précis, mais bon quand même, flou à ce point c'est pas de chance.",
-                "Haldarielle\n\nJe sais que vous avez réussit. Et puisque que je peux prévoir votre question : Parz-karl est le leader des orcs installés dans la vallée au sud d'ici.",
+                "Haldarielle\n\nJe sais que vous avez réussit. Et puisque que je peux prévoir votre question : Parz-karl est le leader des orcs installés dans la vallée au Sud d'ici.",
                 "Haldarielle\n\nBonne route, jeune mage.",
             ),
         ),
@@ -362,7 +371,7 @@ dico_dialogue = {
                 "Un mage\n\nEuh... Pour gagner du temps, on va devoir se téléporter. Et vous ne pourrez pas nous suivre.",
                 "Malone\n\nAh ? Dommage, je vous aurai bien prêté main forte. Dans ce cas, bonne chance ! Je m'en retourne à ma rune.",
                 "Un mage\n\nBon, pour la téléportation... Pour vous c'est trop compliqué. Je m'en charge",
-                "Un mage\n\nPrêt ? Alors on se retrouve là-bas."
+                "Un mage\n\nPrêt ? Alors on se retrouve là-bas.",
             ),
         ),
         'condition' : True,
@@ -387,7 +396,7 @@ dico_dialogue = {
         'dialogue' : (
             (
                 "Narrateur\n\nAlors que vous avancez dans le silencieux village abandonné, une ombre spectrale apparaît face à vous.",
-                "Narrateur\n\nVous préparez un sort d'attaque, mais le cris du mort-vivant vous arrête.",
+                "Narrateur\n\nVous préparez un sort d'attaque, mais le cri du mort-vivant vous arrête.",
                 "Un spectre\n\nNon ! Attendez ! Je suis un spectre. Je ne vais pas vous tuer enfin. Ça ne servirait à rien, je suis déjà mort moi-même.",
                 "Un spectre\n\nÉcoutez, voyageur. Nous avons besoins de vous.",
                 "Un spectre\n\nUne araignée géante a installé sa toile dans la ziggourat. Elle trouble notre repos. Si vous pouviez la chasser...",
@@ -395,7 +404,8 @@ dico_dialogue = {
             ),(
                 "Un spectre\n\nVos ancêtres vous remercient, jeune mage.",
             ),(
-                "Un spectre\n\nLe fantôme clignote littéralement sous vos yeux, comme desarçonné par votre réponse. Avec un regard lourd de jugements, il s'estompe, ne laissant que le vide là où il se tenait.",
+                "Narrateur\n\nLe fantôme clignote littéralement sous vos yeux, comme desarçonné par votre réponse. Avec un regard lourd de jugements, il s'estompe, ne laissant que le vide là où il se tenait.",
+                "Narrateur\n\nVous vous éloignez, et le voyez réapparaître quelques secondes après."
             ),
         ),
         'condition' : True,
@@ -433,7 +443,7 @@ dico_dialogue = {
                 "Balmac\n\nAuriez-vous croisé ma soeur ? Elle ne nomme Dalmä, elle a à peu près mon âge. Elle...",
                 "Narrateur\n\nIl s'arrête, constatant le regard d'incompréhension que vous lui lancez.",
                 "Balmac\n\nNon, vous ne voyez pas.",
-                "Balmac\n\nQuelle infortune ! Elle est partie dans le désert, au sud d'ici, il y'a une semaine. Si vous la voyez, dites-lui que je m'inquiète.",
+                "Balmac\n\nQuelle infortune ! Elle est partie dans le désert, au Sud d'ici, il y'a une semaine. Si vous la voyez, dites-lui que je m'inquiète.",
             ),
         ),
         'condition' : True,
@@ -450,7 +460,9 @@ dico_dialogue = {
                 "Olkin l'Ermite\n\nAhh, ce vieux Aldirien ! Et ça y est, il vous lâche en pleine nature ? Et si j'apportait un peu de mes connaissances à votre éducation ?",
                 "Olkin l'Ermite\n\nVous seriez content de savoir celà, attendez. Donnez-moi votre codex... Voilà, je vous ai écrit quelques connaissances supplémentaires. Bon voyage !",
             ),(
-                "Olkin l'Ermite\n\nHum, c'est ça. Et moi je suis une vielle chaussette qu'on a oublié là. Et qui vous dit que vous n'avez pas encore beaucoup à apprendre ?",
+                "Olkin l'Ermite\n\nHum, c'est ça. Bien sûr.",
+                "Olkin l'Ermite\n\nEt moi je suis connu sous le nom de 'la vielle chaussette qu'on a oublié là'.",
+                "Olkin l'Ermite\n\nEt qui vous dit que vous n'avez pas encore beaucoup à apprendre ?",
                 "Olkin l'Ermite\n\nTenez, par exemple ! Donnez-moi votre codex... Voilà, je vous ai écrit quelques connaissances supplémentaires. Bon voyage !",
             ),(
                 "Olkin l'Ermite\n\nVraiment ? Bon. Mais je vois que vous êtes mage. Voulez-vous que je vous apprenne quelques tours amusants ?",
@@ -464,18 +476,19 @@ dico_dialogue = {
     44 : { # hors niveau | dialogue avec Felria dans le campement de Darkwod
         'dialogue' : (
             (
-                "Felria\n\nBien le bonjour, qu'est-ce qui peut bien mener un mage aussi profondement dans la forêt ?\n\n1. Je cherche d'où viennent les gobelins.\n2. J'ai été ambusqué par des squelettes, il faut les dégager de cette forêt.\n3. Je cherche une certaine Malone⌈",
+                "Narrateur\n\nAssise près d'un feu de camp, une femme elfe vous salue, son arc-rédempteur et sa lame bénie posés à côté d'elle comme des jouets habituels.",
+                "Felria\n\nBien le bonjour, qu'est-ce qui peut bien mener un mage aussi profondement dans la forêt ?\n\n1. Je cherche d'où viennent les gobelins.\n2. J'ai été ambusqué par des squelettes, il faut les dégager de cette forêt.\n3. Je cherche une certaine Malone",
             ),(
-                "Felria\n\nDes gobelins ? Ils viennent de la vallée des Orcs, au sud-est d'ici. Ces répugnantes créatures ont fait alliance avec les squelettes, ça me donne du fil à retordre.",
+                "Felria\n\nDes gobelins ? Ils viennent de la vallée des Orcs, au Sud-Est d'ici. Ces répugnantes créatures ont fait alliance avec les squelettes, ça me donne du fil à retordre.",
                 "Felria\n\nUn peu trop même. Je suis chasseuse de morts, pas d'orcs. Si vous cherchez des gobelins, j'imagine que vous allez combattre les orcs. Tuez-les tous, ça aidera les habitants de Nonameburg.",
-                "Felria\n\nça fait trop longtemps qu'ils traînent ici, et il s'est passé quelque chose récemment. Ils sont plus agressifs, ils font plus de raids.",
+                "Felria\n\nÇa fait trop longtemps qu'ils traînent ici, et il s'est passé quelque chose récemment. Ils sont plus agressifs, ils font plus de raids.",
             ),(
-                "Felria\n\nDégager les squelettes de cette forêt est toute une aventure, et surtout, c'est mon job. Par contre, je vous laisse volontier ces ordures d'orcs qui se sont alliés avec eux et mettent la perssion sur Nonameburg.",
-                "Felria\n\nIls sont établis au sud-est d'ici, dans la plaine des orcs.",
-                "Felria\n\nça fait trop longtemps qu'ils traînent ici, et il s'est passé quelque chose récemment. Ils sont plus agressifs, ils font plus de raids.",
+                "Felria\n\nDégager les squelettes de cette forêt est toute une aventure, et surtout, c'est mon job. Par contre, je vous laisse volontier ces ordures d'orcs qui se sont alliés avec eux et mettent la pression sur Nonameburg.",
+                "Felria\n\nIls sont établis au Sud-Est d'ici, dans la plaine des orcs.",
+                "Felria\n\nÇa fait trop longtemps qu'ils traînent ici, et il s'est passé quelque chose récemment. Ils sont plus agressifs, ils font plus de raids.",
             ),(
-                "Fleria\n\nMalone ? C'est pas l'héroïne de Maintown ? Pas vu dans le coin non, mais il y a fort à parier qu'elle soit allée dire un bonjour aux orcs du sud-est.",
-                "Felria\n\nça fait trop longtemps qu'ils traînent ici, et il s'est passé quelque chose récemment. Ils sont plus agressifs, ils font plus de raids.",
+                "Fleria\n\nMalone ? C'est pas l'héroïne de Maintown ? Pas vu dans le coin non, mais il y a fort à parier qu'elle soit allée dire un bonjour aux orcs du Sud-Est.",
+                "Felria\n\nÇa fait trop longtemps qu'ils traînent ici, et il s'est passé quelque chose récemment. Ils sont plus agressifs, ils font plus de raids.",
             ),
         ),
         'condition' : True,
@@ -485,14 +498,14 @@ dico_dialogue = {
     45 : { # hors niveau | château du roi
         'dialogue' : (
             (
-                "Narrateur\n\nVous pénétrez dans le grand hall du château de Maintown, la capitale de l'ouest de Pyland. L'architecture somptueuse vous impressionne.",
-                "Narrateur\n\nVous êtes introduits dans la salle d'audience, où Endal II le roi lui-même écoute les plaines de son peuple. On vous fait asseoir, et vous attendez votre tour.",
-                "Narrateur\n\nLorsque le roi en vient a vous, vous lui racontez l'attaque des gobelins sur la bibliothèque, l'assurant que tout est pris en main mais que vous avez besoin d'informations pour trouver le campement orc.",
-                "Endal II\n\nEh bien, vous ne sortez pas assez souvent de votre tour, vous les mages. Il y a au sud d'ici une vallée que l'on nomme la Vallée des Orcs. Ces monstres y migrent en été.",
-                "Endal II\n\nIls pillent nos villages de temps en temps, mais on est abitué a les repousser. C'est étrange qu'ils aient pu atteindre votre bibliothèque.",
-                "Endal II\n\nTout va mal en ce moment. Malone l'héroïne en quête de la rune de Daukstring a elle aussi disparue. Mes orcales présentent d'importants évènements dans un futur proche.",
+                "Narrateur\n\nVous pénétrez dans le grand hall du château de Maintown, la capitale de l'Ouest de Pyland. Des gardes vous accueillent et vous font traverser des couloirs dont l'architecture somptueuse vous impressionne.",
+                "Narrateur\n\nVous êtes finallement introduit dans la salle d'audience, où Endal II, le roi lui-même, écoute les plaintes de son peuple. On vous fait asseoir, et vous attendez votre tour.",
+                "Narrateur\n\nLorsque le roi en vient à vous, vous lui racontez l'attaque des gobelins sur la bibliothèque, l'assurant que tout est pris en main mais que vous avez besoin d'informations pour trouver le campement orc.",
+                "Endal II\n\nEh bien, vous ne sortez pas assez souvent de votre tour, vous les mages. Il y a au Sud d'ici une vallée que l'on nomme la Vallée des Orcs. Ces monstres y migrent en été.",
+                "Endal II\n\nIls pillent nos villages de temps en temps, mais on est habitué à les repousser. C'est étrange qu'ils aient pu atteindre votre bibliothèque.",
+                "Endal II\n\nTout va mal en ce moment. Malone l'héroïne en quête de la rune de Daukstring a elle aussi disparue. Mes orcales pré-sentent d'importants événements dans un futur proche.",
                 "Narrateur\n\nLe roi s'arrête, et vous regarde pensivement.",
-                "Endal II\n\nJe me demande si tout ça n'est pas lié. Puisque vous êtes missionnés pour trouver ces orcs, allez au sud dans leur vallée et revenez me dire si Malone ne s'y trouve pas.",
+                "Endal II\n\nJe me demande si tout ça n'est pas lié. Puisque vous êtes missionnés pour trouver ces orcs, allez au Sud dans leur vallée et revenez me dire si Malone ne s'y trouve pas.",
                 "Narrateur\n\nL'entrevue prend fin, et vous quittez le palais en vous demandant comment Aldirien, lui qui sait toujours tout, pouvait ne pas connaître l'emplacement de cette vallée.",
             ),
         ),
@@ -511,33 +524,39 @@ dico_dialogue = {
         'nb_options' : 0,
         'type_choix' : 'aucun'
     },
-    -2 : { # maisons vides
+    47 : {
         'dialogue' : (
             (
-                "Narrateur\n\nLa porte semble fermée à clef.\n\n1. Toquer.\n2. Crocheter la serrure.",
-            ),
-            (
-                "Narrateur\n\nPersonne ne daigne vous ouvrir.",
-            ),
-            (
-                "Narrateur\n\nLa serrure résiste. Vous n'arrivez pas à la crocheter.",
-            ),
-        ),
-        'condition' : True,
-        'nb_options' : 2,
-        'type_choix' : 'spin_box'
-    },
-    -3 : { # panneau | devant la rivière au spawn
-        'dialogue' : (
-            (
-                "Pancarte\n\nCamp de la bibliothèque arcanique\n    Nord : Bibliothèque arcanique\n    Est : Maintown\n    Sud : Nonameburg",
+                "Un mage\n(en chuchotant)\n\nLà... vous voyez l'orc avec la meilleur armure et une bannière dans le dos ?",
+                "Un mage\n(en chuchotant)\n\nJ'ai appris qu'il s'appel Parz-Karl. C'est leur chef. Si on arrive a le tuer, ils fuiront tous.",
+                "Un mage\n(en chuchotant)\n\nAllez-y, je vous couvre.",
             ),
         ),
         'condition' : True,
         'nb_options' : 0,
         'type_choix' : 'aucun'
     },
-    -4 : { # panneau | devant la passe du sud (deux panneaux),
+    -2 : { # maisons vides
+        'dialogue' : (
+            (
+                "Narrateur\n\nOu bien il n'y a personne, ou bien personne ne daigne vous faire entrer ici.",
+            ),
+        ),
+        'condition' : True,
+        'nb_options' : 0,
+        'type_choix' : 'aucun'
+    },
+    -3 : { # panneau | devant la rivière au spawn
+        'dialogue' : (
+            (
+                "Pancarte\n\nCamp de la bibliothèque arcanique\n    Est : Maintown\n    Sud : Nonameburg",
+            ),
+        ),
+        'condition' : True,
+        'nb_options' : 0,
+        'type_choix' : 'aucun'
+    },
+    -4 : { # panneau | devant la passe du Sud (deux panneaux),
         'dialogue' : (
             (
                 "Pancarte\n\nPasse du Sud",
@@ -590,7 +609,7 @@ dico_dialogue = {
     -8 : { # panneau | Sandspear
         'dialogue' : (
             (
-                "Pancarte\n\nBienvenue à la garnison de Sandspear\n\n|---------------------|\n|Entraînements ouverts|\n|---------------------|",
+                "Pancarte\n\nBienvenue à la garnison de Sandspear\n\n| Entraînements ouverts |",
             ),
         ),
         'condition' : True,

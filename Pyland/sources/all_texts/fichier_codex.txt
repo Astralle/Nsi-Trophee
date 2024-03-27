@@ -3,11 +3,14 @@
 Le terminal est la zone où le résultat d'un programme apparaît. La fonction print() permet d'y afficher du contenu. Dans un terminal habituel, il est également possible d'y écrire directement de plusieurs façons :
 · lorsqu'un programme tourne et exécute la fonction input( ) (non vue au travers de jeu). Elle permet à l'utilisateur d'écrire dans le terminal et d'utiliser ce qu'il y écrit pour adapter le comportement du programme.
 · lorsqu'aucun programme n'est en cours. Dans ce cas, il est possible de faire exécuter divers instructions à l'interpréteur python comme des opérations mathématiques.
+Le terminal est une partie essentielle de la programmation, apportant un outil de debuggage, c'est à dire, régler les erreurs pratiquement. Dans ce monde (le jeu) par contre, il est limité, input() n'est pas intégré et print() est limité.
 --st--L'IDE
 IDE est l'abrévation de 'Integrated Development Environment' ou en français, Environnement de Développement Intégré. C'est une application permettant aux programmeurs d'écrire du code dans tel ou tel langage de programmation et de le tester. Il facilite le travail des programmeurs en offrant divers fonctionnalitées comme une coloration syntaxique, la possibilité de travailler sur plusieurs fichiers simultanément ou encore de l'autocomplétion.
+Des exmemples connus de IDE pour Python: PyCharm, VSCode, Jupyter Notebooks, Pydev, etc.
 --st--Python
 Python est un langage de programmation dit 'typé dynamiquement'. Cela signifie qu'il n'est pas nécessaire de préciser le type d'une donnée et qu'une variable peut changer de type après sa création. (les types sont expliqués plus loin dans le codex)
 Attention ! Python est un langage spacial, il prend en compte les retours à la ligne ou les espaces. Les identations en sont un exemple.
+Le langage Python est souvent recommandé pour les débutants en programmation en raison de sa syntaxe claire et de sa simplicité.
 --st--Variable
 Une variable est une sorte de conteneur permettant de mettre en mémoire des données pour pouvoir y accéder plus tard. Elle possède un nom auquel est associé une valeur. Ce nom peut-être n'importe quelle chaîne de caractère composée exclusivement de lettres, minuscules ou majuscules, de chiffres et du tiret du bas (underscore). Il n'est cependant pas possible de commencer le nom de la variable par un chiffre. Même si cela ne change rien du point de vue de l'exécution du programme, il existe des conventions de nomages permettant à un code d'être facilement compréhensible par une autre personne que le programmeur. Pour cela, le nom de la variable doit être composée d'un ou plusieurs mots en minuscule et séparés par des underscores. Une variable peut contenir toutes sortes de valeurs, comme un nombre entier, un nombre à virgule ou une chaîne de caractère. 
 --st--Maths
@@ -26,47 +29,123 @@ En python, il existe les boucles for qui executent un code un nombre défini de 
 --st--Fonction
 Une fonction python est un bout de code effectuant une action précise que vous définissez. Elle se créée avec def nom_fonction(parametre):. Comme pour les variables, le nom de la fonction doit être en minuscule, tout attaché et doit expliquer clairement ce que votre fonction fait. Entre parenthèse, le ou les paramètres sont des variables que vous pouvez utiliser dans le code de la fonction. Comme pour les boucles, la fonction effectue tout le code écrit avec un niveau d'indentation de plus que la ligne de def.
 
---t--Variables
-Les variables sont des conteneurs, comme des boîtes avec chacun une valeur. Ces variables sont retenu en mémoire pour être utilisé plus tard dans le code. Tu peux modifier la variable autant que tu le veux.
+--p--
+t--Indentation
+Les indentations, représentées par des espaces avant les lignes de code, sont d'une importance capitale en Python. Elles définissent la structure et la hiérarchie des blocs de code, ce qui permet au langage de savoir quelles instructions sont incluses dans quels blocs. Il est crucial que toutes les indentations soient cohérentes et de la même taille pour que le code fonctionne correctement.
 --st--Exemple
-a = 10 # Ici a est un entier 10
-a = 15 # On change a pour qu'il soit égal à 15
-b = 5 # On déclare une autre variable
-c = a + b # Ici c = 20.
-print(c) # Enfin, on affiche c
- 
---t--Maths
-Les maths sont une partie importante de la programmation. Et Python contient tout ce qu'il faut pour cela.
-Les exemples ont déjà été dit dans le Vocabulaire mais voici des petits plus.
-Au lieu de tout le temps mettre 'variable = variable * 3' ou n'importe quelle opération à la place de mutiplication, tu peux simplement faire 'variable *= 3'.
-On applique la même avec 'variable += 15' ou 'variable %= 3'.
+racine du code (sans indentation)
+    bloc1 (1 indentation)
+        bloc2
+    bloc1
+        bloc3 (2 indentations)
+            bloc4 (3 indentations)
+        bloc3
+racine
+Dans cet exemple, chaque niveau de bloc est identifié par une indentation supplémentaire de 4 espaces. Si les indentations étaient incohérentes, le code ne serait pas interprété correctement par Python.
+--st--Explication
+Dans tout script Python, il existe un bloc principal, souvent appelé la "racine" du code, qui n'est pas indenté. Les instructions situées à ce niveau sont exécutées en premier.
+Ensuite, nous avons le "bloc1", un bloc distinct du code principal. Il contient les blocs "bloc2", "bloc3" et "bloc4", ce dernier étant inclus dans "bloc3".
+Chaque bloc de code est exécuté en fonction de sa structure et de son contexte. Les blocs peuvent être des conditions, des fonctions, des boucles, etc. Des détails supplémentaires sur le fonctionnement des blocs seront fournis dans les sections dédiées aux fonctions et aux boucles.
 
+--p--
+--t--Variables
+Les variables sont des conteneurs qui permettent de stocker des données en mémoire pour les utiliser ultérieurement dans un programme. Elles sont essentielles pour manipuler et traiter des informations dans un script Python.
+--st--Exemple
+x = 10  # x est une variable contenant l'entier 10
+nom = "Alice"  # nom est une variable contenant la chaîne de caractères "Alice"
+prix = 29.99  # prix est une variable contenant le nombre à virgule 29.99
+Dans cet exemple, nous avons créé trois variables avec des types différents : un entier, une chaîne de caractères et un nombre à virgule.
+--st--Utilisation
+Les variables peuvent être utilisées pour stocker différentes valeurs et effectuer des opérations sur ces valeurs dans un programme. Elles peuvent être modifiées et réaffectées à tout moment.
+x = 5
+y = 3
+somme = x + y  # somme contient la valeur 8
+Dans cet exemple, nous utilisons les variables x et y pour calculer la somme de ces deux nombres et stocker le résultat dans la variable somme.
+
+--p--
+--t--Mathématiques
+Les opérations mathématiques sont couramment utilisées en programmation pour effectuer des calculs et manipuler des données. Python offre un ensemble complet d'opérateurs pour effectuer une large gamme d'opérations mathématiques.
+--st--Opérations courantes
+Les opérations mathématiques de base comprennent l'addition, la soustraction, la multiplication et la division. Voici des exemples de leur utilisation en Python :
+a = 10 + 5  # Addition
+b = 20 - 8  # Soustraction
+c = 6 * 4   # Multiplication
+d = 15 / 3  # Division
+Python prend également en charge d'autres opérations telles que la puissance, le modulo et le quotient de division entière.
+--st--Opérations abrégées
+Pour simplifier les opérations de mise à jour d'une variable, Python propose des opérateurs abrégés.
+a += 3  # Équivalent à a = a + 3
+b -= 2  # Équivalent à b = b - 2
+Ces opérateurs abrégés permettent d'effectuer une opération sur une variable et de réaffecter le résultat à la même variable en une seule instruction.
+
+--p--
 --t--Types
-En Python, comme dans la plupart des langages de programmation, il existe plusieurs 'types' différents. 
-Le type représente la nature d'une donnée et change la façon dont elle est comprise par le programme. Un type définit les opérations pouvant être effectuées sur cette donnée et la manière par laquelle elle est stockée dans la mémoire de l'ordinateur. Pour enregistrer une donnée et pouvoir la réutiliser plus tard, il est nécessaire de l'affecter à une variable. 
-Il existe deux grandes catégories de type :
---st--Types de données immuables :
-Les types de données immuables sont des objets dont l'état (c'est-à-dire les données qu'ils contiennent) ne peut pas être modifié après leur création. 
-Si vous essayez de modifier un objet immuable, cela entraînera en fait la création d'un nouvel objet avec la nouvelle valeur plutôt que de modifier l'objet d'origine. Les types de données immuables sont souvent utilisés dans les situations où vous souhaitez garantir que les données restent constantes et ne sont pas modifiées accidentellement.
-On a donc les entiers ('int'), les nombres à virgule ('float'), les booléen ('bool') ou les chaînes de caractères ('str').
---st--Types de données mutables :
-Les types de données mutables, en revanche, peuvent être modifiés après leur création. Cela signifie que vous pouvez ajouter, supprimer ou modifier des éléments à l'intérieur de l'objet sans créer de nouvel objet. 
-Les types de données mutables sont souvent utilisés dans les situations où vous devez modifier les données au fil du temps, comme dans les listes ('list'), les ensembles ('set') et les dictionnaires ('dict').
+En Python, chaque donnée a un type qui définit sa nature et la manière dont elle est interprétée et traitée par le programme. Comprendre les types de données est essentiel pour manipuler efficacement les informations dans un script Python.
+--st--Types de base
+Python offre plusieurs types de base, tels que les entiers (int), les nombres à virgule (float), les chaînes de caractères (str) et les booléens (bool).
+entier = 42
+virgule = 3.14
+texte = "Bonjour"
+vrai_ou_faux = True
+Chaque type a ses propres opérations et méthodes spécifiques qui lui sont associées.
+--st--Conversion de types
+Il est souvent nécessaire de convertir des données d'un type à un autre. Python offre des fonctions intégrées pour effectuer ces conversions.
+entier_en_chaine = str(42)
+chaine_en_entier = int("123")
+Ces fonctions permettent de convertir une donnée d'un type à un autre en fonction des besoins du programme.
 
+--p--
 --t--Conditions
-Les conditions portent bien leur nom, en Python elle serve à savoir si quelque chose est vrai (True) ou fausse (False).
-Par exemple si on veut savoir si une variable a est plus petite que 10 on écrit 'a < 10'. Si on veut savoir si elle est égale à 10 on écrit 'a == 10':
-* Egalité: '==', exemple 'a == 10'
-* Plus grand que: '>', exemple 'a > 10'
-* Plus grand ou égal: '>=' exemple 'a >= 10'
-* Plus petit que: '<', exemple 'a < 10'
-* Plus petit ou égal: '<=' exemple 'a <= 10'
-* Pas égal à: '!=', exemple 'a != 10'
-* Est dans liste: 'in', exemple 'a in liste'
-* N'est pas: 'not', exemple 'not condition'
-* Et: 'and', exemple 'condition1 and condition2'
-* Ou: 'or', exemple 'condition1 or condition2'
+Les conditions permettent de contrôler le flux d'exécution d'un programme en évaluant si une expression est vraie ou fausse. Les conditions sont largement utilisées en programmation pour prendre des décisions et exécuter des blocs de code en fonction de certains critères.
+--st--Opérateurs de comparaison
+Python propose différents opérateurs de comparaison pour évaluer des expressions et créer des conditions. Voici quelques-uns des opérateurs les plus couramment utilisés :
+* Égalité (==)
+* Différence (!=)
+* Supérieur (>)
+* Inférieur (<)
+* Supérieur ou égal (>=)
+* Inférieur ou égal (<=)
+--st--Opérateurs logiques
+En plus des opérateurs de comparaison, Python propose des opérateurs logiques pour combiner des expressions conditionnelles. Les opérateurs logiques les plus couramment utilisés sont :
+* Et (and)
+* Ou (or)
+* Non (not)
+Ces opérateurs permettent de créer des conditions plus complexes en combinant plusieurs expressions conditionnelles.
+--st--Instructions conditionnelles
+Les instructions conditionnelles permettent de contrôler le flux d'exécution d'un programme en évaluant des expressions conditionnelles et en exécutant des blocs de code en fonction du résultat de ces évaluations. En Python, les instructions conditionnelles sont généralement réalisées à l'aide des mots-clés if, else et elif (qui signifie "else if").
+--st--Instruction 'if'
+L'instruction if permet d'exécuter un bloc de code si une expression conditionnelle est évaluée comme vraie.
+if condition:
+    # Bloc de code à exécuter si la condition est vraie
+Si la condition est vraie, le bloc de code indenté sous l'instruction if est exécuté. Sinon, le bloc de code est ignoré.
+--st--Instruction 'else'
+L'instruction else est utilisée pour exécuter un bloc de code lorsque la condition associée à l'instruction if est évaluée comme fausse.
+if condition:
+    # Bloc de code à exécuter si la condition est vraie
+else:
+    # Bloc de code à exécuter si la condition est fausse
+Si la condition associée à l'instruction if est fausse, le bloc de code indenté sous l'instruction else est exécuté.
+--st--Instruction 'elif'
+L'instruction elif est utilisée pour évaluer plusieurs conditions en séquence. Elle est placée entre les instructions if et else (facultatif) et permet de tester une autre condition si la première est fausse.
+if condition1:
+    # Bloc de code à exécuter si la condition1 est vraie
+elif condition2:
+    # Bloc de code à exécuter si la condition2 est vraie et la condition1 est fausse
+else:
+    # Bloc de code à exécuter si aucune des conditions précédentes n'est vraie
+L'instruction elif permet d'évaluer une nouvelle condition si les conditions précédentes sont fausses. Si une des conditions if ou elif est vraie, les autres conditions associées à des instructions elif ou else ne sont pas évaluées.
+--st--Exemple
+Voici un exemple d'utilisation des instructions conditionnelles if, elif et else :
+x = 10
+if x > 10:
+    print("x est supérieur à 10")
+elif x == 10:
+    print("x est égal à 10")
+else:
+    print("x est inférieur à 10")
+Dans cet exemple, selon la valeur de la variable x, un message différent sera affiché.
 
+--p--
 --t--Boucles
 Il y a deux types de boucles dans python : les for et les whiles.
 * Les boucles for s'écrivent 'for variable in liste:'. La variable va prendre la valeur de chaque élément de la liste les uns après les autres et effectuer le code, jusqu'à la fin de la liste. Vous pouvez créer une liste de nombres de x à y-1 avec range(x, y). x n'est pas nécessaire, si vous ne le mettez pas, la liste ira de 0 à y-1. Ainsi, range(2) créé la liste [0, 1]. 'for i in range(2):' va donc effectuer deux fois un code, et 'i' va valloir sucessivement 0 puis 1.
@@ -75,21 +154,70 @@ Il y a deux types de boucles dans python : les for et les whiles.
 for i in range(3):
     print(i)
 Le code au dessus affiche les nombres 0, 1 et 2.
-Les mots 'break' et 'continue' permettent de simplifier les boucles. 'break' fait terminer la boucle, ne continuant plus le reste de la boucle. 'continue' arrête l'étape qui est exécuté et procède à la prochaine étape.
+En effet, le 'print(i)' est un bloc à part qui s'exécute pour chaque itération de la boucle for, l'indentation est super importante, sans elle, le print(i) s'excéute hors de la boucle.
 i = 1
 while i < 100:
     i = i*2
 Ici elle itère la boucle 'while' tant que i est plus petit que 100, dès que i sera plus grand que 100, elle s'arrêtera. (Ici i sera égal à 128).
+Le bloc 'i = i*2' s'exécute pour chaque itération de la boucle while, ici, tant que i est plus petit que 100.
+Les mots 'break' et 'continue' permettent de simplifier les boucles. 'break' fait terminer la boucle, ne continuant plus le reste de la boucle. 'continue' arrête l'étape qui est exécuté et procède à la prochaine étape. Exemple:
+for i in range(10):
+    if i == 3:
+        continue
+    if i == 8:
+        break
+    print(i)
+Ici, il sera donc afficher 0, 1, 2, 4, 5, 6, 7 dans le terminal puisque le code a sauté le 3, et a arrêter la boucle quand i était égal à 8.
 
+--p--
 --t--Fonctions
-Avez vous marre de toujours répéter le même bout de code à chaque fois ?
-Vous pouvez utiliser les fonctions ! Les fonctions permettent de ne pas à réécrire un bout de code encore et encore mais de le definir pour le réutiliser plus tard.
-Par exemple si on veut afficher "Salut ! Je suis Gaspard":
+Les fonctions en Python sont des blocs de code réutilisables qui effectuent une tâche spécifique lorsqu'elles sont appelées. Elles permettent d'organiser et de structurer le code en le divisant en morceaux logiques et réutilisables.
+--st--Définition de fonctions
+Pour définir une fonction en Python, utilisez le mot-clé def, suivi du nom de la fonction et des parenthèses contenant éventuellement des paramètres. Le bloc de code de la fonction est indenté sous la ligne de définition.
+def nom_de_fonction(parametres):
+    # Bloc de code de la fonction
+Par exemple :
 def afficher_message():
-    print("Salut ! Je suis Gaspard")
-Maintenant, on voudrait aussi afficher le même message mais avec Lou au lieu de Gaspard. Pas de souccis, tu peux utiliser un paramètre, c'est une option dans la defintion d'une fonction qui permet d'intégrer une diversité.
-def afficher_message(nom):
-    print("Salut ! Je suis " + nom) # Ici on affiche le paramètre nom au lieu de Gaspard
-On peut mettre plusieurs paramètres dans les fonctions, autant qu'on veut en fait.
-Pour appeler la fonction, on l'écrit juste ainsi:
-afficher_message("Lou") # Affiche: Salut ! Je suis Lou
+    print("Bonjour !")
+--st--Appel de fonctions
+Pour appeler une fonction définie, utilisez simplement son nom suivi de parenthèses. Si la fonction prend des paramètres, vous devez leur passer des valeurs lors de l'appel.
+nom_de_fonction(parametres)
+Par exemple :
+afficher_message()
+--st--Paramètres de fonctions
+Les paramètres sont des variables utilisées dans la définition de la fonction pour recevoir des valeurs lors de l'appel de la fonction. Les paramètres sont placés entre les parenthèses de la définition de la fonction.
+def saluer(nom):
+    print("Bonjour,", nom)
+Dans cet exemple, nom est un paramètre de la fonction saluer.
+--st--Valeurs de retour
+Les fonctions peuvent retourner des valeurs à l'aide du mot-clé return. Une fois qu'une fonction rencontre une instruction return, elle renvoie la valeur spécifiée et arrête son exécution.
+def additionner(a, b):
+    return a + b
+Dans cet exemple, la fonction additionner prend deux paramètres a et b et retourne leur somme.
+
+--p--
+--t--Listes
+Les listes constituent l'une des structures de données les plus fondamentales en Python. Elles permettent de stocker une collection ordonnée d'éléments, qu'ils soient de même type ou non. Les listes sont dynamiques, ce qui signifie que vous pouvez ajouter, supprimer ou modifier des éléments après leur création.
+--st--Création de listes
+Pour créer une liste en Python, utilisez des crochets [] et séparez les éléments par des virgules. Voici un exemple simple de création d'une liste : ma_liste = [1, 2, 3, 4, 5]
+Vous pouvez également créer une liste vide en utilisant des crochets sans éléments : liste_vide = []
+--st--Accès aux éléments
+Pour accéder aux éléments d'une liste, utilisez l'indice de l'élément entre crochets après le nom de la liste. Les indices commencent à 0 pour le premier élément, 1 pour le deuxième, et ainsi de suite. Voici comment accéder aux éléments d'une liste :
+ma_liste = [10, 20, 30, 40, 50]
+print(ma_liste[0])  # Affiche le premier élément : 10
+print(ma_liste[2])  # Affiche le troisième élément : 30
+Vous pouvez également utiliser des indices négatifs pour accéder aux éléments à partir de la fin de la liste. Par exemple, -1 fait référence au dernier élément, -2 au deuxième élément en partant de la fin, et ainsi de suite.
+--st--Opérations sur les listes
+Python offre de nombreuses opérations pour manipuler les listes :
+* Ajouter des éléments : Utilisez la méthode ma_liste.append(nouvel_element) pour ajouter un élément à la fin de la liste.
+* Supprimer des éléments : Utilisez les méthodes ma_liste.remove(element) pour supprimer une valeur spécifique ou ma_liste.pop(index) pour supprimer un élément à un index donné.
+* Concaténation de listes : Utilisez l'opérateur + pour mettre les éléments des deux listes dans une plus grande.
+* Longueur de la liste : Utilisez la fonction len(ma_liste) pour connaître le nombre d'éléments dans une liste.
+* Le minimum, le maximum et la somme : min(ma_liste) renvoie le minimum, max(ma_liste) le maximum et sum(ma_liste) renvoie la somme.
+--st--Listes et boucles
+Les listes sont souvent utilisées avec des boucles pour parcourir tous leurs éléments. Voici un exemple de boucle for utilisant une liste :
+for element in ma_liste:
+    print(element)
+for i in range(len(ma_liste)):
+    print(ma_liste[i])
+Ces deux boucles affichent chaque élément de la liste ma_liste de manières différentes. Les listes offrent une flexibilité et une puissance significatives dans la programmation Python, facilitant la manipulation et le stockage de données de manière efficace et organisée.

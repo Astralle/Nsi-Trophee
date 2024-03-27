@@ -4774,6 +4774,9 @@ marked_tiles[30][71] = -1
 marked_tiles[60][62] = 10
 #chemin campement orc
 
+marked_tiles[10][72] = 47
+# dialogue pré niveau 11
+
 marked_tiles[67][68] = 11
 #combat Parz-Karl
 
@@ -4798,8 +4801,8 @@ marked_tiles[73][10] = 12
 marked_tiles[73][9] = 12
 #combat final
 
-marked_tiles[72][9] = 12
-#combat final
+marked_tiles[72][10] = -1
+#unacessible
 
 marked_tiles[77][24] = 8
 #combat entrainement

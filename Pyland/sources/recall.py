@@ -5,7 +5,12 @@ sauvegarde de base : 20/4/3/0/0/False/True/False/False/True/False/False/True/Fal
 """
 
 def recall():
-
+    """
+    lit la sauvegarde du fichier de sauvegarde
+    Returns
+    -------
+    toutes les variables a réimplanter
+    """
     f = open("all_texts/save.txt", "r")
     save_data = f.read()
     if save_data == "":
@@ -27,6 +32,16 @@ def recall():
 
 
 def temp_to_actual(temp):
+    """
+    Renvoie les varaibles sous les bonnes formes , autre que str
+    Parameters
+    ----------
+    temp : les variables en temps que str
+
+    Returns
+    -----
+    les varaibles sous les bonnes formes--
+    """
     if temp == "True":
         temp = True
     elif temp == "False":
@@ -37,6 +52,16 @@ def temp_to_actual(temp):
 
 
 def var_in_dico(list_data):
+    """
+    Renvoie les varaibles dans un dico
+    Parameters
+    ----------
+    list_data : toues les données sous le bon facteur
+
+    Returns
+    -------
+    le dico
+    """
     var_to_read = {
         "player_hp": list_data[0],
         "player_pos_0": list_data[1],

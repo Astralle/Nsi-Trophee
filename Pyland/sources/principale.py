@@ -11,8 +11,8 @@ from PyQt5.QtCore import QRectF
 import io, contextlib
 
 # constants
-from constante_son import *
 from pnj import dico_pnj
+from constantes import ORIGIN_MAP, ORIGIN_PLAYER
 
 # load
 import progression_base
@@ -39,17 +39,24 @@ level = {
 # =========
 
 def niveau_actuel() :
-    """Renvoie le niveau lié à la case sur laquelle se trouve le joueur
+    """
+    Renvoie le niveau lié à la case sur laquelle se trouve le joueur
+    Returns
+    -------
+    si la case est marqué son numéro
     """
     return RESTRICTED_TILES[player_pos[1]][player_pos[0]]
 
 def executer(interface : dict) -> None :
     """
     Exécute le code écrit par l'utilisateur en cas de niveau, de combat ou juste normalement
+    Parameters
+    ----------
+    interface : l'interface du jeu
 
-    Args:
-        zone_texte (QTextEdit): La zone d'édition où l'utilisateur a écrit du code
-        terminal (QTextEdit): Le terminal dans lequel on affiche les résultats
+    Returns
+    -------
+
     """
     if level["player in"]:
         executer_en_level(interface)
@@ -179,14 +186,16 @@ def redessiner(interface : dict, images : dict) -> None :
         if pos[0] // VIEWPORT_WIDTH == background_position[0] \
         and pos[1] // VIEWPORT_HEIGHT == background_position[1] \
         and pnj["condition"]:
-            if pos == (0, 0): continue
             pnj_x = pos[0] % VIEWPORT_WIDTH
             pnj_y = pos[1] % VIEWPORT_HEIGHT
-            pnj_target = QRectF(pnj_x * tile_affichee, pnj_y * tile_affichee, tile_affichee, tile_affichee)
-            painter.drawPixmap(pnj_target, pnj["image"], sources["player"])
+            nb_tiles_largeur = pnj.get('nb_tiles_largeur', 1)
+            nb_tiles_hauteur = pnj.get('nb_tiles_hauteur', 1)
+            pnj_target = QRectF(pnj_x * tile_affichee, pnj_y * tile_affichee, tile_affichee * nb_tiles_largeur, tile_affichee * nb_tiles_hauteur)
+            pnj_source = QRectF(0, 0, pnj["image"].width(), pnj["image"].height())
+            painter.drawPixmap(pnj_target, pnj["image"], pnj_source)
 
 
-def movement(event : QKeyEvent, disposition : QVBoxLayout) -> None :
+def movement(event : QKeyEvent, interface : dict) -> None :
     """
     Interprète les évènements provoqués par l'utilisateur sur la zone de jeu et change
     les la position du joueur et du fond en conséquence.
@@ -205,9 +214,9 @@ def movement(event : QKeyEvent, disposition : QVBoxLayout) -> None :
             background_position[1] = player_pos[1] // viewport[1]
             niveau = niveau_actuel()
             if niveau > 0 or niveau < -1:
-                commencer_dialogue(disposition, niveau)
+                commencer_dialogue(interface['dialogue'], niveau)
         else :
-            SON_INACCESSIBLE.play()
+            interface["son_inaccessible"].play()
 
 
 def trigger_niveau(event : QKeyEvent, interface : dict) -> None:
@@ -223,7 +232,7 @@ def trigger_niveau(event : QKeyEvent, interface : dict) -> None:
     if event.key() != Qt.Key_Escape:
         niveau = search_level_on_current(player_pos, interface)
         if not level["player in"] and 1 <= niveau <= len(liste_niveaux) and liste_niveaux[niveau]['condition'] :
-            changer_son(interface["son_principal"], interface["son_battle"])
+            changer_son(interface["son_battle"], interface["son_principal"])
             level["player in"] = True
             level["current"] = liste_niveaux[niveau]
             print("Le joueur est rentré dans un niveau", player_pos)
@@ -232,17 +241,16 @@ def trigger_niveau(event : QKeyEvent, interface : dict) -> None:
 def sortir_niveau(event, interface) :
     if event.key() == Qt.Key_Escape:
         if level["player in"] and level["finished"]:
-            changer_son(interface["son_battle"], interface["son_principal"])
+            changer_son(interface["son_principal"], interface["son_battle"])
             print("Le joueur a fini le niveau !")
             update_condition_niveau(level['current']['message_id'])
             update_condition_pnj(level['current']['message_id'] +100) # on rajoute 100 lorsqu'on déclenche en fin de niveau et non en fin de dialogue (cf pnj.py)
             level["player in"] = False
             level["finished"] = False
             changement_niveau(0, interface)
-            save_all()
+            save_all(interface)
             if dico_dialogue.get(level['current']['message_id'] + 20, False):
                 commencer_dialogue(interface['dialogue'], level['current']['message_id'] + 20)
-            print(level['current']['message_id'] in (4, 6, 12, 13, 14, 15))
             if level['current']['message_id'] in (4, 6, 12, 13, 14, 15):
                 trigger_suite_niveau(interface, level['current']['message_id'])
 
@@ -252,6 +260,14 @@ def trigger_suite_niveau(interface, niveau):
     qu'à la fin d'un précédent niveau et non durant les déplacements du joueur, et prends comme paramètre supplémentaire
     niveau (int) : le niveau qui demande le lancement d'une suite.
     De plus, le paramètre event est retiré.
+    Parameters
+    ----------
+    interface ; l'interface du jeu
+    niveau : le niveau actuel du joueur
+
+    Returns
+    -------
+
     """
     # assignement du niveau suivant correspondant
     if niveau in (12, 13, 14, 15):
@@ -262,7 +278,7 @@ def trigger_suite_niveau(interface, niveau):
         niveau = 18
     # lancement du niveau demandé
     if not level["player in"] and liste_niveaux[niveau]['condition'] :
-        changer_son(interface['son_principal'], interface['son_battle'])
+        changer_son(interface['son_battle'], interface['son_principal'])
         level['player in'] = True
         level['current'] = liste_niveaux[niveau]
         changement_niveau(level['current']['message_id'], interface)
@@ -310,7 +326,15 @@ def update_condition_pnj(niveau : int):
 
 def search_level_on_current(player_pos, interface):
     """
+    retourne l'id du level
+    Parameters
+    ----------
+    player_pos : la position du player
+    interface : l'interface du jeu
 
+    Returns
+    -------
+    l'id du level
     """
     if (level_id := RESTRICTED_TILES[player_pos[1]][player_pos[0]]) < 1:
         level_id = 0
@@ -335,7 +359,7 @@ def action_utilisateur(event : QKeyEvent, interface : dict) -> None :
     if interface["zone_texte"].hasFocus() or level["player in"]:
         interface["zone_texte"].keyPressEvent(event)
     else:
-        movement(event, interface['dialogue'])
+        movement(event, interface)
         interface["jeu"].update()
         trigger_niveau(event, interface)
     sortir_niveau(event, interface)
@@ -400,12 +424,25 @@ def suite_dialogue(disposition : QVBoxLayout, jeu : QWidget) -> None :
     else :
         cacher_dialogue(disposition)
         update_condition_pnj(etat_dialogue['niveau'])
-        save_all()
+        if etat_dialogue['niveau'] == 31: # si le joueur fini de dialogue suivant le niveau 11
+            tp_player(jeu)
         jeu.setFocus()
     # Si le dialogue en est au moment ou le joueur doit faire un choix
     if selected_dialogue['nb_options'] and not etat_dialogue["option"] and etat_dialogue["avancement"] == len(dialogue[etat_dialogue["option"]]) - 1 :
         if selected_dialogue['type_choix'] == 'spin_box' :
             montrer_spin_box(disposition, selected_dialogue['nb_options'])
+
+def tp_player(jeu : QWidget):
+    """
+    téléporte le joueur en (9, 72) à la fin du niveau 11
+    pour qu'il puisse passer au niveau 12
+    """
+    player_pos[0] = 9
+    player_pos[1] = 72
+    background_position[0] = player_pos[0] // VIEWPORT_WIDTH
+    background_position[1] = player_pos[1] // VIEWPORT_HEIGHT
+    jeu.update()
+    
 
 def commencer_dialogue(disposition : QVBoxLayout, niveau : int):
     """
@@ -430,11 +467,23 @@ def commencer_dialogue(disposition : QVBoxLayout, niveau : int):
         montrer_dialogue(disposition)
 
 
-def save_all():
-    save = open("all_texts/save.txt", "w") # augmente les performances
+def save_all(interface):
+    """
+    sauvegarde la progression du joueur
+    Parameters
+    ----------
+    interface : tout les variables a sauvegarder dans le fichier de sauvegarde
+
+    Returns
+    -------
+
+    """
+    save = open("all_texts/save.txt", "w")
     separator = "/"
+    barre_vie = interface["barre_vie"]
+    hp_joueur = barre_vie.value()
     temp = (
-            str(vie_joueur) +
+            str(hp_joueur) +
             str(separator) +
             str(player_pos[0]) +
             str(separator) +
@@ -471,13 +520,12 @@ def save_all():
             str(progression_base.dico_progression["saal_lio_arrive"]) +
             str(separator)
     )
-    #print(temp)
     save.write(temp)
-    save.close() # pour réduire les performances
+    save.close()
 
 # main
 def main() :
-    """La fonction principale du jeu. Elle lance l'exécution."""
+    """La fonction principale du jeu. Elle lance le programme."""
     interface = creer_interface()
     creer_liens(interface)
     app.exec_()

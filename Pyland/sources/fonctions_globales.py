@@ -58,12 +58,34 @@ def can_move_to(position : tuple[int,int]) -> bool :
     return blocked_case
 
 def taille_prochain_mot(reste : str) -> int:
+    """
+    regarde la taille du prochain mot
+    Parameters
+    ----------
+    reste: la taille du prochain mot
+
+    Returns
+    -------
+    len(reste) : la taille du reste
+    """
     for i in range(len(reste)) :
         if reste[i] in (' ', '\n') :
             return i
     return len(reste)
 
 def multi_split(texte : str, taille : int, *sep : str) -> list[str]:
+    """
+    Coupe les mots du codex pour que ceux ci ne dépasse pas sur les lignes
+    Parameters
+    ----------
+    texte : le text en question
+    taille : la taille du mot
+    sep : le séparateur de lignes .
+
+    Returns
+    -------
+
+    """
     liste = []
     ligne = ''
     compte = 0

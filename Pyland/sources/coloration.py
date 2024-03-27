@@ -1,42 +1,47 @@
+"""s'occupe de la coloration de l'IDE interne en définisant les couelurs de chaque mot-clée possible"""
+
 from PyQt5.QtGui import QColor
 from PyQt5.QtCore import QRegExp
 
 
-VIOLET2 = QColor(101, 84, 193)
-ROUGE = QColor(255, 0, 0)
-ROUGE_FONCE = QColor(144, 12, 40)
-CYAN = QColor(28, 195, 173)
-VIOLET = QColor(141, 29, 117)
-GRIS = QColor(153, 153, 153)
+VERT_BLEU = QColor(0, 240, 100) # types
+ROUGE = QColor(255, 0, 0) # erreurs
+ROUGE_FONCE = QColor(144, 12, 40) # mots clés
+CYAN = QColor(28, 195, 173) # fonctions
+VIOLET = QColor(186, 0, 245) # booléens et None
+GRIS = QColor(153, 153, 153) # commentaires
 BLEU_FONCE = QColor(38, 21, 232)
 VERT = QColor(0, 197, 6)
 BLEU_PASTEL = QColor(30, 95,164)
-ORANGE = QColor(210, 100, 40)
+ORANGE = QColor(210, 100, 40) # strings et dostrings
 VERT_POMME = QColor(37, 142, 0)
 COULEURS = {"rouge" : ROUGE, "rouge_fonce" : ROUGE_FONCE, "cyan" : CYAN, "violet" : VIOLET, "gris" : GRIS, "bleu_fonce" : BLEU_FONCE,
-            "vert" : VERT, "bleu_pastel" : BLEU_PASTEL, "orange" : ORANGE, "vert_pomme" : VERT_POMME, "violet2" : VIOLET2}
+            "vert" : VERT, "bleu_pastel" : BLEU_PASTEL, "orange" : ORANGE, "vert_pomme" : VERT_POMME, "vert_bleu" : VERT_BLEU}
 
 HIGHLIGHTING_RULES : tuple[tuple[QRegExp, QColor, bool]] = (
                       (QRegExp("\\bfor\\b"), "rouge_fonce", True),
                       (QRegExp("\\bwhile\\b"), "rouge_fonce", True),
                       (QRegExp("\\bin\\b"), "rouge_fonce", True),
-                      (QRegExp("\\bdef\\b"), "bleu_fonce", True),
-                      (QRegExp("\\breturn\\b"), "bleu_fonce", True),
-                      (QRegExp("\\bdel\\b"), "bleu_fonce", True),
-                      (QRegExp("\\bclass\\b"), "bleu_fonce", True),
                       (QRegExp("\\bif\\b"), "rouge_fonce", True),
                       (QRegExp("\\belif\\b"), "rouge_fonce", True),
                       (QRegExp("\\belse\\b"), "rouge_fonce", True),
                       (QRegExp("\\bwith\\b"), "rouge_fonce", True),
                       (QRegExp("\\bas\\b"), "rouge_fonce", True),
+                      (QRegExp("\\bis\\b"), "rouge_fonce", True),
+                      (QRegExp("\\btry\\b"), "rouge_fonce", True),
+                      (QRegExp("\\bexcept\\b"), "rouge_fonce", True),
+                      (QRegExp("\\bdef\\b"), "bleu_fonce", True),
+                      (QRegExp("\\breturn\\b"), "bleu_fonce", True),
+                      (QRegExp("\\bdel\\b"), "bleu_fonce", True),
+                      (QRegExp("\\bclass\\b"), "bleu_fonce", True),
                       (QRegExp("\\band\\b"), "vert", True),
                       (QRegExp("\\bor\\b"), "vert", True),
                       (QRegExp("\\bnot\\b"), "vert", True),
-                      (QRegExp("\\bis\\b"), "violet", False),
                       (QRegExp("\\bNone\\b"), "violet", False),
                       (QRegExp("\\bTrue\\b"), "violet", False),
                       (QRegExp("\\bFalse\\b"), "violet", False),
                       (QRegExp("\\brange\\b"), "cyan", False),
+                      (QRegExp("\\blen\\b"), "cyan", False),
                       (QRegExp("\\bprint\\b"), "cyan", False),
                       (QRegExp("\\bsplit\\b"), "cyan", False),
                       (QRegExp("\\binsert\\b"), "cyan", False),
@@ -82,19 +87,21 @@ HIGHLIGHTING_RULES : tuple[tuple[QRegExp, QColor, bool]] = (
                       (QRegExp("\\bmap\\b"), "cyan", False),
                       (QRegExp("\\benumerate\\b"), "cyan", False),
                       (QRegExp("\\bexec\\b"), "cyan", False),
-                      (QRegExp("\\beval\\b"), "cyan", False),
-                      (QRegExp("\\bint\\b"), "violet2", False),
-                      (QRegExp("\\bstr\\b"), "violet2", False),
-                      (QRegExp("\\btype\\b"), "violet2", False),
-                      (QRegExp("\\bcomplex\\b"), "violet2", False),
-                      (QRegExp("\\bbool\\b"), "violet2", False),
-                      (QRegExp("\\btuple\\b"), "violet2", False),
-                      (QRegExp("\\bset\\b"), "violet2", False),
-                      (QRegExp("\\bfloat\\b"), "violet2", False),
-                      (QRegExp("\\blist\\b"), "violet2", False),
-                      (QRegExp("\\bdict\\b"), "violet2", False),
+                      (QRegExp("\\bchr\\b"), "cyan", False),
+                      (QRegExp("\\bord\\b"), "cyan", False),
+                      (QRegExp("\\bint\\b"), "vert_bleu", False),
+                      (QRegExp("\\bstr\\b"), "vert_bleu", False),
+                      (QRegExp("\\btype\\b"), "vert_bleu", False),
+                      (QRegExp("\\bcomplex\\b"), "vert_bleu", False),
+                      (QRegExp("\\bbool\\b"), "vert_bleu", False),
+                      (QRegExp("\\btuple\\b"), "vert_bleu", False),
+                      (QRegExp("\\bset\\b"), "vert_bleu", False),
+                      (QRegExp("\\bfloat\\b"), "vert_bleu", False),
+                      (QRegExp("\\blist\\b"), "vert_bleu", False),
+                      (QRegExp("\\bdict\\b"), "vert_bleu", False),
                       (QRegExp("[=-\*\+/%]"), "gris", False),
-                      (QRegExp("[0-9_]+"), "bleu_pastel", False),
+                      (QRegExp("[0-9]+j?"), "bleu_pastel", False),
+                      (QRegExp("[0-9]_[0-9]"), "bleu_pastel", False),
                       (QRegExp("=="), "gris", False),
                       (QRegExp("<="), "gris", False),
                       (QRegExp(">="), "gris", False),
@@ -102,19 +109,22 @@ HIGHLIGHTING_RULES : tuple[tuple[QRegExp, QColor, bool]] = (
                       (QRegExp("<"), "gris", False),
                       (QRegExp("!="), "gris", False),
                       (QRegExp("\[|\]|\(|\)|\{|\}"), "vert_pomme", False),
-                      (QRegExp("#[^\\n]*"),"gris", False),
                       (QRegExp("={3,}|[-+*%]{2,}|/{3,}"), "rouge", False),  # à partir d'ici, il s'agit d'erreurs
                       (QRegExp("=[<>!-*+\\\/%]+"), "rouge", False),
+                      (QRegExp("[<>!-*+\\\%]{2,}="), "rouge", False),
+                      (QRegExp("/{3,}="), "rouge", False),
                       (QRegExp("[<>!/%-+*\]+=="), "rouge", False),
-                      (QRegExp("[^a-zA-Z]+\\d+[a-zA-Z]+"), "rouge", False),
+                      (QRegExp("(?![a-zA-Z])\\d+[a-ik-zA-Z][a-zA-Z]"), "rouge", False),
+                      (QRegExp("(?![a-zA-Z])\\d+j[a-zA-Z]+"), "rouge", False),
                       (QRegExp("(\([^)\"']*(\]|\}))|((\[|\{)[^(\"']*\))"), "rouge", False),
                       (QRegExp("(\[[^\]\"']*\})|(\{[^\[\"']*\])"), "rouge", False),
                       (QRegExp("\\brange\\b\( *\)"), "rouge", False),
-                      (QRegExp("\\brange\\b\(\".*\)"), "rouge", False),
-                      (QRegExp("\\brange\\b\([^0-9]*\)"), "rouge", False),
-                      (QRegExp("(?\\bdef\\b)[^a\\n:]*a(\\n|\\r)"), "rouge", False),
+                      (QRegExp("(?\\bdef\\b)[^\\r\\n:]*(\\n|\\r)"), "rouge", False),
+                      (QRegExp("^(([^\(\)]*\([^\(\)]*\)[^\(\)]*)*\(([^\(\)]*\([^\(\)]*\)[^\(\)]*)*$"), "rouge", False),
                       (QRegExp("\"[^\"]*\""), "orange", False),             # sauf ces deux dernières expressions
                       (QRegExp("\'[^\']*\'"), "orange", False),             # qui gèrent la coloration des strings
+                      (QRegExp("\"\"\".*\"\"\""), "orange", False),         # et des commentaires
+                      (QRegExp("#[^\\n]*"),"gris", False),
                       )
 
 HIGHLIGHTING_NIVEAU = {
@@ -130,7 +140,10 @@ HIGHLIGHTING_NIVEAU = {
     10 : QRegExp("\\b(passage_possible)\\b"),
     11 : QRegExp("\\b(nombre_riposte)\\b"),
     12 : QRegExp("\\b(bloque_anagramme)\\b"),
-    13 : QRegExp("\\b(melange)\\b"),
-    14 : QRegExp("\\b(is_fibonacci)\\b"),
-    15 : QRegExp("\\b(retourne_sort)\\b")
+    13 : QRegExp("\\b(echo_palindrome)\\b"),
+    14 : QRegExp("\\b(melange)\\b"),
+    15 : QRegExp("\\b(est_fibonacci)\\b"),
+    16 : QRegExp("\\b(retourne_sort)\\b"),
+    17 :QRegExp("\\b(crie_e)\\b"),
+    18 :QRegExp("\\b(change_ordre)\\b"),
 }

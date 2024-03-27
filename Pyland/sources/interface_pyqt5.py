@@ -6,9 +6,9 @@ gère l'interface du jeu
 # imports
 # =======
 from PyQt5.QtWidgets import QLabel, QPushButton, QVBoxLayout, QWidget, QApplication, QTextEdit, QHBoxLayout, QProgressBar, QStackedWidget, QSpinBox, QSizePolicy
-from PyQt5.QtGui import QPalette, QColor, QPixmap, QIcon, QFontMetrics, QPainter, QFont
+from PyQt5.QtGui import QPalette, QColor, QPixmap, QIcon, QFontMetrics, QPainter
 from PyQt5.QtCore import Qt,  QSize, QRectF, QUrl, QTimer
-from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
+from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent, QSoundEffect
 from fonctions_liens import text_modifier, cacher_dialogue
 from fonctions_globales import multi_split
 from math import ceil
@@ -29,7 +29,11 @@ from chargement_police import FONT_CODEX, FONT_SOUS_TITRE_CODEX, FONT_TITRE_CODE
 # =========
 def precedente(bouton : QPushButton, sec_bouton : QPushButton, pile : QStackedWidget) -> None:
     """
-    permet de passer à la page précédente de l'affichage des énoncés de niveaux
+    Permet de passer à la page précédente de l'affichage des énoncés de niveaux.
+
+    Params :
+    bouton (QPushButton) : Le bouton qui est préssé (bouton gauche)
+    secbouton (QPushButton) : Le bouton qui n'est pas préssé (bouton droit)
     """
     widget : QStackedWidget = pile.currentWidget()
     index = max(0, widget.currentIndex() - 1)
@@ -41,7 +45,11 @@ def precedente(bouton : QPushButton, sec_bouton : QPushButton, pile : QStackedWi
 
 def suivante(bouton : QPushButton, sec_bouton : QPushButton, pile : QStackedWidget) -> None :
     """
-    permet de passer à la page suivante de l'affichage des énoncés de niveaux
+    Permet de passer à la page suivante de l'affichage des énoncés de niveaux.
+
+    Params :
+    bouton (QPushButton) : Le bouton qui n'est pas préssé (bouton droit)
+    secbouton (QPushButton) : Le bouton qui est préssé (bouton gauche)
     """
     widget : QStackedWidget = pile.currentWidget()
     nombre_widgets = widget.count() - 1
@@ -77,31 +85,10 @@ def creer_niveaux(largeur : int) -> tuple[QVBoxLayout, QStackedWidget]:
             lignes = multi_split(niveau, largeur // pile_niveaux.fontMetrics().width("a"))
             for n in range(ceil(len(lignes)/N_LIGNES)) :
                 label = QLabel("".join(lignes[n*N_LIGNES : min((n + 1) * N_LIGNES, len(lignes))]))
+                label.setTextInteractionFlags(label.textInteractionFlags() | Qt.TextSelectableByMouse)
                 label.setAlignment(Qt.AlignTop)
                 pile_pages.addWidget(label)
             pile_niveaux.addWidget(pile_pages)
-
-        """
-        texte = ""
-        n_lignes = 0
-        pile_pages = QStackedWidget()
-        for ligne in fichier.readlines():
-            if ligne == "\n" :
-                pile_pages.addWidget(QLabel(texte))
-                pile_niveaux.addWidget(pile_pages)
-                texte = ""
-                n_lignes = 0
-                pile_pages = QStackedWidget()
-            elif n_lignes >= 10 :
-                pile_pages.addWidget(QLabel(texte))
-                n_lignes = 0
-                texte = ""
-            else :
-                texte += ligne
-                n_lignes += 1
-    if n_lignes :
-        pile_pages.addWidget(QLabel(texte))
-        pile_niveaux.addWidget(pile_pages)"""
 
     # taille des deux boutons qui suivent
     largeur = 30
@@ -338,11 +325,18 @@ def recuperer_vie(barre_vie : QProgressBar, timer : QTimer) :
 
 def creer_barre_jeu(pile : QStackedWidget) -> tuple[QVBoxLayout, QWidget, QTextEdit, QVBoxLayout]:
     """
-    Gère l'agencement de la partie gauche de l'interface : 
+    Gère l'agencement de la partie gauche de l'interface :
     - écran de jeu (carte)                                               [créé ici]
     - cadre de dialogue (par dessus la carte)                            [créé ici]
     - barre de vie (en bleu sous la carte)                               [créée ici]
     - terminal et codex (écran noir et image livre sous la barre de vie) [créés dans creer_barre_inf()]
+    Parameters
+    ----------
+    pile : la pile pricipale du jeu
+
+    Returns
+    -------
+    le jeu en gros
     """
     # partie gauche de l'interface
     widget = QWidget()
@@ -387,6 +381,13 @@ def creer_barre_jeu(pile : QStackedWidget) -> tuple[QVBoxLayout, QWidget, QTextE
 def creer_fenetre(pile : QStackedWidget) -> QWidget :
     """
     fenetre principale du jeu, qui contient l'interface.
+    Parameters
+    ----------
+    pile : la pile principale du jeu
+
+    Returns
+    -------
+    la fenetre du jeu
     """
     fenetre = QWidget()
     fenetre.setFixedSize(pile.size())
@@ -399,9 +400,9 @@ def creer_layout(interface : dict) -> QHBoxLayout :
     """
     Renvoie le layout global de la fenêtre principale
 
-    params
+    Parameters
     ------
-    interface (dict) :
+    interface (dict) : les éléments de l'interface
     """
     layout = QHBoxLayout()
     layout.addWidget(interface["barre_jeu"])
@@ -410,6 +411,17 @@ def creer_layout(interface : dict) -> QHBoxLayout :
     return layout
 
 def creer_label_titre(texte : str, hauteur_restante : int) :
+    """
+    Creer un label pour les titres dans le codex
+    Parameters
+    ----------
+    texte : le texte qui ferat le titre
+    hauteur_restante : la hauteur restante dans le codex
+
+    Returns
+    -------
+
+    """
     if texte.startswith('--t--') :
         label = QLabel()
         label.setFont(FONT_TITRE_CODEX)
@@ -426,6 +438,17 @@ def creer_label_titre(texte : str, hauteur_restante : int) :
 
 
 def creer_label_sous_titre(texte : str, hauteur_restante : int) :
+    """
+    Creer un label pour les sous-titres dans le codex
+    Parameters
+    ----------
+    texte : le texte qui ferat le sous-titre
+    hauteur_restante : la hauteur restante dans le codex
+
+    Returns
+    -------
+
+    """
     if texte.startswith('--st--') :
         label = QLabel()
         label.setFont(FONT_SOUS_TITRE_CODEX)
@@ -442,6 +465,18 @@ def creer_label_sous_titre(texte : str, hauteur_restante : int) :
 
 
 def reste_texte(texte : str, texte_utilise : str) :
+    """
+    (Honnetemnt je fais les docs après et si qql avait pas coder ça en i , j , ect j'aurais essayer de comprendre)
+    donne le reste du texte a afficher
+    Parameters
+    ----------
+    texte : le texte total
+    texte_utilise : le texte deja utilisé
+
+    Returns
+    -------
+    le texte qu'il reste
+    """
     i = 0
     j = 0
     while i < len(texte) and j < len(texte_utilise) :
@@ -458,6 +493,18 @@ def reste_texte(texte : str, texte_utilise : str) :
 
 
 def creer_label_liste(texte : str, hauteur_restante : int, largeur : int) :
+    """
+    Creer les labels pour les listes
+    Parameters
+    ----------
+    texte : le texte a mettre en liste
+    hauteur_restante : la hauteur restantre dans le codex
+    largeur : la largeur du codex
+
+    Returns
+    -------
+
+    """
     block = ''
     lignes = texte.split('\n')
     n = 0
@@ -484,6 +531,18 @@ def creer_label_liste(texte : str, hauteur_restante : int, largeur : int) :
     
 
 def creer_block_texte(texte : str, hauteur_restante : int, largeur : int) -> tuple[QLabel, int, list[str]]:
+    """
+    Creer les blocs de textes dans le codex
+    Parameters
+    ----------
+    texte : le texte a mettre
+    hauteur_restante : la hauteur restantre dans le codex
+    largeur : la largeur du codex
+
+    Returns
+    -------
+
+    """
     block = ''
     n = 0
     label = QLabel()
@@ -504,6 +563,18 @@ def creer_block_texte(texte : str, hauteur_restante : int, largeur : int) -> tup
         return None, hauteur_restante, texte
 
 def creer_page(texte : str, hauteur : int, largeur : int) -> tuple[QWidget, list[str]] :
+    """
+     Creer les pages du codex
+    Parameters
+    ----------
+    texte : le texte des pages
+    hauteur
+    largeur
+
+    Returns
+    -------
+
+    """
     page = QWidget()
     layout = QVBoxLayout()
     page.setLayout(layout)
@@ -531,6 +602,16 @@ def creer_page(texte : str, hauteur : int, largeur : int) -> tuple[QWidget, list
 def creer_pages_codex(gauche : QStackedWidget, droite : QStackedWidget, pile : QStackedWidget, bouton : QPushButton) -> None:
     """
     créé l'affichage du codex ouvert et son contenu
+    Parameters
+    ----------
+    gauche : la bande gauche de l'écran en QStackWidget
+    droite : la bande droite de l'écran en QStackWidget
+    pile : la pile principale du jeu
+    bouton : les bouton à mettre
+
+    Returns
+    -------
+
     """
 
     # affichage des lignes
@@ -566,6 +647,15 @@ def creer_pages_codex(gauche : QStackedWidget, droite : QStackedWidget, pile : Q
 def aller_page(page_gauche : QStackedWidget, page_droite : QStackedWidget, changement : int) -> None :
     """
     permet de passer d'une page du codex a l'autre
+    Parameters
+    ----------
+    page_gauche : la page de gauche du codex
+    page_droite : la page de droite du codex
+    changement : la nouvelle page à afficher
+
+    Returns
+    -------
+
     """
     page_gauche.setCurrentIndex(page_gauche.currentIndex() + changement)
     page_droite.setCurrentIndex(page_droite.currentIndex() + changement)
@@ -574,6 +664,14 @@ def aller_page(page_gauche : QStackedWidget, page_droite : QStackedWidget, chang
 def fond_codex(codex : QWidget, pile_principale : QStackedWidget) -> None :
     """
     affiche l'arrière-plan lors de l'ouvrerture du codex
+    Parameters
+    ----------
+    codex : le codex entier
+    pile_principale : la pile principale du jeu
+
+    Returns
+    -------
+
     """
     painter = QPainter(codex)
     fond = QPixmap("images/fond_codex.png")
@@ -657,6 +755,13 @@ def creer_pile(interface : dict) -> QStackedWidget :
     """
     défini la couleur d'arrière-plan et
     créé une pile d'affichage différenciant l'affichage de l'interface de jeu et l'affichage du codex ouvert.
+    Parameters
+    ----------
+    interface : l'interface du jeu
+
+    Returns
+    -------
+    pile : la pile du jeu entiere
     """
     pile = QStackedWidget()
     page_accueil = creer_accueil(interface)
@@ -731,11 +836,33 @@ def creer_accueil(interface) -> tuple[QLabel, QPushButton] :
     return label
 
 def repeter(player : QMediaPlayer, status : QMediaPlayer.MediaStatus) :
+    """
+    Repete la musique de fond
+    Parameters
+    ----------
+    player : la musique de fond
+    status : le statur de la musique
+
+    Returns
+    -------
+
+    """
     if status == QMediaPlayer.EndOfMedia :
         player.setPosition(0)
         player.play()
 
 def son(fichier : str, boucler : bool = True) -> QMediaPlayer:
+    """
+    s'occupe de jouer la musique de fond
+    Parameters
+    ----------
+    fichier : les fichier avec la musique de fond
+    boucler : si la musique doit se repeter ou non
+
+    Returns
+    -------
+
+    """
     player = QMediaPlayer()
     player.setMedia(QMediaContent(QUrl.fromLocalFile(fichier)))
     if boucler :
@@ -756,14 +883,21 @@ def creer_sons() -> tuple[QMediaPlayer]:
     player_battle = son(FICHIER_SON_BATTLE)
     player_boss_final = son(FICHIER_SON_BOSS_FINAL)
     player_death = son(FICHIER_SON_DEATH, False)
-    return player, player_battle, player_death, player_boss_final
+
+    effet_sonore = QSoundEffect()
+    effet_sonore.setSource(QUrl.fromLocalFile(FICHIER_SON_INACCESSIBLE))
+
+    return player, player_battle, player_death, player_boss_final, effet_sonore
 
 def creer_interface() -> dict:
     """
     Crée et renvoie le dictionnaire contenant toute l'interface
+    Returns
+    -------
+    le dictionnaire en question
     """
     interface = {}
-    interface["son_principal"], interface["son_battle"], interface["son_death"], interface["son_boss_final"] = creer_sons()
+    interface["son_principal"], interface["son_battle"], interface["son_death"], interface["son_boss_final"], interface["son_inaccessible"] = creer_sons()
     interface["pile"] = creer_pile(interface)
     interface["fenêtre"] = creer_fenetre(interface["pile"])
     interface["barre_jeu"], interface["jeu"], interface["terminal"], interface["dialogue"], interface["barre_vie"], interface["timer_vie"] = creer_barre_jeu(interface["pile"])

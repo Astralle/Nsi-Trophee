@@ -6,9 +6,10 @@ dictionnaire de pnj contenant
 from constantes import dico_saved_var
 from PyQt5.QtGui import QPixmap
 
-# 1 à 12 et 21 à 32 déclenchement à la fin d'un dialogue
+# 1 à 12 et 21 à 31 déclenchement à la fin d'un dialogue
+# 36 déclenchement à la fin du dialogue du dernier niveau (coupé en 5 parties de 12 à 16)
 # on rajoute 100 lorsqu'on veut déclencher à la fin d'un niveau.
-# attention : les suites des niveaux 4 et 6 sont 17 et 18 (pas le même système qu'avec les dialogues).
+# attention : les suites des niveau 4 et 6 sont 17 et 18.
 
 dico_pnj = { # aldirien - camp du début
     (5, 2) : {
@@ -36,7 +37,7 @@ dico_pnj = { # aldirien - camp du début
         'condition' : dico_saved_var['ambuscade_gobelin'],
         'niveau': (102,) # fin du niveau 2
     },
-    (32, 4) : {
+    (36, 4) : {
         'image' : QPixmap('encounters/creatures/gobelin.png'),
         'condition' : dico_saved_var['ambuscade_gobelin'],
         'niveau': (102,) # fin du niveau 2
@@ -69,7 +70,7 @@ dico_pnj = { # aldirien - camp du début
     (35, 42) : {
         'image' : QPixmap('encounters/npc/kheia.png'),
         'condition' : dico_saved_var['undead_vivant'],
-        'niveau': (54,) # fin du dialogue suite de suite 4
+        'niveau': (37,) # fin du dialogue suite de suite 4
     }, # squelettes Darkwod
     (36, 40) : {
         'image' : QPixmap('encounters/creatures/undead.png'),
@@ -146,10 +147,10 @@ dico_pnj = { # aldirien - camp du début
         'condition' : dico_saved_var['parz_karl_vivant'],
         'niveau': (111,) # fin du niveau 11
     }, # Aldirien - dans la bibliothèque
-    (74, 9) : {
+    (9, 74) : {
         'image' : QPixmap('encounters/npc/aldirien.png'),
         'condition' : dico_saved_var['aldirien_vivant'],
-        'niveau': (32,) # fin du dialogue suite 12
+        'niveau': (36,) # fin du dialogue suite 12
     }, # le mage - chemin vers la vallée orc
     (64, 60) : {
         'image' : QPixmap('encounters/npc/mage.png'),
@@ -158,10 +159,10 @@ dico_pnj = { # aldirien - camp du début
     }, # le mage - devant Parz-Karl
     (69, 65) : {
         'image' : QPixmap('encounters/npc/mage.png'),
-        'condition' : dico_saved_var['mage_infiltre'] and not(dico_saved_var['mage_teleporte']),
-        'niveau': (110, 21) # fin du dialogue suite 11
+        'condition' : dico_saved_var['mage_infiltre'] and not(dico_saved_var['mage_teleporte']), #vaut false and not(false) au début, pourtant le mage est affiché. Si on relance le jeu, le bug n'apparaît plus.
+        'niveau': (110, 31) # fin du dialogue suite 11
     }, # le mage - téléporté dans la bibliothèque
-    (72, 10) : {
+    (10, 72) : {
         'image' : QPixmap('encounters/npc/mage.png'),
         'condition' : True,
         'niveau': (0,) # jamais
@@ -204,34 +205,88 @@ dico_pnj = { # aldirien - camp du début
     (11, 74) : {
         'image' : QPixmap('encounters/npc/saal_lio_dragon.png'),
         'condition' : dico_saved_var['saal_lio_arrive'] and dico_saved_var['aldirien_vivant'],
-        'niveau': (112,) # fin niveau 12
+        'niveau': (12, 116), # fin dialogue 12 et fin niveau 12
+        'nb_tiles_largeur' : 3, # le nombre de tiles que prend le dragon
+        'nb_tiles_hauteur' : 3, # il est le seul à avoir besoin de plus d'une tile donc à avoir ces 2 propriétés
     }, # pylinarium - ouvert
     (10, 75) : {
         'image' : QPixmap('encounters/artefacts/open_pylinarium.png'),
         'condition' : dico_saved_var['aldirien_vivant'],
-        'niveau': (32,) # fin dialogue suite 12
+        'niveau': (36,) # fin dialogue suite 12
     }, # pylinarium - fermé
     (10, 76) : {
         'image' : QPixmap('encounters/artefacts/closed_pylinarium.png'),
         'condition' : not(dico_saved_var['aldirien_vivant']),
-        'niveau': (32,) # fin dialogue suite 12
+        'niveau': (36,) # fin dialogue suite 12
+    },
+    (9, 45) : {
+        'image' : QPixmap('encounters/creatures/peasant.png'),
+        'condition' : True,
+        'niveau' : (0,) # jamais
+    },
+    (11, 42) : {
+        'image' : QPixmap('encounters/creatures/peasant.png'),
+        'condition' : True,
+        'niveau' : (0,) # jamais
+    },
+    (16, 43) : {
+        'image' : QPixmap('encounters/creatures/peasant.png'),
+        'condition' : True,
+        'niveau' : (0,) # jamais
+    },
+    (5, 42) : {
+        'image' : QPixmap('encounters/creatures/peasant.png'),
+        'condition' : True,
+        'niveau' : (0,) # jamais
+    },
+    (74, 10) : {
+        'image' : QPixmap('encounters/creatures/peasant.png'),
+        'condition' : True,
+        'niveau' : (0,) # jamais
+    },
+    (78, 12) : {
+        'image' : QPixmap('encounters/creatures/peasant.png'),
+        'condition' : True,
+        'niveau' : (0,) # jamais
+    },
+    (68, 13) : {
+        'image' : QPixmap('encounters/creatures/peasant.png'),
+        'condition' : True,
+        'niveau' : (0,) # jamais
+    },
+    (70, 14) : {
+        'image' : QPixmap('encounters/creatures/peasant.png'),
+        'condition' : True,
+        'niveau' : (0,) # jamais
+    },
+    (66, 18) : {
+        'image' : QPixmap('encounters/creatures/peasant.png'),
+        'condition' : True,
+        'niveau' : (0,) # jamais
+    },
+    (64, 16) : {
+        'image' : QPixmap('encounters/creatures/peasant.png'),
+        'condition' : True,
+        'niveau' : (0,) # jamais
+    },
+    (63, 12) : {
+        'image' : QPixmap('encounters/creatures/peasant.png'),
+        'condition' : True,
+        'niveau' : (0,) # jamais
+    },
+    (58, 17) : {
+        'image' : QPixmap('encounters/creatures/peasant.png'),
+        'condition' : True,
+        'niveau' : (0,) # jamais
+    },
+    (76, 18) : {
+        'image' : QPixmap('encounters/creatures/peasant.png'),
+        'condition' : True,
+        'niveau' : (0,) # jamais
+    },
+    (70, 17) : {
+        'image' : QPixmap('encounters/creatures/peasant.png'),
+        'condition' : True,
+        'niveau' : (0,) # jamais
     },
 }
-# coming soon : les fermiers 
-# Nonameburg
-# 9, 45 
-# 11, 42
-# 26, 43
-# 5, 42
-# 
-# Maintown
-# 74, 10
-# 78, 12
-# 68, 13
-# 70, 14
-# 66, 18
-# 64, 16
-# 63, 12
-# 58, 17
-# 76, 18
-# 70, 17

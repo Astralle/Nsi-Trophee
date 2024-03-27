@@ -99,30 +99,52 @@ def trouver_squelette(lst):
 
 squelette_suite = {
     'message_id': 17, # dernier niveau == 16
-    'tests': (""),
-    'réponses': ("",),
+    'tests': ('''print(change_ordre("guerrier", "attaque('squelette')"))''',
+            '''print(change_ordre("archer", "arc.cibler('humain')"))''',
+            '''print(change_ordre("archer", "arc.charger('flèche')"))''',
+            '''print(change_ordre("arbre", "seve.dirige_to('feuillage')"))''',
+            '''print(change_ordre("barbare", "double_hache.croiser()"))''',
+            '''print(change_ordre("troll", "troll.dormir()"))''',
+            ),
+    'réponses': ("attaque('squelette')",
+                "arc.cibler('humain')",
+                "arc.charger('rien')",
+                "seve.dirige_to('feuillage')",
+                "double_hache.lacher()",
+                "troll.dormir()",
+                ),
     'condition': dico_dialogue[24]['condition'],
     'progression': 'undead_vivant',
 }
 """
-def 
+def change_ordre(type, ordre):
+    if type == "guerrier" and ordre == "attaque('humain')":
+        ordre = "attaque('squelette')"
+    elif type == "barbare" and ordre == "double_hache.croiser()":
+        ordre = "double_hache.lacher()"
+    elif type == "archer" and ordre == "arc.charger('flèche')":
+        ordre = "arc.charger('rien')"
+    return ordre
 """
 
 decryptage_feu = {
     'message_id': 5,
     'tests': ("print(inverse_dialogue('! redia suov xuev eJ'))", 
               "print(inverse_dialogue('...dnerpmoc em ennosreP'))",
-              "print(inverse_dialogue('.elpmis tse'c tnatruoP'))",),
+              "print(inverse_dialogue('.elpmis tse c tnatruoP'))",),
     'réponses': ('Je veux vous aider !',
                  'Personne me comprend...',
-                 'Pourtant c\'est simple.'),
+                 'Pourtant c est simple.'),
     'condition': dico_dialogue[5]['condition'],
     'progression': 'aucune',
 }
 """
-def inverse_dialogue(string):
-	return string[::-1]
-""" # c'est pas la solution
+def inverse_dialogue(x):
+	y=""
+	for i in range(len(x)):
+		y+= x[-i]
+	return y
+"""
 
 
 grosses_araignees = {
@@ -148,16 +170,16 @@ araignee_suite = {
                 "print(cris_e(2.0))",
                 "print(cris_e(1.9))",
                 "print(cris_e(2.718))",),
-    'réponses': ('""',
-                '"e"',
-                '""',
-                '"e"',),
+    'réponses': ('',
+                'e',
+                '',
+                'e',),
     'condition': dico_dialogue[26]['condition'],
     'progression': 'araigne_vivante',
 }
 """
 def cris_e(nb):
-    if nb >= 2 and nb <= 2:
+    if nb >= 2 and nb <= 3:
         return "e"
     return ""
 """
@@ -208,11 +230,11 @@ def mystere(word, mechant):
 
 haldarielle = {
     'message_id': 9,
-    'tests': ("print(decrypte_cesar('rjxxflj htij', 5))", 
+    'tests': ("print(decrypte_cesar('hznnvbz xjyz', 5))", 
               "print(decrypte_cesar('whyrf prfne', 13))",
-              "print(decrypte_cesar('xmtkovbz wvndlpz', 21))",
+              "print(decrypte_cesar('hwduyflj gfxnvzj', 21))",
               "print(decrypte_cesar('test', 26))",
-              "print(decrypte_cesar('nsppsmsvo', 10))"),
+              "print(decrypte_cesar('tyvvysybu', 10))"),
     'réponses': ('message code',
                  'jules cesar',
                  'cryptage basique',
@@ -236,11 +258,11 @@ def decrypte_cesar(message, decalage):
 
 camp_orc = {
     'message_id': 10,
-    'tests': ("print(chemin_existe([[1, 1, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]]))", 
-              "print(chemin_existe([[1, 0, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 1, 1, 1]]))",
-              "print(chemin_existe([[1, 0, 0, 1, 1, 0, 1, 0, 0, 0], [0, 1, 0, 0, 1, 1, 0, 1, 1, 1]]))",
-              "print(chemin_existe([[1, 1, 0, 0, 1, 1, 0, 1, 1, 1], [1, 0, 1, 1, 1, 0, 1, 0, 0, 1]]))",
-              "print(chemin_existe([[1, 1, 1, 0, 1, 1, 1, 1, 1, 1], [1, 0, 1, 1, 1, 0, 1, 1, 0, 1]]))"),
+    'tests': ("print(passage_possible([[1, 1, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]]))", 
+              "print(passage_possible([[1, 0, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 1, 1, 1]]))",
+              "print(passage_possible([[1, 0, 0, 1, 1, 0, 1, 0, 0, 0], [0, 1, 0, 0, 1, 1, 0, 1, 1, 1]]))",
+              "print(passage_possible([[1, 1, 0, 0, 1, 1, 0, 1, 1, 1], [1, 0, 1, 1, 1, 0, 1, 0, 0, 1]]))",
+              "print(passage_possible([[1, 1, 1, 0, 1, 1, 1, 1, 1, 1], [1, 0, 1, 1, 1, 0, 1, 1, 0, 1]]))"),
     'réponses': ('True',
                  'False',
                  'False',
@@ -250,7 +272,7 @@ camp_orc = {
     'progression': 'mage_infiltre',
 }
 """
-def chemin_existe(che):
+def passage_possible(che):
     if che[0][0] == 0 or che[1][9] == 0:
         return False
     for i in range(10):
@@ -300,15 +322,23 @@ aldirien_1 = {
 }
 """
 def bloque_anagramme(phrase1, phrase2):
-        """
+    anag = True
+    if len(phrase1) != len(phrase2):
+        anag = False
+    else:
+        for i in phrase1:
+            if not i in phrase2:
+                anag = False
+    return anag
+"""
 
 aldirien_2 = {
     'message_id': 13,
     'tests': (
         "print(echo_palindrome(5678765))",
-        "print(bloque_anagramme(234321))",
-        "print(bloque_anagramme(12312))",
-        "print(bloque_anagramme(22032423022))",
+        "print(echo_palindrome(234321))",
+        "print(echo_palindrome(12312))",
+        "print(echo_palindrome(22032423022))",
         ),
         'réponses': ('True',
                     'False',
@@ -318,8 +348,20 @@ aldirien_2 = {
     'progression': 'aucune',
 }
 """
-def echo_palindrome(nombre):
-        """
+def echo_palindrome(nb):
+    nb = str(nb)
+    if len(nb) % 2 == 0:
+        half = nb[:int((len(nb)/2))]
+        half2 = nb[int((len(nb)/2)):]
+    else:
+        half = nb[:int(((len(nb)-1)/2))]
+        half2 = nb[1+int(((len(nb)-1)/2)):]
+    palin = True
+    for i in range(len(half)):
+        if half[i] != half2[-i]:
+            palin = False
+    return palin
+"""
 
 aldirien_3 = {
     'message_id': 14,
@@ -337,10 +379,10 @@ aldirien_3 = {
 aldirien_4 = {
     'message_id': 15,
     'tests': (
-        "print(is_fibonacci(13))",
-        "print(is_fibonacci(31))",
-        "print(is_fibonacci(221))",
-        "print(is_fibonacci(210324))",
+        "print(est_fibonacci(13))",
+        "print(est_fibonacci(31))",
+        "print(est_fibonacci(221))",
+        "print(est_fibonacci(210324))",
         ),
         'réponses': ('True',
                     'True',
@@ -369,4 +411,4 @@ aldirien_5 = {
 }
 
 
-liste_niveaux = ({}, debut, embuscade_gobelins, farore, embuscade_squelettes, decryptage_feu, grosses_araignees, scorpion, l_illusion_du_choix, haldarielle, camp_orc, parz_karl, aldirien_1, aldirien_2, aldirien_3, aldirien_4, aldirien_5, araignee_suite, squelette_suite)
+liste_niveaux = ({}, debut, embuscade_gobelins, farore, embuscade_squelettes, decryptage_feu, grosses_araignees, scorpion, l_illusion_du_choix, haldarielle, camp_orc, parz_karl, aldirien_1, aldirien_2, aldirien_3, aldirien_4, aldirien_5, squelette_suite, araignee_suite)

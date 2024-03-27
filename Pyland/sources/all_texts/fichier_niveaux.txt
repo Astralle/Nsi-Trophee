@@ -37,7 +37,7 @@ Farore est gravement blessée, mais elle est en plus coincée sous des débris.
 Elle a besoin que vous l'aidiez à sortir de sous les pierres !
  
 Énoncé :
-Pour l'aider, détruisez les pierres qui ont un poids en dessous de 20 kg.
+Pour l'aider, détruisez les pierres qui ont un poids en strictement inférieur à 20 kg.
 Pour cela, vous devez rédiger une fonction pierre_cassable(liste_pierre) qui retourne le nombre de pierre que vous parvenez à casser.
 Elle prend en argument une liste dont chaque élément est un entier représentant le poids de chaque pierre.
  
@@ -75,7 +75,7 @@ Créez la fonction inverse_dialogue(dialogue) qui, en prenant un string en argum
 Exemples :
 print(inverse_dialogue('! redia suov xuev eJ')) -> 'Je veux vous aider !'
 print(inverse_dialogue('...dnerpmoc em ennosreP')) -> 'Personne me comprend...'
-print(inverse_dialogue('.elpmis tse'c tnatruoP')) -> 'Pourtant c'est simple.'
+print(inverse_dialogue(".elpmis tse'c tnatruoP")) -> 'Pourtant c'est simple.'
 
 Mauvais présage dans l'air(e)...
 Situation :
@@ -129,13 +129,13 @@ Situation :
 La divination est un art bizarre qui fait des phrases bizarres.
  
 Énoncé :
-L'orbe parle avec un code césar. Pour décrypter les messages, vous devez remplacer chaque lettre par une lettre placée un nombre donné de fois plus haut dans l'alphabet. Par exemple, si vous devez déplacer de 4, E deviendra A, et A deviendra W.
-decrypte_cesar(message, decalage) renvoie le message avec chaque lettre déplacée 'décalage' fois vers la gauche dans l'alphabet. E devient donc A si decalage = 4.
+L'orbe parle avec un code césar. Pour décrypter les messages, vous devez remplacer chaque lettre par une lettre placée un nombre donné de fois plus haut dans l'alphabet. Par exemple, si vous devez déplacer de 4 les lettres, E deviendra A, et A deviendra W.
+decrypte_cesar(message, decalage) renvoie le message avec chaque lettre déplacée 'decalage' fois vers la gauche dans l'alphabet. E devient donc A si decalage = 4.
  
 Exemples :
-print(decrypte_cesar('rjxxflj htij', 5)) -> 'message code'
+print(decrypte_cesar('hznnvbz xjyz', 5)) -> 'message code'
 print(decrypte_cesar('whyrf prfne', 13)) -> 'jules cesar'
-print(decrypte_cesar('xmtkovbz wvndlpz', 21)) -> 'cryptage basique'
+print(decrypte_cesar('hwduyflj gfxnvzj', 21)) -> 'cryptage basique'
 print(decrypte_cesar('test', 26)) -> 'test'
 
 On me voit, on me voit plus...
@@ -145,7 +145,7 @@ Vous devez vous faufiler un passage dans le camp orc.
 Énoncé :
 Vous devez trouver un passage hors de vue dans une petite zone à découvert.
 Cette zone est représenté par un tableau, c'est-à-dire une liste de liste, de longeur 10 et de largeur 2.
-Écrivez passage_possible(chemin), qui devra retourner si oui ou non, il est possible de passer sans se faire remarquer entre les positions (0, 0) et (10, 1).
+Écrivez passage_possible(chemin), qui devra retourner si oui ou non, il est possible de passer sans se faire remarquer entre les positions (0, 0) et (9, 1).
 Le tableau comporte uniquement des booléens indiquant si vous pouvez vous déplacer sur cette case sans être vu ou seulement y rencontrer une mort prématurée.
 Les déplacements en diagonale sont autorisés.
  
@@ -194,19 +194,15 @@ Protégez Pylint (ce sera la seule fois dans votre vie)
 Situation :
 Aldirien est là, et il tente de corrompre les données du Pylinarium !
 C'est le livre défenseur des bons sorts bien lancés. Si un mage s'accaparait sa puissance, il pourrait détruire la magie et en conserver le monopole !
-Et... malheureusement Aldirien ne va pas se contenter d'un seul sort pour vous empêcher d'intervenir'.
+Et... malheureusement Aldirien ne va pas se contenter d'un seul sort pour vous empêcher de le bloquer.
  
 Énoncé (1/5):
-Saal-lio tente de vous embrouiller le cerveau avec des anagrammes pour faire tomber votre résistance
-mentale.
-Rédigez un sort bloque_anagramme(expression1, expression2) qui renvoie True si deux phrases sont des anagrammes
-et False sinon.
+Saal-lio tente de vous embrouiller le cerveau avec des anagrammes pour faire tomber votre résistance mentale.
+Rédigez un sort bloque_anagramme(expression1, expression2) qui renvoie True si deux phrases sont des anagrammes et False sinon.
 Deux phrases sont anagrammes si elles contiennent exactement les mêmes lettres mais dans un ordre différent.
 Par exemple, "listen" et "silent" sont des anagrammes, tout comme "fairy tales" et "rail safety".
 On ne tient pas compte des accents, majuscules et minuscules.
  
-Rappel :
-Deux phrases sont dites anagrammes l'une de l'autre
 Exemples :
 print(bloque_anagramme('silent', 'listen')) -> True
 print(bloque_anagramme('night', 'thing')) -> True
@@ -215,20 +211,17 @@ print(bloque_anagramme('raven', 'evil')) -> False
 Protégez Pylint (ce sera la seule fois dans votre vie)
 Situation :
 Aldirien est là, et il tente de corrompre les données du Pylinarium !
-C'est le livre défenseur des bons sorts bien lancés. Si un mage s'accaparait sa
-puissance, il pourrait détruire la magie et en conserver le monopole !
+C'est le livre défenseur des bons sorts bien lancés. Si un mage s'accaparait sa puissance, il pourrait détruire la magie et en conserver le monopole !
 Et... malheureusement Aldirien ne va pas se contenter d'un seul sort pour vous empêcher de le bloquer.
  
 Énoncé (2/5):
-Voyant son échec, Saal-lio et Aldirien lancent ensemble des chiffres sur vous pour disloquer l'encodage
-de votre enveloppe physique. Heureusement, vous avez une idée.
-Créez la fonction echo_palindrome(nombre) qui renvoie True lorsque l'ensemble des chiffres envoyés par les
-deux grands mentors donne un palindrome. Vous les faites alors rentrer en écho pour créer une explosion sur vos
-ennemis !
+Voyant son échec, Saal-lio et Aldirien lancent ensemble des chiffres sur vous pour disloquer l'encodage de votre enveloppe physique. Heureusement, vous avez une idée.
+Créez la fonction echo_palindrome(nombre) qui renvoie True lorsque l'ensemble des chiffres envoyés par les deux grands mentors donne un palindrome.
+Vous les faites alors rentrer en écho pour créer une explosion sur vos ennemis !
  
 Rappel :
 Un nombre est palindrome s'il peut être lu dans les deux sens de la même manière.
-Par exemple, 121 est palindrome, tout comme 43234.
+Par exemple, 121 est palindrome, tout comme 432234.
  
 Exemples :
 print(echo_palindrome(5678765)) -> True
@@ -243,15 +236,14 @@ Et... malheureusement Aldirien ne va pas se contenter d'un seul sort pour vous e
  
 Énoncé (3/5):
 Pendant que Saal-lio canalise plus de puissance, Aldirien tente de vous lancer des sorts tout en dévérouillant le Pylinarium.
-Écrivez un programme melange(sort1, sort2) qui prend en argument les différents sorts d'Aldirien sous forme de string et les
-mélangent a chaque espace.
+Écrivez un programme melange(sort1, sort2) qui prend en argument les différents sorts d'Aldirien sous forme de string et les mélangent à chaque espace.
 Attention, si une ligne est plus longue que l'autre sa fin sera donnée dans le bon ordre.
  
 Exemples :
 Si le pemier sort d'Aldirien est : "print('clef : {0}{1}'.format(code, fake_user)) "
 et le deuxième : "for _ in range(2): remove('mage_humain')"
 alors votre sort renvoie : "print('clef for : _ {0}{1}'.format(code, in fake_user)) range(2): remove('mage_humain)"
-On prend le 1er mot du 1er sort, puis du seconde puis le second mot du 1er et ainsi de suite.
+On prend le premier mot du 1er sort, puis du 2nd puis le second mot du 1er et ainsi de suite.
 print(melange("print('clef : {0}{1}'.format(code, fake_user))", "for i in range(2): remove('mage_humain')"))
 -> "print('clef for : i {0}{1}'.format(code, in fake_user)) range(2): remove('mage_humain')"
 
@@ -263,53 +255,71 @@ Et... malheureusement Aldirien ne va pas se contenter d'un seul sort pour vous e
  
 Énoncé (4/5):
 Saal-lio a fini de canaliser sa puissance, et il forme une structure complexe autour de la suite de Fibonacci.
-Mais pour vous empêcher de le contrer, il envoie aussi des entiers qui n'ont rien a voir.
-Rédigez une fonction is_fibonacci(nombre) qui vérifie si un nombre appartient à la suite de Fibonacci ou non et renvoie le résultat sous la forme d'un booléen.
+Mais pour vous empêcher de le contrer, il envoie aussi des entiers qui n'ont rien à voir.
+Rédigez une fonction est_fibonacci(nombre) qui vérifie si un nombre appartient à la suite de Fibonacci ou non et renvoie le résultat sous la forme d'un booléen.
  
 Rappel :
 La suite de Fibonacci est une suite pour laquelle chaque terme est la somme des deux précédents et qui commence par 1.
 Les premiers termes en sont donc [1, 1, 2, 3, 5, 8, 13, 21].
  
 Exemples :
-print(is_fibonacci(13)) -> True
-print(is_fibonacci(34)) -> True
-print(is_fibonacci(221)) -> False
+print(est_fibonacci(13)) -> True
+print(est_fibonacci(34)) -> True
+print(est_fibonacci(221)) -> False
 
 Protégez Pylint (ce sera la seule fois dans votre vie)
 Situation :
 Aldirien est là, et il tente de corrompre les données du Pylinarium !
-C'est le livre défenseur des bons sorts bien lancés. Si un mage s'accaparait sa
-puissance, il pourrait détruire la magie et en conserver le monopole !
+C'est le livre défenseur des bons sorts bien lancés. Si un mage s'accaparait sa puissance, il pourrait détruire la magie et en conserver le monopole !
 Et... malheureusement Aldirien ne va pas se contenter d'un seul sort pour vous empêcher de le bloquer.
  
 Énoncé (5/5):
-La structure de Saal-lio a échouée, et le mage perd sa forme draconique qui le consumme. 
+La structure de Saal-lio a échoué, et le mage perd sa forme draconique qui le consumme. 
 Mais Aldirien est toujours là !
-Il vous lance un sort mortel, mais qui peut être renvoyé comme une balle de ping-pong. En revanche, il devient de plus en plus compliqué à renvoyer à chaque aller-retour. 
-La difficulté pour renvoyer le sort est une suite étrange, qui fonctonne ainsi :
-Elle débute à 1. On peut lire ce premier terme "un 1".
-Cela créé le deuxième terme : 11. Celui-ci se lis "deux 1".
-Et appraît le troisième terme : 21. Vous le lisez "un 2 et un 1".
-Le terme suivant est donc 1211, et il se lis "un 1, un 2 et deux 1".
-Écrivez une fonction retourne_sort(nombre) qui prend en paramètre le nombre
-qu'Aldirien vous envoie et lui retourne le nombre suivant de la suite.
+Il vous lance un sort mortel, qui peut cependant être renvoyé comme une balle de ping-pong. En revanche, il devient de plus en plus compliqué à renvoyer à chaque aller-retour. 
+Pour renvoyer le sort, la difficulté réside dans l'étrangeté de la suite à utiliser, qui fonctionne ainsi :
+Elle débute à 1. Ce premier terme se lit littéralement "un 1".
+Cela crée le deuxième terme : 11, qui se lit lui-même "deux 1".
+Et apparaît alors le troisième terme : 21. De la même façon il se lit "un 2 et un 1".
+Le terme suivant est donc 1211, qui se lit "un 1, un 2 et deux 1" et ainsi de suite...
+Écrivez une fonction retourne_sort(nombre) qui prend en paramètre le nombre qu'Aldirien vous envoie et lui retourne le nombre suivant de la suite.
  
 Exemples :
 print(retourne_sort(1)) -> 11
 print(retourne_sort(11)) -> 21
 print(retourne_sort(133)) -> 1123
 
+Skeleton surprise
+Situation :
+Surprise ! Des tas de squelettes vous encerclent. Si vous voulez sortir d'ici vivant, il va falloir se battre.
+ 
+Énoncé :
+Les squelettes obéissent à certains ordres précis, mais n'ont pas de conscience propre. Ils n'agissent que grâce à un programme dans leur tête.
+Et si vous pouviez le changer ?
+Écrivez la fonction change_ordre(type_squelette, ordre) qui prend en paramètre un type_squelette de squelette et son programme, sous forme de string à chaque fois.
+Votre fonction commencera par lire la ligne de code présente dans le paramètre ordre puis renverra le nouvel ordre en fonction de cette ligne de code.
+Si le squelette est un "guerrier", votre sort doit remplacer l'ordre "attaque('humain')" par "attaque('squelette')".
+Si le squelette est un "archer", votre sort doit remplacer l'ordre  "arc.charger('flèche')" par "arc.charger('rien')".
+Si le squelette est un "barbare", votre sort doit remplacer l'ordre  "double_hache.croiser()" par "double_hache.lacher()".
+Bien sûr, si votre sort ne trouve pas la directive à changer, il ne change rien et renvoie la même directive sans la modifier.
+Dans le cas où votre sort ferait effet sur une autre créature, et que type_squelette ne soit en fait pas un squelette, renvoyez toujours les mêmes directives sans les modifier.
+ 
+Exemples :
+print(change_ordre("guerrier", "attaque('humain')")) -> "attaque('squelette')"
+print(change_ordre("archer", "arc.cibler('humain')")) -> "arc.cibler('humain')"
+print(change_ordre("arbre", "seve.dirige_to('feuillage')")) -> "seve.dirige_to('feuillage')"
+
 Spider Dance
 Situation :
-Bien vu ! Il s'agissait d'une araignée d'Euler. Maintenant qu'elle est au dessus de vous et prête a vous mordre, il va falloir vous en débarrasser.
-Heureusement, le moyen de détruire ces créatures et bien connu : si une araignée d'Euler entend la lettre "e" lorsqu'elle attaque avec entre 2 et 3 pattes, elle perds ses moyens et devient très vulnérable. 
+Bien vu ! Il s'agissait d'une araignée d'Euler. Maintenant qu'elle est au-dessus de vous et prête à vous mordre, il va falloir vous en débarrasser.
+Heureusement, le moyen de détruire ces créatures est bien connu : si une araignée d'Euler entend la lettre "e" lorsqu'elle attaque avec entre 2 et 3 pattes, elle perd ses moyens et devient très vulnérable. 
 Cette réaction est complètement irrationnelle, mais que voulez-vous, il faut de tout pour faire un ensemble.
  
 Énoncé :
-Écrivez une fonction crie_e(nombre_pattes) qui prend en paramètre le nombre de pattes que l’araignée utilise pour vous frapper et qui renvoie "e" si ce nombre est entre 2 et 3, et une chaîne vide "" sinon.
-Oui, cette araignée est plus facile a combattre qu’a repérer.
+Écrivez une fonction crie_e(nombre_pattes) qui prend en paramètre le nombre de pattes que l’araignée utilise pour vous frapper et qui renvoie "e" si ce nombre est entre 2 et 3 inclus, et une chaîne vide "" sinon.
+Oui, cette araignée est plus facile à combattre qu’à repérer.
  
 Exemples :
 print(cris_e(25.03)) -> ""
 print(cris_e(2.0)) -> "e"
-print(cris_e(3.0)) -> "e"
+print(cris_e(3.0)) -> "e
